@@ -1,0 +1,51 @@
+﻿@using MyCommon.Helpers.Form
+@using MyCommon.Helpers.Grid
+@using MyCommon.Helpers.ToolBox
+@model NezamEquipment.Web.Areas.Admin.Features.User.AdminUserIndexViewModel
+@{
+    ViewBag.PageTitle = "لیست کاربران";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle(smallTitle: Model.Role != null ? $"نقش {Model.Role.Name}" : "")
+</div>
+<div class="col-md-12">
+    @Html.Form(Model).Options(i =>
+    {
+        i.IsSearchForm(MVC.Admin.User.Index(), Model.PageTotal);
+    }).Items(i =>
+    {
+        i.DropDown(Model.S, x => x.RoleId, 4, Model.S.DropDownRole);
+        i.TextBox(Model.S, x => x.Fullname, 4);
+        i.TextBox(Model.S, x => x.Position, 4);
+        i.TextBox(Model.S, x => x.Username, 4);
+        i.EnumDropDown(Model.S, x => x.AreaType, 4);
+    }).Done()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+        i.AddButton(MVC.Admin.User.Add()).SetText("افزودن کاربر جدید").SetClass("btn btn-success");
+    }).Done()
+</div>
+<div class="col-md-12">
+    @Html.Grid(Model,x=>x.Users).Options(i =>
+    {
+       
+        i.AddDetailsButton();
+        i.AddEditButton();
+        i.AddDeleteButton().SetQueryString("id", nameof(Model.User.Id));
+
+    }).Columns(i =>
+    {
+        i.AddColumnCounter();
+        i.AddColumnForButton();
+        i.AddColumnFor(Model.User, x => x.UserName);
+        i.AddColumnFor(Model.User, x => x.Fullname);
+        i.AddColumnFor(Model.User, x => x.Roles).SetIsList("Name").SetCustomTemplate("<label class=\"label label-default\">{0}</label>");
+        i.AddColumnFor(Model.User, x => x.Position);
+        i.AddColumnFor(Model.User, x => x.AreaType);
+        i.AddColumnFor(Model.User, x => x.LastLogin);
+    }).Done()
+</div>
+

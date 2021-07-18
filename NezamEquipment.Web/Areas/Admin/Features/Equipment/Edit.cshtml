@@ -1,0 +1,21 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Equipment.AdminNezamEquipmentEditViewModel
+@{
+    ViewBag.PageTitle = "ویرایش اطلاعات تجهیزات";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    @using (Ajax.BeginForm("Edit", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.Equipment.Edit()))))
+    {
+        Html.RenderPartial("_Form", Model.PartialForm);
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.Equipment.Details(Model.PartialForm.EquipmentDto.Id))';
+    </script>
+}

@@ -1,0 +1,65 @@
+﻿@using NezamEquipment.DomainClasses.Enum
+@model NezamEquipment.Web.Areas.Admin.Features.Employees.AdminNezamEmployeIndexViewModel
+@{
+    ViewBag.PageTitle = "لیست کارمندان";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.Form(Model).Options(i =>
+{
+    i.IsSearchForm(MVC.Admin.Employees.Index(), Model.PageTotal);
+}).Items(i =>
+{
+
+    i.TextBox(Model.S, x => x.NezamEmployeFullName, 6);
+    i.TextBox(Model.S, x => x.NezamEmployeNationalCode, 6);
+    //i.TextBox(Model.S, x => x.CodePersonal, 4);
+    i.EnumDropDown(Model.S, x => x.UnitType, 6);
+    i.TextBox(Model.S, x => x.IP, 6);
+
+
+}).Done()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+        i.AddButton(MVC.Admin.Employees.Add()).SetText("افزودن کارمند جدید").SetClass("btn btn-success");
+    }).Done()
+</div>
+<div class="col-md-12">
+    @Html.Grid(Model, x => x.NezamEmployes).Options(i =>
+{
+    i.AddDetailsButton();
+    i.AddEditButton();
+    //i.AddButton(MVC.Admin.Employees.PasswordCahnge()).SetClass("label label-info").SetText("تغییر پسورد").SetQueryString("id", nameof(Model.NezamEmploye.Id));
+
+    i.AddDeleteButton();
+    //i.SetRowColorRoles(nameof(Model.NezamEmploye.unitType), new Dictionary<string, EGridColorType>()
+    //    {
+    //        {UnitType.Disactive.ToString(), EGridColorType.Danger},
+    //    });
+}).Columns(i =>
+{
+    i.AddColumnCounter();
+    i.AddColumnForButton();
+    i.AddColumnFor(Model.NezamEmploye, x => x.Fullname);
+
+    i.AddColumnFor(Model.NezamEmploye, x => x.CodePersonal);
+    i.AddColumnFor(Model.NezamEmploye, x => x.NationalCode);
+    i.AddColumnFor(Model.NezamEmploye, x => x.unitType);
+    i.AddColumnFor(Model.NezamEmploye, x => x.NetworkType);
+    i.AddColumnFor(Model.NezamEmploye, x => x.IP);
+    i.AddColumnFor(Model.NezamEmploye, x => x.UserLogin);
+
+}).Done()
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Employees.Index())";
+    </script>
+}

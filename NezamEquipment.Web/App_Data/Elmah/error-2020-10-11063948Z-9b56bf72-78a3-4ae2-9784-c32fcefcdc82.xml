@@ -1,0 +1,194 @@
+﻿<error errorId="9b56bf72-78a3-4ae2-9784-c32fcefcdc82" application="/LM/W3SVC/2/ROOT" host="DESKTOP-G9DJ020" type="System.InvalidOperationException" message="Nullable object must have a value." source="mscorlib" detail="System.InvalidOperationException: Nullable object must have a value.&#xD;&#xA;   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)&#xD;&#xA;   at System.Nullable`1.get_Value()&#xD;&#xA;   at ASP._Page_Areas_RentAndTransfer_Features_Transfer_Index_cshtml.&lt;Execute&gt;b__3_1(FormDataItem i) in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\RentAndTransfer\Features\Transfer\Index.cshtml:line 23&#xD;&#xA;   at MyCommon.Helpers.Form.FormExtension.Items(Action`1 buildItems)&#xD;&#xA;   at ASP._Page_Areas_RentAndTransfer_Features_Transfer_Index_cshtml.Execute() in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\RentAndTransfer\Features\Transfer\Index.cshtml:line 17&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" time="2020-10-11T06:39:48.9431206Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=7MDtfux-vsp0pSYj4l5HnuGdE78X1qNsVgL3tWH3kseJdQcoRRH7xqyO6nCxwr9DGWdjGFSp2NDZRV0exZPwdx3kdI81; .ASPXAUTH=C20CDD0AB4AD6EA143600A2741AF7761D2C6F9010677A76C939810322249EAB355DD18BA737AE8537838947678770B7939F26EF4A3E8584EE5D6305C9D79E9B93788965FE1BD5701C72F49C7043D95D82B345E0C6FD15C83AD3AEE7F80463572481FE4D265DFFFB9A4988C9235D96D449E2899D44FD809330466868AC6B4F3267F85FD42DBE519C1F8BFB160A7B57AF56CD279116979875809DFFA6D50CAB6ADE27B59401B36748219E886054C904B79793E4EC515DE25D67E8F99B7578B7A757AA5A001D0418225B3D91BC4AB49243D939F22C9&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:none&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=7MDtfux-vsp0pSYj4l5HnuGdE78X1qNsVgL3tWH3kseJdQcoRRH7xqyO6nCxwr9DGWdjGFSp2NDZRV0exZPwdx3kdI81; .ASPXAUTH=C20CDD0AB4AD6EA143600A2741AF7761D2C6F9010677A76C939810322249EAB355DD18BA737AE8537838947678770B7939F26EF4A3E8584EE5D6305C9D79E9B93788965FE1BD5701C72F49C7043D95D82B345E0C6FD15C83AD3AEE7F80463572481FE4D265DFFFB9A4988C9235D96D449E2899D44FD809330466868AC6B4F3267F85FD42DBE519C1F8BFB160A7B57AF56CD279116979875809DFFA6D50CAB6ADE27B59401B36748219E886054C904B79793E4EC515DE25D67E8F99B7578B7A757AA5A001D0418225B3D91BC4AB49243D939F22C9&#xD;&#xA;Host: localhost:1324&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: none&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/RentAndTransfert/Transfer" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\RentAndTransfert\Transfer" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="S.ContractNumber=&amp;S.FromCreatedOnstr=%DB%B1%DB%B3%DB%B9%DB%B9%2F%DB%B0%DB%B7%2F%DB%B0%DB%B1&amp;S.ToCreatedOnstr=%DB%B1%DB%B3%DB%B9%DB%B9%2F%DB%B0%DB%B7%2F%DB%B2%DB%B0" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50303" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/RentAndTransfert/Transfer" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/RentAndTransfert/Transfer" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=7MDtfux-vsp0pSYj4l5HnuGdE78X1qNsVgL3tWH3kseJdQcoRRH7xqyO6nCxwr9DGWdjGFSp2NDZRV0exZPwdx3kdI81; .ASPXAUTH=C20CDD0AB4AD6EA143600A2741AF7761D2C6F9010677A76C939810322249EAB355DD18BA737AE8537838947678770B7939F26EF4A3E8584EE5D6305C9D79E9B93788965FE1BD5701C72F49C7043D95D82B345E0C6FD15C83AD3AEE7F80463572481FE4D265DFFFB9A4988C9235D96D449E2899D44FD809330466868AC6B4F3267F85FD42DBE519C1F8BFB160A7B57AF56CD279116979875809DFFA6D50CAB6ADE27B59401B36748219E886054C904B79793E4EC515DE25D67E8F99B7578B7A757AA5A001D0418225B3D91BC4AB49243D939F22C9" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="none" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="S.ContractNumber">
+      <value string="" />
+    </item>
+    <item name="S.FromCreatedOnstr">
+      <value string="۱۳۹۹/۰۷/۰۱" />
+    </item>
+    <item name="S.ToCreatedOnstr">
+      <value string="۱۳۹۹/۰۷/۲۰" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="7MDtfux-vsp0pSYj4l5HnuGdE78X1qNsVgL3tWH3kseJdQcoRRH7xqyO6nCxwr9DGWdjGFSp2NDZRV0exZPwdx3kdI81" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="C20CDD0AB4AD6EA143600A2741AF7761D2C6F9010677A76C939810322249EAB355DD18BA737AE8537838947678770B7939F26EF4A3E8584EE5D6305C9D79E9B93788965FE1BD5701C72F49C7043D95D82B345E0C6FD15C83AD3AEE7F80463572481FE4D265DFFFB9A4988C9235D96D449E2899D44FD809330466868AC6B4F3267F85FD42DBE519C1F8BFB160A7B57AF56CD279116979875809DFFA6D50CAB6ADE27B59401B36748219E886054C904B79793E4EC515DE25D67E8F99B7578B7A757AA5A001D0418225B3D91BC4AB49243D939F22C9" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="0eibylu1dernbwt2dhqkzgk0" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,1075 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.3.5.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.3.5.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A68DDA3F-7979-4796-8F1D-4B218B36F331}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NezamEquipment.Web</RootNamespace>
+    <AssemblyName>NezamEquipment.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.4.2\lib\net35\BotDetect.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect.Web.Mvc, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.4.2\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.5\lib\net46\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="DNTScheduler, Version=1.1.0.0, Culture=neutral, PublicKeyToken=50c85bcc1dbe9da4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DNTScheduler.1.1.0.0\lib\net45\DNTScheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EFSecondLevelCache, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EFSecondLevelCache.1.2.0.0\lib\net45\EFSecondLevelCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.1.0\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gmap.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.Net.1.0.1\lib\Gmap.net.dll</HintPath>
+    </Reference>
+    <Reference Include="hbehr.recaptcha, Version=1.9.0.36338, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReCaptcha-AspNet.1.9.0\lib\net46\hbehr.recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.23.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.23\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.1.0\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DNTScheduler.1.1.0.0\lib\net45\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcPaging, Version=2.1.13.46, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcPaging.2.1.13\lib\net40\MvcPaging.dll</HintPath>
+    </Reference>
+    <Reference Include="MyCommon.Helpers">
+      <HintPath>Dll\MyCommon.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2017.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2017.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Mvc, Version=2017.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Stimulsoft.Report.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.4.0.0.315\lib\net40\StructureMap.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.1\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\T4MVCExtensions.4.2.4\lib\net45\T4MVCExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Elmah\index.html" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\ListEquipmentUnit.cshtml" />
+    <Content Include="Areas\Admin\Features\EquipmentFaulty\_Form.cshtml" />
+    <Content Include="Areas\Admin\Features\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Role\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\Role\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\Role\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Role\NoEditForDefaultRole.cshtml" />
+    <Content Include="Areas\Admin\Features\Role\_Form.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\Default\_Danger.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\Default\_DefaultDelete.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\Default\_NoDataForDisplaying.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\Default\_Success.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\Default\_Warning.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\_Management.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\RightMenu.cshtml" />
+    <Content Include="Areas\Admin\Features\User\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\User\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\User\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\User\_Form.cshtml" />
+    <Content Include="Areas\Admin\Features\web.config" />
+    <Content Include="Areas\Admin\Features\_ViewStart.cshtml" />
+    <Content Include="Content\Images\avatar1.png" />
+    <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\bakk.jpg" />
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\bg5.png" />
+    <Content Include="Content\Images\6726new.jpg" />
+    <Content Include="Content\Images\bgk.jpg" />
+    <Content Include="Content\Images\download.jpg" />
+    <Content Include="Content\Images\favicon.png" />
+    <Content Include="Content\Images\header.jpg" />
+    <Content Include="Content\Images\loader.gif" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\logo6.png" />
+    <Content Include="Content\_Admin\1-theme_styles.css" />
+    <Content Include="Content\_Admin\2-Style.css" />
+    <Content Include="Content\_Admin\3-ScssStyle.css" />
+    <Content Include="Content\_Default\01-bootstrap.css" />
+    <Content Include="Content\_Default\02-bootstrap-rtl.min.css" />
+    <Content Include="Content\_Default\04-PersianDateTimePicker.css" />
+    <Content Include="Content\_Default\05-datepicker.min.css" />
+    <Content Include="Content\_Default\06-select2.css" />
+    <Content Include="Content\_Default\07-select2-bootstrap.css" />
+    <Content Include="Content\_Default\08-jquery.Bootstrap-PersianDateTimePicker.css" />
+    <Content Include="Content\_Default\DefaultRoles.css" />
+    <Content Include="Content\_Default\font-awesome.min.css" />
+    <Content Include="Content\_Default\Site.css" />
+    <Content Include="Content\_Home\04-animate.css" />
+    <Content Include="Content\_Home\01-bootstrap.css" />
+    <Content Include="Content\_Home\03-font-awesome.css" />
+    <Content Include="Content\_Home\08-leaflet.css" />
+    <Content Include="Content\_Home\4-IranNastaliq.css" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfonte0a5.html" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Content\_Home\05-menu.css" />
+    <Content Include="Content\_Home\06-style.css" />
+    <Content Include="Content\_Home\07-main.css" />
+    <Content Include="Content\_Home\09-persian-datepicker.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="readme.txt" />
+    <Content Include="Scripts\highchart\css\highcharts.css" />
+    <Content Include="Scripts\highchart\highcharts-3d.js" />
+    <Content Include="Scripts\highchart\highcharts-3d.src.js" />
+    <Content Include="Scripts\highchart\highcharts-more.js" />
+    <Content Include="Scripts\highchart\highcharts-more.src.js" />
+    <Content Include="Scripts\highchart\highcharts.js" />
+    <Content Include="Scripts\highchart\highcharts.src.js" />
+    <Content Include="Scripts\highchart\js\highcharts-3d.js" />
+    <Content Include="Scripts\highchart\js\highcharts-3d.src.js" />
+    <Content Include="Scripts\highchart\js\highcharts-more.js" />
+    <Content Include="Scripts\highchart\js\highcharts-more.src.js" />
+    <Content Include="Scripts\highchart\js\highcharts.js" />
+    <Content Include="Scripts\highchart\js\highcharts.src.js" />
+    <Content Include="Scripts\highchart\js\modules\accessibility.js" />
+    <Content Include="Scripts\highchart\js\modules\accessibility.src.js" />
+    <Content Include="Scripts\highchart\js\modules\annotations.js" />
+    <Content Include="Scripts\highchart\js\modules\annotations.src.js" />
+    <Content Include="Scripts\highchart\js\modules\boost-canvas.js" />
+    <Content Include="Scripts\highchart\js\modules\boost-canvas.src.js" />
+    <Content Include="Scripts\highchart\js\modules\boost.js" />
+    <Content Include="Scripts\highchart\js\modules\boost.src.js" />
+    <Content Include="Scripts\highchart\js\modules\broken-axis.js" />
+    <Content Include="Scripts\highchart\js\modules\broken-axis.src.js" />
+    <Content Include="Scripts\highchart\js\modules\bullet.js" />
+    <Content Include="Scripts\highchart\js\modules\bullet.src.js" />
+    <Content Include="Scripts\highchart\js\modules\data.js" />
+    <Content Include="Scripts\highchart\js\modules\data.src.js" />
+    <Content Include="Scripts\highchart\js\modules\drag-panes.js" />
+    <Content Include="Scripts\highchart\js\modules\drag-panes.src.js" />
+    <Content Include="Scripts\highchart\js\modules\drilldown.js" />
+    <Content Include="Scripts\highchart\js\modules\drilldown.src.js" />
+    <Content Include="Scripts\highchart\js\modules\export-data.js" />
+    <Content Include="Scripts\highchart\js\modules\export-data.src.js" />
+    <Content Include="Scripts\highchart\js\modules\exporting.js" />
+    <Content Include="Scripts\highchart\js\modules\exporting.src.js" />
+    <Content Include="Scripts\highchart\js\modules\funnel.js" />
+    <Content Include="Scripts\highchart\js\modules\funnel.src.js" />
+    <Content Include="Scripts\highchart\js\modules\gantt.js" />
+    <Content Include="Scripts\highchart\js\modules\gantt.src.js" />
+    <Content Include="Scripts\highchart\js\modules\grid-axis.js" />
+    <Content Include="Scripts\highchart\js\modules\grid-axis.src.js" />
+    <Content Include="Scripts\highchart\js\modules\heatmap.js" />
+    <Content Include="Scripts\highchart\js\modules\heatmap.src.js" />
+    <Content Include="Scripts\highchart\js\modules\histogram-bellcurve.js" />
+    <Content Include="Scripts\highchart\js\modules\histogram-bellcurve.src.js" />
+    <Content Include="Scripts\highchart\js\modules\item-series.js" />
+    <Content Include="Scripts\highchart\js\modules\item-series.src.js" />
+    <Content Include="Scripts\highchart\js\modules\no-data-to-display.js" />
+    <Content Include="Scripts\highchart\js\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\highchart\js\modules\offline-exporting.js" />
+    <Content Include="Scripts\highchart\js\modules\offline-exporting.src.js" />
+    <Content Include="Scripts\highchart\js\modules\oldie.js" />
+    <Content Include="Scripts\highchart\js\modules\oldie.src.js" />
+    <Content Include="Scripts\highchart\js\modules\overlapping-datalabels.js" />
+    <Content Include="Scripts\highchart\js\modules\overlapping-datalabels.src.js" />
+    <Content Include="Scripts\highchart\js\modules\parallel-coordinates.js" />
+    <Content Include="Scripts\highchart\js\modules\parallel-coordinates.src.js" />
+    <Content Include="Scripts\highchart\js\modules\pareto.js" />
+    <Content Include="Scripts\highchart\js\modules\pareto.src.js" />
+    <Content Include="Scripts\highchart\js\modules\sankey.js" />
+    <Content Include="Scripts\highchart\js\modules\sankey.src.js" />
+    <Content Include="Scripts\highchart\js\modules\series-label.js" />
+    <Content Include="Scripts\highchart\js\modules\series-label.src.js" />
+    <Content Include="Scripts\highchart\js\modules\solid-gauge.js" />
+    <Content Include="Scripts\highchart\js\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\highchart\js\modules\static-scale.js" />
+    <Content Include="Scripts\highchart\js\modules\static-scale.src.js" />
+    <Content Include="Scripts\highchart\js\modules\stock.js" />
+    <Content Include="Scripts\highchart\js\modules\stock.src.js" />
+    <Content Include="Scripts\highchart\js\modules\streamgraph.js" />
+    <Content Include="Scripts\highchart\js\modules\streamgraph.src.js" />
+    <Content Include="Scripts\highchart\js\modules\sunburst.js" />
+    <Content Include="Scripts\highchart\js\modules\sunburst.src.js" />
+    <Content Include="Scripts\highchart\js\modules\tilemap.js" />
+    <Content Include="Scripts\highchart\js\modules\tilemap.src.js" />
+    <Content Include="Scripts\highchart\js\modules\treemap.js" />
+    <Content Include="Scripts\highchart\js\modules\treemap.src.js" />
+    <Content Include="Scripts\highchart\js\modules\variable-pie.js" />
+    <Content Include="Scripts\highchart\js\modules\variable-pie.src.js" />
+    <Content Include="Scripts\highchart\js\modules\variwide.js" />
+    <Content Include="Scripts\highchart\js\modules\variwide.src.js" />
+    <Content Include="Scripts\highchart\js\modules\vector.js" />
+    <Content Include="Scripts\highchart\js\modules\vector.src.js" />
+    <Content Include="Scripts\highchart\js\modules\windbarb.js" />
+    <Content Include="Scripts\highchart\js\modules\windbarb.src.js" />
+    <Content Include="Scripts\highchart\js\modules\wordcloud.js" />
+    <Content Include="Scripts\highchart\js\modules\wordcloud.src.js" />
+    <Content Include="Scripts\highchart\js\modules\xrange.js" />
+    <Content Include="Scripts\highchart\js\modules\xrange.src.js" />
+    <Content Include="Scripts\highchart\js\themes\avocado.js" />
+    <Content Include="Scripts\highchart\js\themes\avocado.src.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-blue.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-blue.src.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-green.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-green.src.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-unica.js" />
+    <Content Include="Scripts\highchart\js\themes\dark-unica.src.js" />
+    <Content Include="Scripts\highchart\js\themes\gray.js" />
+    <Content Include="Scripts\highchart\js\themes\gray.src.js" />
+    <Content Include="Scripts\highchart\js\themes\grid-light.js" />
+    <Content Include="Scripts\highchart\js\themes\grid-light.src.js" />
+    <Content Include="Scripts\highchart\js\themes\grid.js" />
+    <Content Include="Scripts\highchart\js\themes\grid.src.js" />
+    <Content Include="Scripts\highchart\js\themes\sand-signika.js" />
+    <Content Include="Scripts\highchart\js\themes\sand-signika.src.js" />
+    <Content Include="Scripts\highchart\js\themes\skies.js" />
+    <Content Include="Scripts\highchart\js\themes\skies.src.js" />
+    <Content Include="Scripts\highchart\js\themes\sunset.js" />
+    <Content Include="Scripts\highchart\js\themes\sunset.src.js" />
+    <Content Include="Scripts\highchart\lib\canvg.js" />
+    <Content Include="Scripts\highchart\lib\canvg.src.js" />
+    <Content Include="Scripts\highchart\lib\jspdf.js" />
+    <Content Include="Scripts\highchart\lib\jspdf.src.js" />
+    <Content Include="Scripts\highchart\lib\rgbcolor.js" />
+    <Content Include="Scripts\highchart\lib\rgbcolor.src.js" />
+    <Content Include="Scripts\highchart\lib\svg2pdf.js" />
+    <Content Include="Scripts\highchart\lib\svg2pdf.src.js" />
+    <Content Include="Scripts\highchart\modules\accessibility.js" />
+    <Content Include="Scripts\highchart\modules\accessibility.src.js" />
+    <Content Include="Scripts\highchart\modules\annotations.js" />
+    <Content Include="Scripts\highchart\modules\annotations.src.js" />
+    <Content Include="Scripts\highchart\modules\boost-canvas.js" />
+    <Content Include="Scripts\highchart\modules\boost-canvas.src.js" />
+    <Content Include="Scripts\highchart\modules\boost.js" />
+    <Content Include="Scripts\highchart\modules\boost.src.js" />
+    <Content Include="Scripts\highchart\modules\broken-axis.js" />
+    <Content Include="Scripts\highchart\modules\broken-axis.src.js" />
+    <Content Include="Scripts\highchart\modules\bullet.js" />
+    <Content Include="Scripts\highchart\modules\bullet.src.js" />
+    <Content Include="Scripts\highchart\modules\data.js" />
+    <Content Include="Scripts\highchart\modules\data.src.js" />
+    <Content Include="Scripts\highchart\modules\drag-panes.js" />
+    <Content Include="Scripts\highchart\modules\drag-panes.src.js" />
+    <Content Include="Scripts\highchart\modules\drilldown.js" />
+    <Content Include="Scripts\highchart\modules\drilldown.src.js" />
+    <Content Include="Scripts\highchart\modules\export-data.js" />
+    <Content Include="Scripts\highchart\modules\export-data.src.js" />
+    <Content Include="Scripts\highchart\modules\exporting.js" />
+    <Content Include="Scripts\highchart\modules\exporting.src.js" />
+    <Content Include="Scripts\highchart\modules\funnel.js" />
+    <Content Include="Scripts\highchart\modules\funnel.src.js" />
+    <Content Include="Scripts\highchart\modules\gantt.js" />
+    <Content Include="Scripts\highchart\modules\gantt.src.js" />
+    <Content Include="Scripts\highchart\modules\grid-axis.js" />
+    <Content Include="Scripts\highchart\modules\grid-axis.src.js" />
+    <Content Include="Scripts\highchart\modules\heatmap.js" />
+    <Content Include="Scripts\highchart\modules\heatmap.src.js" />
+    <Content Include="Scripts\highchart\modules\histogram-bellcurve.js" />
+    <Content Include="Scripts\highchart\modules\histogram-bellcurve.src.js" />
+    <Content Include="Scripts\highchart\modules\item-series.js" />
+    <Content Include="Scripts\highchart\modules\item-series.src.js" />
+    <Content Include="Scripts\highchart\modules\no-data-to-display.js" />
+    <Content Include="Scripts\highchart\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\highchart\modules\offline-exporting.js" />
+    <Content Include="Scripts\highchart\modules\offline-exporting.src.js" />
+    <Content Include="Scripts\highchart\modules\oldie.js" />
+    <Content Include="Scripts\highchart\modules\oldie.src.js" />
+    <Content Include="Scripts\highchart\modules\overlapping-datalabels.js" />
+    <Content Include="Scripts\highchart\modules\overlapping-datalabels.src.js" />
+    <Content Include="Scripts\highchart\modules\parallel-coordinates.js" />
+    <Content Include="Scripts\highchart\modules\parallel-coordinates.src.js" />
+    <Content Include="Scripts\highchart\modules\pareto.js" />
+    <Content Include="Scripts\highchart\modules\pareto.src.js" />
+    <Content Include="Scripts\highchart\modules\sankey.js" />
+    <Content Include="Scripts\highchart\modules\sankey.src.js" />
+    <Content Include="Scripts\highchart\modules\series-label.js" />
+    <Content Include="Scripts\highchart\modules\series-label.src.js" />
+    <Content Include="Scripts\highchart\modules\solid-gauge.js" />
+    <Content Include="Scripts\highchart\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\highchart\modules\static-scale.js" />
+    <Content Include="Scripts\highchart\modules\static-scale.src.js" />
+    <Content Include="Scripts\highchart\modules\stock.js" />
+    <Content Include="Scripts\highchart\modules\stock.src.js" />
+    <Content Include="Scripts\highchart\modules\streamgraph.js" />
+    <Content Include="Scripts\highchart\modules\streamgraph.src.js" />
+    <Content Include="Scripts\highchart\modules\sunburst.js" />
+    <Content Include="Scripts\highchart\modules\sunburst.src.js" />
+    <Content Include="Scripts\highchart\modules\tilemap.js" />
+    <Content Include="Scripts\highchart\modules\tilemap.src.js" />
+    <Content Include="Scripts\highchart\modules\treemap.js" />
+    <Content Include="Scripts\highchart\modules\treemap.src.js" />
+    <Content Include="Scripts\highchart\modules\variable-pie.js" />
+    <Content Include="Scripts\highchart\modules\variable-pie.src.js" />
+    <Content Include="Scripts\highchart\modules\variwide.js" />
+    <Content Include="Scripts\highchart\modules\variwide.src.js" />
+    <Content Include="Scripts\highchart\modules\vector.js" />
+    <Content Include="Scripts\highchart\modules\vector.src.js" />
+    <Content Include="Scripts\highchart\modules\windbarb.js" />
+    <Content Include="Scripts\highchart\modules\windbarb.src.js" />
+    <Content Include="Scripts\highchart\modules\wordcloud.js" />
+    <Content Include="Scripts\highchart\modules\wordcloud.src.js" />
+    <Content Include="Scripts\highchart\modules\xrange.js" />
+    <Content Include="Scripts\highchart\modules\xrange.src.js" />
+    <Content Include="Scripts\highchart\readme.txt" />
+    <Content Include="Scripts\highchart\themes\avocado.js" />
+    <Content Include="Scripts\highchart\themes\avocado.src.js" />
+    <Content Include="Scripts\highchart\themes\dark-blue.js" />
+    <Content Include="Scripts\highchart\themes\dark-blue.src.js" />
+    <Content Include="Scripts\highchart\themes\dark-green.js" />
+    <Content Include="Scripts\highchart\themes\dark-green.src.js" />
+    <Content Include="Scripts\highchart\themes\dark-unica.js" />
+    <Content Include="Scripts\highchart\themes\dark-unica.src.js" />
+    <Content Include="Scripts\highchart\themes\gray.js" />
+    <Content Include="Scripts\highchart\themes\gray.src.js" />
+    <Content Include="Scripts\highchart\themes\grid-light.js" />
+    <Content Include="Scripts\highchart\themes\grid-light.src.js" />
+    <Content Include="Scripts\highchart\themes\grid.js" />
+    <Content Include="Scripts\highchart\themes\grid.src.js" />
+    <Content Include="Scripts\highchart\themes\sand-signika.js" />
+    <Content Include="Scripts\highchart\themes\sand-signika.src.js" />
+    <Content Include="Scripts\highchart\themes\skies.js" />
+    <Content Include="Scripts\highchart\themes\skies.src.js" />
+    <Content Include="Scripts\highchart\themes\sunset.js" />
+    <Content Include="Scripts\highchart\themes\sunset.src.js" />
+    <Content Include="Scripts\Other\bootstrap-select.min.js" />
+    <Content Include="Scripts\Other\ekko-lightbox.min.js" />
+    <Content Include="Scripts\Other\MapLeafLetDataEntry.js" />
+    <Content Include="Scripts\Other\sha256.min.js" />
+    <Content Include="Scripts\Other\spectrum.js" />
+    <Content Include="Scripts\Other\timepicki.js" />
+    <Content Include="Scripts\_Default\01-jquery-3.1.1.js" />
+    <Content Include="Scripts\_Default\10-jalaali.js" />
+    <Content Include="Scripts\_Default\11-ekko-lightbox.min.js" />
+    <Content Include="Scripts\_Admin\1-scripts.js" />
+    <Content Include="Scripts\_Default\02-bootstrap.js" />
+    <Content Include="Scripts\_Default\03-bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\_Default\04-bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\_Default\05-jquery.maskedinput.min.js" />
+    <Content Include="Scripts\_Default\06-jquery.noty.packaged.js" />
+    <Content Include="Scripts\_Default\07-jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\_Default\08-jquery.validate.js" />
+    <Content Include="Scripts\_Default\09-jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\_Default\JavaScript.js" />
+    <Content Include="Scripts\_Home\01-jquery.js" />
+    <Content Include="Scripts\_Home\02-bootstrap.js" />
+    <Content Include="Scripts\_Home\03-plugins.js" />
+    <Content Include="Scripts\_Home\04-scripts.js" />
+    <Content Include="Scripts\_Home\05-leaflet.js" />
+    <Content Include="Scripts\_Home\07-jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\_Home\reservationform\js\main.js" />
+    <Content Include="Scripts\_Home\reservationform\js\plugins.js" />
+    <Content Include="Scripts\_Home\reservationform\js\vendor\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\_Home\reservationform\js\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="Areas\Admin\Features\Profile\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\Profile\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\UserAccessList\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\_LayoutEmpty.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\_Profile.cshtml" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Content\_Home\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\_Employees.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\_Form.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Setting\Sms.cshtml" />
+    <Content Include="Areas\Admin\Features\Setting\_AsanPardakht.cshtml" />
+    <Content Include="Areas\Admin\Features\Setting\AsanPardakht.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\_Message.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\_Report.cshtml" />
+    <Content Include="Areas\Report\Features\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Report\Features\web.config" />
+    <Content Include="Areas\Report\Features\_ViewStart.cshtml" />
+    <Content Include="fonts\IranNastaliq.ttf" />
+    <Content Include="fonts\IranNastaliq.woff" />
+    <Content Include="fonts\IranNastaliq.eot" />
+    <Content Include="fonts\IranNastaliq.woff2" />
+    <Content Include="Areas\Admin\Features\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\PasswordCahnge.cshtml" />
+    <Content Include="Areas\Admin\Features\Employees\_FormPass.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\_Form.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Shared\RightMenu\_Equipment.cshtml" />
+    <Content Include="Areas\Admin\Features\EmployEquipment\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\EmployEquipment\Index.cshtml" />
+    <Content Include="Areas\Admin\Features\Equipment\ListEquipmentUnit.cshtml" />
+    <Content Include="Areas\Admin\Features\Home\ListEquipmentUnit.cshtml" />
+    <Content Include="Areas\Admin\Features\Home\Details.cshtml" />
+    <Content Include="Areas\Admin\Features\Segment\Add.cshtml" />
+    <Content Include="Areas\Admin\Features\Segment\Edit.cshtml" />
+    <Content Include="Areas\Admin\Features\Segment\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\highchart\css\highcharts.scss" />
+    <Content Include="Scripts\highchart\highcharts-3d.js.map" />
+    <Content Include="Scripts\highchart\highcharts-more.js.map" />
+    <Content Include="Scripts\highchart\highcharts.js.map" />
+    <Content Include="Scripts\highchart\js\highcharts-3d.js.map" />
+    <Content Include="Scripts\highchart\js\highcharts-more.js.map" />
+    <Content Include="Scripts\highchart\js\highcharts.js.map" />
+    <Content Include="Scripts\highchart\js\modules\accessibility.js.map" />
+    <Content Include="Scripts\highchart\js\modules\annotations.js.map" />
+    <Content Include="Scripts\highchart\js\modules\boost-canvas.js.map" />
+    <Content Include="Scripts\highchart\js\modules\boost.js.map" />
+    <Content Include="Scripts\highchart\js\modules\broken-axis.js.map" />
+    <Content Include="Scripts\highchart\js\modules\bullet.js.map" />
+    <Content Include="Scripts\highchart\js\modules\data.js.map" />
+    <Content Include="Scripts\highchart\js\modules\drag-panes.js.map" />
+    <Content Include="Scripts\highchart\js\modules\drilldown.js.map" />
+    <Content Include="Scripts\highchart\js\modules\export-data.js.map" />
+    <Content Include="Scripts\highchart\js\modules\exporting.js.map" />
+    <Content Include="Scripts\highchart\js\modules\funnel.js.map" />
+    <Content Include="Scripts\highchart\js\modules\gantt.js.map" />
+    <Content Include="Scripts\highchart\js\modules\grid-axis.js.map" />
+    <Content Include="Scripts\highchart\js\modules\heatmap.js.map" />
+    <Content Include="Scripts\highchart\js\modules\histogram-bellcurve.js.map" />
+    <Content Include="Scripts\highchart\js\modules\item-series.js.map" />
+    <Content Include="Scripts\highchart\js\modules\no-data-to-display.js.map" />
+    <Content Include="Scripts\highchart\js\modules\offline-exporting.js.map" />
+    <Content Include="Scripts\highchart\js\modules\oldie.js.map" />
+    <Content Include="Scripts\highchart\js\modules\overlapping-datalabels.js.map" />
+    <Content Include="Scripts\highchart\js\modules\parallel-coordinates.js.map" />
+    <Content Include="Scripts\highchart\js\modules\pareto.js.map" />
+    <Content Include="Scripts\highchart\js\modules\sankey.js.map" />
+    <Content Include="Scripts\highchart\js\modules\series-label.js.map" />
+    <Content Include="Scripts\highchart\js\modules\solid-gauge.js.map" />
+    <Content Include="Scripts\highchart\js\modules\static-scale.js.map" />
+    <Content Include="Scripts\highchart\js\modules\stock.js.map" />
+    <Content Include="Scripts\highchart\js\modules\streamgraph.js.map" />
+    <Content Include="Scripts\highchart\js\modules\sunburst.js.map" />
+    <Content Include="Scripts\highchart\js\modules\tilemap.js.map" />
+    <Content Include="Scripts\highchart\js\modules\treemap.js.map" />
+    <Content Include="Scripts\highchart\js\modules\variable-pie.js.map" />
+    <Content Include="Scripts\highchart\js\modules\variwide.js.map" />
+    <Content Include="Scripts\highchart\js\modules\vector.js.map" />
+    <Content Include="Scripts\highchart\js\modules\windbarb.js.map" />
+    <Content Include="Scripts\highchart\js\modules\wordcloud.js.map" />
+    <Content Include="Scripts\highchart\js\modules\xrange.js.map" />
+    <Content Include="Scripts\highchart\js\themes\avocado.js.map" />
+    <Content Include="Scripts\highchart\js\themes\dark-blue.js.map" />
+    <Content Include="Scripts\highchart\js\themes\dark-green.js.map" />
+    <Content Include="Scripts\highchart\js\themes\dark-unica.js.map" />
+    <Content Include="Scripts\highchart\js\themes\gray.js.map" />
+    <Content Include="Scripts\highchart\js\themes\grid-light.js.map" />
+    <Content Include="Scripts\highchart\js\themes\grid.js.map" />
+    <Content Include="Scripts\highchart\js\themes\sand-signika.js.map" />
+    <Content Include="Scripts\highchart\js\themes\skies.js.map" />
+    <Content Include="Scripts\highchart\js\themes\sunset.js.map" />
+    <Content Include="Scripts\highchart\modules\accessibility.js.map" />
+    <Content Include="Scripts\highchart\modules\annotations.js.map" />
+    <Content Include="Scripts\highchart\modules\boost-canvas.js.map" />
+    <Content Include="Scripts\highchart\modules\boost.js.map" />
+    <Content Include="Scripts\highchart\modules\broken-axis.js.map" />
+    <Content Include="Scripts\highchart\modules\bullet.js.map" />
+    <Content Include="Scripts\highchart\modules\data.js.map" />
+    <Content Include="Scripts\highchart\modules\drag-panes.js.map" />
+    <Content Include="Scripts\highchart\modules\drilldown.js.map" />
+    <Content Include="Scripts\highchart\modules\export-data.js.map" />
+    <Content Include="Scripts\highchart\modules\exporting.js.map" />
+    <Content Include="Scripts\highchart\modules\funnel.js.map" />
+    <Content Include="Scripts\highchart\modules\gantt.js.map" />
+    <Content Include="Scripts\highchart\modules\grid-axis.js.map" />
+    <Content Include="Scripts\highchart\modules\heatmap.js.map" />
+    <Content Include="Scripts\highchart\modules\histogram-bellcurve.js.map" />
+    <Content Include="Scripts\highchart\modules\item-series.js.map" />
+    <Content Include="Scripts\highchart\modules\no-data-to-display.js.map" />
+    <Content Include="Scripts\highchart\modules\offline-exporting.js.map" />
+    <Content Include="Scripts\highchart\modules\oldie.js.map" />
+    <Content Include="Scripts\highchart\modules\overlapping-datalabels.js.map" />
+    <Content Include="Scripts\highchart\modules\parallel-coordinates.js.map" />
+    <Content Include="Scripts\highchart\modules\pareto.js.map" />
+    <Content Include="Scripts\highchart\modules\sankey.js.map" />
+    <Content Include="Scripts\highchart\modules\series-label.js.map" />
+    <Content Include="Scripts\highchart\modules\solid-gauge.js.map" />
+    <Content Include="Scripts\highchart\modules\static-scale.js.map" />
+    <Content Include="Scripts\highchart\modules\stock.js.map" />
+    <Content Include="Scripts\highchart\modules\streamgraph.js.map" />
+    <Content Include="Scripts\highchart\modules\sunburst.js.map" />
+    <Content Include="Scripts\highchart\modules\tilemap.js.map" />
+    <Content Include="Scripts\highchart\modules\treemap.js.map" />
+    <Content Include="Scripts\highchart\modules\variable-pie.js.map" />
+    <Content Include="Scripts\highchart\modules\variwide.js.map" />
+    <Content Include="Scripts\highchart\modules\vector.js.map" />
+    <Content Include="Scripts\highchart\modules\windbarb.js.map" />
+    <Content Include="Scripts\highchart\modules\wordcloud.js.map" />
+    <Content Include="Scripts\highchart\modules\xrange.js.map" />
+    <Content Include="Scripts\highchart\themes\avocado.js.map" />
+    <Content Include="Scripts\highchart\themes\dark-blue.js.map" />
+    <Content Include="Scripts\highchart\themes\dark-green.js.map" />
+    <Content Include="Scripts\highchart\themes\dark-unica.js.map" />
+    <Content Include="Scripts\highchart\themes\gray.js.map" />
+    <Content Include="Scripts\highchart\themes\grid-light.js.map" />
+    <Content Include="Scripts\highchart\themes\grid.js.map" />
+    <Content Include="Scripts\highchart\themes\sand-signika.js.map" />
+    <Content Include="Scripts\highchart\themes\skies.js.map" />
+    <Content Include="Scripts\highchart\themes\sunset.js.map" />
+    <Content Include="Scripts\_Default\11-jquery.Bootstrap-PersianDateTimePicker.js" />
+    <None Include="T4MVC\T4MVC.tt.settings.xml" />
+    <Content Include="T4MVC\T4MVC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4MVC.cs</LastGenOutput>
+    </Content>
+    <Content Include="Upload\index.html" />
+    <Content Include="Views\Error\HttpError404.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Error\ListOfErrors.cshtml" />
+    <Content Include="Views\Error\NoPermission.cshtml" />
+    <Content Include="Views\Error\Success.cshtml" />
+    <Content Include="Views\Extension\img\myimg.png" />
+    <Content Include="Views\Extension\jquery-3.2.1.min.js" />
+    <Content Include="Views\Extension\js\analytics.js" />
+    <Content Include="Views\Extension\js\background.js" />
+    <Content Include="Views\Extension\js\cptemplates.js" />
+    <Content Include="Views\Extension\js\json2-min.js" />
+    <Content Include="Views\Extension\js\startEditor.js" />
+    <Content Include="Views\Extension\js\startSelector.js" />
+    <Content Include="Views\Extension\manifest.json" />
+    <Content Include="Views\Extension\Popup.html" />
+    <Content Include="Views\Extension\popup.js" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Bootstrap3Pagination.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Double.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Int32.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Int64.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\String.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutEmpty.cshtml" />
+    <Content Include="Views\Shared\_LayoutSabt.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Bootstrapping.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Areas\Admin\Base\AdminBaseController.cs" />
+    <Compile Include="Areas\Admin\Features\Account\AccountController.cs" />
+    <Compile Include="Areas\Admin\Features\Account\LoginViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EmployEquipment\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EmployEquipment\EmployEquipmentController.cs" />
+    <Compile Include="Areas\Admin\Features\EmployEquipment\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\EquipmentFaultyController.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\IndexSearchViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\EquipmentFaulty\_FormViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\EquipmentController.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\IndexSearchViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Equipment\_FormViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\EmployeesController.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\IndexSearchViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Employees\_FormViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Home\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Segment\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Segment\AdminSegmentIndexSearchViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Segment\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Segment\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Segment\SegmentController.cs" />
+    <Compile Include="Areas\Admin\Features\Setting\AsanPardakhtViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Setting\SmsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\UserAccessList\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\UserAccessList\UserAccessListController.cs" />
+    <Compile Include="Areas\Admin\Features\Home\HomeController.cs" />
+    <Compile Include="Areas\Admin\Features\Home\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Profile\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Profile\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Profile\ProfileController.cs" />
+    <Compile Include="Areas\Admin\Features\Role\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Role\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Role\_FormViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Role\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\Role\RoleController.cs" />
+    <Compile Include="Areas\Admin\Features\Setting\SettingController.cs" />
+    <Compile Include="Areas\Admin\Features\User\IndexSearchViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\EditViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\_FormViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\AddViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\DetailsViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\IndexViewModel.cs" />
+    <Compile Include="Areas\Admin\Features\User\UserController.cs" />
+    <Compile Include="Areas\Report\Base\ReportBaseController.cs" />
+    <Compile Include="Areas\Report\Base\ReportBaseViewModel.cs" />
+    <Compile Include="Areas\Report\ReportAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DependencyResolution\ObjectFactory.cs" />
+    <Compile Include="DNTScheduler\JobsTask\SmsLogTask.cs" />
+    <Compile Include="Helpers\TreeView.cs" />
+    <Compile Include="Models\LoginInfo.cs" />
+    <Compile Include="DependencyResolution\ControllerConvention.cs" />
+    <Compile Include="DependencyResolution\CostumeObjectFactory.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\Registery\AspNetIdentityRegistery.cs" />
+    <Compile Include="DependencyResolution\Registery\AutoMapperRegistry.cs" />
+    <Compile Include="DependencyResolution\Registery\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
+    <Compile Include="DNTScheduler\JobsTask\DeleteOldErrorLogsTask.cs" />
+    <Compile Include="DNTScheduler\ScheduledTasksRegistry.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Base\AdminBaseViewModel.cs" />
+    <Compile Include="Models\GlobalInfo.cs" />
+    <Compile Include="Models\Home\HomeIndexViewModel.cs" />
+    <Compile Include="Models\Sadad\SadadPayResultData.cs" />
+    <Compile Include="Models\Sadad\SadadPurchaseResult.cs" />
+    <Compile Include="Models\Sadad\SadadVerifyResultData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="T4MVC\AccountController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.AccountController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.AdminBaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.BaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.EmployeesController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.EmployEquipmentController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.EquipmentController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.EquipmentFaultyController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.FeaturesController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.ProfileController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.RoleController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.SegmentController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.SettingController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.UserAccessListController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Admin.UserController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\ErrorController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\ExtensionController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Report.BaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Report.FeaturesController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\Report.ReportBaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\SharedController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\T4MVC.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\AFSANEH.ttf" />
+    <Content Include="fonts\bbc-nassim-bold.eot" />
+    <Content Include="fonts\bbc-nassim-bold.ttf" />
+    <Content Include="fonts\bbc-nassim-bold.woff" />
+    <Content Include="fonts\bbc-nassim-regular.eot" />
+    <Content Include="fonts\bbc-nassim-regular.ttf" />
+    <Content Include="fonts\bbc-nassim-regular.woff" />
+    <Content Include="fonts\BYekan.eot" />
+    <Content Include="fonts\BYekan.ttf" />
+    <Content Include="fonts\BYekan.woff" />
+    <Content Include="fonts\FarTehran.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\index.php" />
+    <Content Include="fonts\summernote.eot" />
+    <Content Include="fonts\summernote.ttf" />
+    <Content Include="fonts\summernote.woff" />
+    <Content Include="packages.config" />
+    <None Include="T4MVC\T4MVC.tt.hooks.t4" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\StimulReport\" />
+    <Folder Include="Upload\RentFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NezamEquipment.AutoMapper\NezamEquipment.AutoMapper.csproj">
+      <Project>{A532319B-5874-48EE-A83B-C16687F1BA7D}</Project>
+      <Name>NezamEquipment.AutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NezamEquipment.Common\NezamEquipment.Common.csproj">
+      <Project>{375E9441-64F8-43CA-AA50-7EB605116C37}</Project>
+      <Name>NezamEquipment.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NezamEquipment.DataLayer\NezamEquipment.DataLayer.csproj">
+      <Project>{e1592401-c09c-4d4d-9037-578d3741a964}</Project>
+      <Name>NezamEquipment.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NezamEquipment.DomainClasses\NezamEquipment.DomainClasses.csproj">
+      <Project>{2ddcfeda-dfee-4c34-977d-4aae48921b0d}</Project>
+      <Name>NezamEquipment.DomainClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NezamEquipment.ServiceLayer\NezamEquipment.ServiceLayer.csproj">
+      <Project>{95e6879b-187d-4689-a839-9235d4e9c2da}</Project>
+      <Name>NezamEquipment.ServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NezamEquipment.Web.Framework\NezamEquipment.Web.Framework.csproj">
+      <Project>{c2d2e09c-6438-4822-a0a5-31f660c64f0c}</Project>
+      <Name>NezamEquipment.Web.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExtraLibraries\PersianDataAnnotations\PersianDataAnnotations.csproj">
+      <Project>{D230F4B7-C93A-4824-9296-47C2DB8B8A09}</Project>
+      <Name>PersianDataAnnotations</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1324</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1324/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.3.5.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.3.5.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

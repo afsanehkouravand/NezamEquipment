@@ -1,0 +1,76 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.User.AdminUserPartialFormViewModel
+
+<div class="well well-white well-shadow">
+    <fieldset class="fieldset">
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.User.Id)
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <div class="row margin-bottom-10">
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.UserName, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.FirstName, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.LastName, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.Position, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.Position, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.Position, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.Email, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.User.Password, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.User.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-12">
+                @Html.LabelFor(model => model.User.AreaType, htmlAttributes: new { @class = "control-label" })
+                @Html.EnumDropDownListFor(model => model.User.AreaType, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.User.AreaType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row margin-bottom-10 margin-top-30">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    @Html.Label("نقش ها", htmlAttributes: new { @class = "control-label col-md-2 text-left" })
+                    <div class="col-md-7">
+                        <span class="help-block">لطفا نقش های که این کاربر به آنها دسترسی دارد را انتخاب کنید.</span>
+                        @foreach (var item in Model.AllRoles)
+                        {
+                            <div class="">
+                                <input type="checkbox" name="SelectedRole" value="@item.Value" @(item.Selected ? "checked" : "") class="checkbox-inline" />
+                                @item.Text
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group form-button">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ارسال" class="btn btn-success" />
+                @Html.ButtonLoading()
+            </div>
+        </div>
+    </fieldset>
+</div>

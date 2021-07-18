@@ -1,0 +1,35 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel
+@{
+   
+    var indexNezamEmploye = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.Employees.Name, MVC.Admin.Employees.ActionNames.Index);
+    var count = 0;
+}
+
+@if ( indexNezamEmploye)
+{
+    var controllerGroup = new List<string>
+            {
+               
+                MVC.Admin.Employees.Name.ToLower(),
+            };
+    <li data-controller-group="@string.Join(" ",controllerGroup)">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-user"></i>
+            <span>کارمندان</span>
+            @if (count != 0)
+            {
+                <span class="label label-number-circle" style="color: white !important; margin: 0; font-size: 14px;">@count</span>
+            }
+            <i class="fa fa-chevron-circle-left drop-icon"></i>
+        </a>
+        <ul class="submenu">
+
+            <li data-controller-action="@MVC.Admin.Employees.Name.ToLower() @MVC.Admin.Employees.ActionNames.Index.ToLower()">
+                <a href="@Url.Action(MVC.Admin.Employees.Index())">
+                    <span>لیست کارمندان </span>
+                </a>
+            </li>
+
+        </ul>
+    </li>
+}

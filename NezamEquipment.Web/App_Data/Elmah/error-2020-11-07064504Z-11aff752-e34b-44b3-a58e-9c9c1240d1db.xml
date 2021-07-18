@@ -1,0 +1,183 @@
+﻿<error errorId="11aff752-e34b-44b3-a58e-9c9c1240d1db" application="/LM/W3SVC/2/ROOT" host="KOURAVAND" type="System.NotSupportedException" message="LINQ to Entities does not recognize the method 'System.String ShamsiDateTime(System.DateTime, System.Nullable`1[System.Boolean])' method, and this method cannot be translated into a store expression." source="EntityFramework" detail="System.NotSupportedException: LINQ to Entities does not recognize the method 'System.String ShamsiDateTime(System.DateTime, System.Nullable`1[System.Boolean])' method, and this method cannot be translated into a store expression.&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.DefaultTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MemberInitTranslator.TypedTranslate(ExpressionConverter parent, MemberInitExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.JoinTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression&amp; source, DbExpressionBinding&amp; sourceBinding, DbExpression&amp; lambda)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryMergeAsTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectQuery.ToTraceString()&#xD;&#xA;   at EFSecondLevelCache.EFCacheKeyProvider.GetEFCacheKey[T](IQueryable`1 query, Expression expression, String keyHashPrefix, String saltKey)&#xD;&#xA;   at EFSecondLevelCache.EFCachedQueryProvider`1.Materialize(Expression expression, Func`1 materializer)&#xD;&#xA;   at EFSecondLevelCache.EFCachedQueryProvider`1.Execute[TResult](Expression expression)&#xD;&#xA;   at EFSecondLevelCache.EFCachedQueryProvider`1.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)&#xD;&#xA;   at System.Data.Entity.QueryableExtensions.CountAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)&#xD;&#xA;   at System.Data.Entity.QueryableExtensions.CountAsync[TSource](IQueryable`1 source)&#xD;&#xA;   at NezamEquipment.Common.ServiceLayer.ToGetAllTupleResultExtension.&lt;ToGetAllTupleResult&gt;d__0`2.MoveNext() in F:\kouravand\NezamEquipment\NezamEquipment.Common\ServiceLayer\ToGetAllTupleResultExtension.cs:line 29&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.ServiceLayer.Entity.Equipment.EquipmentService.&lt;GetAllAsync&gt;d__11.MoveNext() in F:\kouravand\NezamEquipment\NezamEquipment.ServiceLayer\Entity\Equipment\EquipmentService.cs:line 194&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.Web.Areas.Admin.Features.Equipment.EquipmentController.&lt;Index&gt;d__3.MoveNext() in F:\kouravand\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\Equipment\EquipmentController.cs:line 55&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="sa" time="2020-11-07T06:45:04.0913821Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=cIZX-27YYyP3gfunI8zTeTWgXCI22eqgS8aUu_za2x_oaQTk66bsOHQqISQJeZ7aq8YJBIcFXL_W21kNds376oyEH_k1; ASP.NET_SessionId=0maiceiaex2t45jdwuru1buf; NezamEquipmentIdentityCookie=hFCQj3uaTcgCDOIVQR6du04rTvjYCcnetFbS2-XFphfi_4DvECB3G5CY8pgkQgBQMXrkudGp7j9QQGm35vIZWpPCwBJQGTQKlz4oWECwBkaffiuJPvFc5xbRq97DrFk_uIdC53MmGF3okQPreOcIqCaOXNXfexUrNEeGTnJhS21N6WmfFmNUhzevOyo8yb8hEjW3lERmcdBnhdLJNAVYTmvXQpFIF5DdZv1S9-zE6KbIxjT0nkPhtidKbAVyBWCC45XuO3-E5EMyQoflJT019EJs3kIj2sDxGsB_89zWLq2sUYemmYuqwDfDG7iKk1f9Jk7lKH94C8pvoq39Y8KlmGzgP5JMXhheyx312m13X8DY-7r3he1Le26YbzWwfwiobxocLd3Zh86rx-xeYAm7s_t_8S3NOAGRS20fqaxAlxRG4uWWBIOFsX6QsT7h6OJyIIpEd6aGx5Yjc45lRPftCWkDjCWeWXUsJIRnE401Z5jhjwehkpTlfjb-eGOAowkJiOaf2Q&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/Admin&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: __RequestVerificationToken=cIZX-27YYyP3gfunI8zTeTWgXCI22eqgS8aUu_za2x_oaQTk66bsOHQqISQJeZ7aq8YJBIcFXL_W21kNds376oyEH_k1; ASP.NET_SessionId=0maiceiaex2t45jdwuru1buf; NezamEquipmentIdentityCookie=hFCQj3uaTcgCDOIVQR6du04rTvjYCcnetFbS2-XFphfi_4DvECB3G5CY8pgkQgBQMXrkudGp7j9QQGm35vIZWpPCwBJQGTQKlz4oWECwBkaffiuJPvFc5xbRq97DrFk_uIdC53MmGF3okQPreOcIqCaOXNXfexUrNEeGTnJhS21N6WmfFmNUhzevOyo8yb8hEjW3lERmcdBnhdLJNAVYTmvXQpFIF5DdZv1S9-zE6KbIxjT0nkPhtidKbAVyBWCC45XuO3-E5EMyQoflJT019EJs3kIj2sDxGsB_89zWLq2sUYemmYuqwDfDG7iKk1f9Jk7lKH94C8pvoq39Y8KlmGzgP5JMXhheyx312m13X8DY-7r3he1Le26YbzWwfwiobxocLd3Zh86rx-xeYAm7s_t_8S3NOAGRS20fqaxAlxRG4uWWBIOFsX6QsT7h6OJyIIpEd6aGx5Yjc45lRPftCWkDjCWeWXUsJIRnE401Z5jhjwehkpTlfjb-eGOAowkJiOaf2Q&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/Admin&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\kouravand\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="sa" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Admin/Equipment" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\kouravand\NezamEquipment\NezamEquipment.Web\Admin\Equipment" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="54226" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Admin/Equipment" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Admin/Equipment" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=cIZX-27YYyP3gfunI8zTeTWgXCI22eqgS8aUu_za2x_oaQTk66bsOHQqISQJeZ7aq8YJBIcFXL_W21kNds376oyEH_k1; ASP.NET_SessionId=0maiceiaex2t45jdwuru1buf; NezamEquipmentIdentityCookie=hFCQj3uaTcgCDOIVQR6du04rTvjYCcnetFbS2-XFphfi_4DvECB3G5CY8pgkQgBQMXrkudGp7j9QQGm35vIZWpPCwBJQGTQKlz4oWECwBkaffiuJPvFc5xbRq97DrFk_uIdC53MmGF3okQPreOcIqCaOXNXfexUrNEeGTnJhS21N6WmfFmNUhzevOyo8yb8hEjW3lERmcdBnhdLJNAVYTmvXQpFIF5DdZv1S9-zE6KbIxjT0nkPhtidKbAVyBWCC45XuO3-E5EMyQoflJT019EJs3kIj2sDxGsB_89zWLq2sUYemmYuqwDfDG7iKk1f9Jk7lKH94C8pvoq39Y8KlmGzgP5JMXhheyx312m13X8DY-7r3he1Le26YbzWwfwiobxocLd3Zh86rx-xeYAm7s_t_8S3NOAGRS20fqaxAlxRG4uWWBIOFsX6QsT7h6OJyIIpEd6aGx5Yjc45lRPftCWkDjCWeWXUsJIRnE401Z5jhjwehkpTlfjb-eGOAowkJiOaf2Q" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/Admin" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="cIZX-27YYyP3gfunI8zTeTWgXCI22eqgS8aUu_za2x_oaQTk66bsOHQqISQJeZ7aq8YJBIcFXL_W21kNds376oyEH_k1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="0maiceiaex2t45jdwuru1buf" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="hFCQj3uaTcgCDOIVQR6du04rTvjYCcnetFbS2-XFphfi_4DvECB3G5CY8pgkQgBQMXrkudGp7j9QQGm35vIZWpPCwBJQGTQKlz4oWECwBkaffiuJPvFc5xbRq97DrFk_uIdC53MmGF3okQPreOcIqCaOXNXfexUrNEeGTnJhS21N6WmfFmNUhzevOyo8yb8hEjW3lERmcdBnhdLJNAVYTmvXQpFIF5DdZv1S9-zE6KbIxjT0nkPhtidKbAVyBWCC45XuO3-E5EMyQoflJT019EJs3kIj2sDxGsB_89zWLq2sUYemmYuqwDfDG7iKk1f9Jk7lKH94C8pvoq39Y8KlmGzgP5JMXhheyx312m13X8DY-7r3he1Le26YbzWwfwiobxocLd3Zh86rx-xeYAm7s_t_8S3NOAGRS20fqaxAlxRG4uWWBIOFsX6QsT7h6OJyIIpEd6aGx5Yjc45lRPftCWkDjCWeWXUsJIRnE401Z5jhjwehkpTlfjb-eGOAowkJiOaf2Q" />
+    </item>
+  </cookies>
+</error>

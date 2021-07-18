@@ -1,0 +1,180 @@
+﻿<error errorId="3beef7b8-1f75-4a3a-9cc6-adf59fc29d23" application="/LM/W3SVC/2/ROOT" host="DESKTOP-G9DJ020" type="System.Web.HttpException" message="Path '/Areas/Admin/Features/Transfer/Index.cshtml' was not found." source="System.Web" detail="System.Web.HttpException (0x80004005): Path '/Areas/Admin/Features/Transfer/Index.cshtml' was not found.&#xD;&#xA;   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="sa" time="2020-09-19T05:32:00.2085902Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=xp33l3rvkstgo2wwhqavswxh; __RequestVerificationToken=fuZ10RFTsoVlGHJ06BzXeFIWXgEtNiZc_lPNKMH3lGUW9DRNCU9-apnWeiruUwI1V-vjkGhzc5QsGh4H5fgZ1TEVJvk1; NezamEquipmentIdentityCookie=fdX4BV3aaR-988Hv-Qki2s8aQkvEkoLYkkagR-SWY3xtBHqcVJAjr8GLA02q84GfogLeyegBYP9ywxv8Hg5XF4byAB8wD4jSrODSnGUVoTuoqsOZoUWVmENKS6Qb7q0KB5L5EO9lZAx49WK0_vJpu4g9nxuJ6bOD90Y8A77EZLGgXEpsTAATZw9wXURfuUFkMkpWrRshYSNLWJDiSeW9jeGBMa4Q0clw4xdhoHxz1sjZxOVuojUOWDbENY7_mRXT9SVcD4aXUWxR2hVzNqWls8XL1k7An-ZZqEDn77RLI-CxMarh1sclPY55uzgNtUqtMWSoMpUHVHuqCRwd6PuLSjlCFRSdasPtVsHRPwifrQaJ5_e7ZBAJ22Vu77xIFZlgEJfvhtGJqr7E7igmZ5QJz8CDu0C4n9Hnq9ErSolh924YSZ8Bg-f2mlsk2xIaO1xpXZ8tzz1lVzh3pK97TrfG1eRinP-dd1wkYg6fTBos9hhgzVxg1cJ-tkN0cZ7EmIBxzFkzgIEVvRsaSxMYjIjrb4mbgeg&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:none&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: ASP.NET_SessionId=xp33l3rvkstgo2wwhqavswxh; __RequestVerificationToken=fuZ10RFTsoVlGHJ06BzXeFIWXgEtNiZc_lPNKMH3lGUW9DRNCU9-apnWeiruUwI1V-vjkGhzc5QsGh4H5fgZ1TEVJvk1; NezamEquipmentIdentityCookie=fdX4BV3aaR-988Hv-Qki2s8aQkvEkoLYkkagR-SWY3xtBHqcVJAjr8GLA02q84GfogLeyegBYP9ywxv8Hg5XF4byAB8wD4jSrODSnGUVoTuoqsOZoUWVmENKS6Qb7q0KB5L5EO9lZAx49WK0_vJpu4g9nxuJ6bOD90Y8A77EZLGgXEpsTAATZw9wXURfuUFkMkpWrRshYSNLWJDiSeW9jeGBMa4Q0clw4xdhoHxz1sjZxOVuojUOWDbENY7_mRXT9SVcD4aXUWxR2hVzNqWls8XL1k7An-ZZqEDn77RLI-CxMarh1sclPY55uzgNtUqtMWSoMpUHVHuqCRwd6PuLSjlCFRSdasPtVsHRPwifrQaJ5_e7ZBAJ22Vu77xIFZlgEJfvhtGJqr7E7igmZ5QJz8CDu0C4n9Hnq9ErSolh924YSZ8Bg-f2mlsk2xIaO1xpXZ8tzz1lVzh3pK97TrfG1eRinP-dd1wkYg6fTBos9hhgzVxg1cJ-tkN0cZ7EmIBxzFkzgIEVvRsaSxMYjIjrb4mbgeg&#xD;&#xA;Host: localhost:1324&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: none&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Areas/Admin/Features/Transfer/Index.cshtml" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\Transfer\Index.cshtml" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="54139" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Areas/Admin/Features/Transfer/Index.cshtml" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Areas/Admin/Features/Transfer/Index.cshtml" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=xp33l3rvkstgo2wwhqavswxh; __RequestVerificationToken=fuZ10RFTsoVlGHJ06BzXeFIWXgEtNiZc_lPNKMH3lGUW9DRNCU9-apnWeiruUwI1V-vjkGhzc5QsGh4H5fgZ1TEVJvk1; NezamEquipmentIdentityCookie=fdX4BV3aaR-988Hv-Qki2s8aQkvEkoLYkkagR-SWY3xtBHqcVJAjr8GLA02q84GfogLeyegBYP9ywxv8Hg5XF4byAB8wD4jSrODSnGUVoTuoqsOZoUWVmENKS6Qb7q0KB5L5EO9lZAx49WK0_vJpu4g9nxuJ6bOD90Y8A77EZLGgXEpsTAATZw9wXURfuUFkMkpWrRshYSNLWJDiSeW9jeGBMa4Q0clw4xdhoHxz1sjZxOVuojUOWDbENY7_mRXT9SVcD4aXUWxR2hVzNqWls8XL1k7An-ZZqEDn77RLI-CxMarh1sclPY55uzgNtUqtMWSoMpUHVHuqCRwd6PuLSjlCFRSdasPtVsHRPwifrQaJ5_e7ZBAJ22Vu77xIFZlgEJfvhtGJqr7E7igmZ5QJz8CDu0C4n9Hnq9ErSolh924YSZ8Bg-f2mlsk2xIaO1xpXZ8tzz1lVzh3pK97TrfG1eRinP-dd1wkYg6fTBos9hhgzVxg1cJ-tkN0cZ7EmIBxzFkzgIEVvRsaSxMYjIjrb4mbgeg" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="none" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="xp33l3rvkstgo2wwhqavswxh" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="fuZ10RFTsoVlGHJ06BzXeFIWXgEtNiZc_lPNKMH3lGUW9DRNCU9-apnWeiruUwI1V-vjkGhzc5QsGh4H5fgZ1TEVJvk1" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="fdX4BV3aaR-988Hv-Qki2s8aQkvEkoLYkkagR-SWY3xtBHqcVJAjr8GLA02q84GfogLeyegBYP9ywxv8Hg5XF4byAB8wD4jSrODSnGUVoTuoqsOZoUWVmENKS6Qb7q0KB5L5EO9lZAx49WK0_vJpu4g9nxuJ6bOD90Y8A77EZLGgXEpsTAATZw9wXURfuUFkMkpWrRshYSNLWJDiSeW9jeGBMa4Q0clw4xdhoHxz1sjZxOVuojUOWDbENY7_mRXT9SVcD4aXUWxR2hVzNqWls8XL1k7An-ZZqEDn77RLI-CxMarh1sclPY55uzgNtUqtMWSoMpUHVHuqCRwd6PuLSjlCFRSdasPtVsHRPwifrQaJ5_e7ZBAJ22Vu77xIFZlgEJfvhtGJqr7E7igmZ5QJz8CDu0C4n9Hnq9ErSolh924YSZ8Bg-f2mlsk2xIaO1xpXZ8tzz1lVzh3pK97TrfG1eRinP-dd1wkYg6fTBos9hhgzVxg1cJ-tkN0cZ7EmIBxzFkzgIEVvRsaSxMYjIjrb4mbgeg" />
+    </item>
+  </cookies>
+</error>

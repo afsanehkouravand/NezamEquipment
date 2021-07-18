@@ -1,0 +1,21 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.User.AdminUserEditViewModel
+@{
+    ViewBag.PageTitle = "ویرایش اطلاعات کاربر";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    @using (Ajax.BeginForm("Edit", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.User.Edit()))))
+    {
+        Html.RenderPartial("_Form", Model.PartialForm);
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.User.Details(Model.PartialForm.User.Id))';
+    </script>
+}

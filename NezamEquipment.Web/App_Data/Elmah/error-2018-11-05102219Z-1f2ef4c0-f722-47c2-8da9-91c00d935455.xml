@@ -1,0 +1,165 @@
+﻿<error errorId="1f2ef4c0-f722-47c2-8da9-91c00d935455" application="/LM/W3SVC/2/ROOT" host="KOURAVAND-PC" type="System.Web.HttpException" message="The controller for path '/RentAndTransfert/AddTransfer' was not found or does not implement IController." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): The controller for path '/RentAndTransfert/AddTransfer' was not found or does not implement IController.&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" time="2018-11-05T10:22:19.1275931Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=EhmHZU8hJYUXGVbyYtqA0f9r3J8FIfxe_iWGNqggs-C2zzBWklJHMhJ8XMVGpocPZ280AIpQe2_L9wzx6rziMrymJbM1; .ASPXAUTH=5AC84EDAD4C58B19A3BCA7B413547462EA7E54903A29D8727B8E59B7F0E404FB2C8A45843873CCD8EA1B9477D5C6F2AAA74D3175574CE6F73533B7056AEA3BD97008C36223BA8DCD13EF733F015B78765BF282C43B1A803C8120C9D15903348D4B0D40A7EFD895A271F5A18BFBB15983EEA5BBD0CD62422AF89CE50069E0BAC78AE2F8949C1ADD648903CE97F692EB471B900F6C34ED2EF7D1115A9104951536582365778DB03DB70E2D8F6687CDCA374153FDA67C7704F8E2A8923A86E8F64FE8E3682A47205E53E6DAE18807DB949E32F5BD42&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: __RequestVerificationToken=EhmHZU8hJYUXGVbyYtqA0f9r3J8FIfxe_iWGNqggs-C2zzBWklJHMhJ8XMVGpocPZ280AIpQe2_L9wzx6rziMrymJbM1; .ASPXAUTH=5AC84EDAD4C58B19A3BCA7B413547462EA7E54903A29D8727B8E59B7F0E404FB2C8A45843873CCD8EA1B9477D5C6F2AAA74D3175574CE6F73533B7056AEA3BD97008C36223BA8DCD13EF733F015B78765BF282C43B1A803C8120C9D15903348D4B0D40A7EFD895A271F5A18BFBB15983EEA5BBD0CD62422AF89CE50069E0BAC78AE2F8949C1ADD648903CE97F692EB471B900F6C34ED2EF7D1115A9104951536582365778DB03DB70E2D8F6687CDCA374153FDA67C7704F8E2A8923A86E8F64FE8E3682A47205E53E6DAE18807DB949E32F5BD42&#xD;&#xA;Host: localhost:1324&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/RentAndTransfert/AddTransfer" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\RentAndTransfert\AddTransfer" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50911" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/RentAndTransfert/AddTransfer" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/RentAndTransfert/AddTransfer" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=EhmHZU8hJYUXGVbyYtqA0f9r3J8FIfxe_iWGNqggs-C2zzBWklJHMhJ8XMVGpocPZ280AIpQe2_L9wzx6rziMrymJbM1; .ASPXAUTH=5AC84EDAD4C58B19A3BCA7B413547462EA7E54903A29D8727B8E59B7F0E404FB2C8A45843873CCD8EA1B9477D5C6F2AAA74D3175574CE6F73533B7056AEA3BD97008C36223BA8DCD13EF733F015B78765BF282C43B1A803C8120C9D15903348D4B0D40A7EFD895A271F5A18BFBB15983EEA5BBD0CD62422AF89CE50069E0BAC78AE2F8949C1ADD648903CE97F692EB471B900F6C34ED2EF7D1115A9104951536582365778DB03DB70E2D8F6687CDCA374153FDA67C7704F8E2A8923A86E8F64FE8E3682A47205E53E6DAE18807DB949E32F5BD42" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="EhmHZU8hJYUXGVbyYtqA0f9r3J8FIfxe_iWGNqggs-C2zzBWklJHMhJ8XMVGpocPZ280AIpQe2_L9wzx6rziMrymJbM1" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="5AC84EDAD4C58B19A3BCA7B413547462EA7E54903A29D8727B8E59B7F0E404FB2C8A45843873CCD8EA1B9477D5C6F2AAA74D3175574CE6F73533B7056AEA3BD97008C36223BA8DCD13EF733F015B78765BF282C43B1A803C8120C9D15903348D4B0D40A7EFD895A271F5A18BFBB15983EEA5BBD0CD62422AF89CE50069E0BAC78AE2F8949C1ADD648903CE97F692EB471B900F6C34ED2EF7D1115A9104951536582365778DB03DB70E2D8F6687CDCA374153FDA67C7704F8E2A8923A86E8F64FE8E3682A47205E53E6DAE18807DB949E32F5BD42" />
+    </item>
+  </cookies>
+</error>

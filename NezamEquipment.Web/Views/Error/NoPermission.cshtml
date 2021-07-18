@@ -1,0 +1,15 @@
+﻿@model int
+@{
+    ViewBag.PageTitle = "اجازه دسترسی";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+<div class="container tahoma">
+    <div class="hidden-sm hidden-xs" style="height: 80px;"></div>
+    <div class="hidden-lg hidden-md" style="height: 30px;"></div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-danger text-center">
+            <strong>شما اجازه دسترسی به این صفحه را ندارید. @(Model > 0 ? Model.ToString() : "")</strong>
+        </div>
+    </div>
+</div>

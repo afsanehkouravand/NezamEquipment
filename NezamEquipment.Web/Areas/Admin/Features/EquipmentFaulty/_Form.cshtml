@@ -1,0 +1,54 @@
+﻿@using NezamEquipment.ServiceLayer.OtherServices.Upload.Dto
+@model NezamEquipment.Web.Areas.Admin.Features.EquipmentFaulty.AdminEquipmentFaultyPartialFormViewModel
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.EquipmentFaultyDto.Id)
+@Html.HiddenFor(x => x.EquipmentId)
+
+<div class="well well-white well-shadow">
+    <fieldset class="form-horizontal fieldset">
+        <legend>اطلاعات قطعات تعمیری</legend>
+        <div class="row margin-bottom-10">
+
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentFaultyDto.MoneyRepair)
+                @Html.TextBoxFor(x => x.EquipmentFaultyDto.MoneyRepair, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentFaultyDto.MoneyRepair, "", new { @class = "text-danger" })
+            </div>
+         
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentFaultyDto.RepairDatestr)
+                @Html.DatePickerFor(x => x.EquipmentFaultyDto.RepairDatestr, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentFaultyDto.RepairDatestr, "", new { @class = "text-danger" })
+            </div>
+           
+        </div>
+
+        <div class="row margin-bottom-10">
+
+            <div class="col-sm-12">
+                @Html.LabelFor(x => x.EquipmentFaultyDto.Description)
+                @Html.TextBoxFor(x => x.EquipmentFaultyDto.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentFaultyDto.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+       
+            <div class="col-sm-6">
+                <div class="well well-sm well-shadow">
+                    @Html.Label(Model.UploadByBase64.Title)
+                    @Html.ValidationMessage($"{nameof(Model.UploadByBase64)}", "", new {@class = "text-danger"})
+                    <input class="form-control" type="file" name="@($"{nameof(Model.UploadByBase64)}")" id="@($"{nameof(Model.UploadByBase64)}")" @( Model.UploadByBase64.IsRequired ? "data-val=true data-val-required=*" : "")/>
+                    @Html.Hidden($"{nameof(Model.UploadByBase64)}.{nameof(UploadByBase64Dto.CustomData)}", Model.UploadByBase64.CustomData)
+                    @Html.Hidden($"{nameof(Model.UploadByBase64)}.{nameof(UploadByBase64Dto.Name)}")
+                    @Html.Hidden($"{nameof(Model.UploadByBase64)}.{nameof(UploadByBase64Dto.Base64)}")
+                </div>
+            </div>
+          
+        <div class="row">
+            <div class="col-sm-12 margin-top-20">
+                <button type="submit" class="btn btn-success">ارسال</button>
+                @Html.ButtonLoading()
+            </div>
+        </div>
+    </fieldset>
+</div>

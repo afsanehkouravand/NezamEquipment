@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Yaghot" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Yaghot" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://37.32.45.69:2194/Transmission.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="InputPaymentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:long" />
+      <xs:element minOccurs="0" name="GroupEarnedID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:long" />
+      <xs:element minOccurs="0" name="RealTransactionDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RefrenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransNo" type="xs:long" />
+      <xs:element minOccurs="0" name="transferDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InputPaymentType" nillable="true" type="tns:InputPaymentType" />
+  <xs:complexType name="ArrayOfResultTransmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultTransmission" nillable="true" type="tns:ResultTransmission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultTransmission" nillable="true" type="tns:ArrayOfResultTransmission" />
+  <xs:complexType name="ResultTransmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yaghot_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yaghot_ReferenceId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultTransmission" nillable="true" type="tns:ResultTransmission" />
+  <xs:complexType name="InputPaymentTypeBackup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:long" />
+      <xs:element minOccurs="0" name="GroupEarnedID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:long" />
+      <xs:element minOccurs="0" name="RealTransactionDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RefrenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransNo" type="xs:long" />
+      <xs:element minOccurs="0" name="transferDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InputPaymentTypeBackup" nillable="true" type="tns:InputPaymentTypeBackup" />
+  <xs:complexType name="InputArchivePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:long" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RealDateTransfer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="transferDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InputArchivePayment" nillable="true" type="tns:InputArchivePayment" />
+</xs:schema>

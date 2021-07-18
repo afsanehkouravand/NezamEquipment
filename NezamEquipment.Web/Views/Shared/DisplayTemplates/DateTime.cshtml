@@ -1,0 +1,20 @@
+﻿@using NezamEquipment.Common.Extension
+@model DateTime?
+
+@{
+    if (Model != null)
+    {
+        if (Model.Value.Year != 0001)
+        {
+            @Model.Value.ToShortShamsi(false)
+        }
+        else
+        {
+            <span>-</span>
+        }
+    }
+    else
+    {
+        <span>-</span>
+    }
+}

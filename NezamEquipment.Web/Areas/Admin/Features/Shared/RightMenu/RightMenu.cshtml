@@ -1,0 +1,20 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel
+<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+    <ul class="nav nav-pills nav-stacked nav-ver ulfixrightmenu">
+        <li data-controller="@MVC.Admin.Home.Name.ToLower()">
+            <a href="@Url.Action(MVC.Admin.Home.Index())">
+                <i class="fa fa-dashboard"></i>
+                <span>داشبورد</span>
+            </a>
+        </li>
+
+        @{
+            Html.RenderPartial("RightMenu/_Employees", Model);
+            Html.RenderPartial("RightMenu/_Equipment", Model);
+           
+            Html.RenderPartial("RightMenu/_Management", Model);
+            Html.RenderPartial("RightMenu/_Profile", Model);
+        }
+
+    </ul>
+</div>

@@ -1,0 +1,127 @@
+﻿@using MyCommon.Helpers.Grid
+@model NezamEquipment.Web.Areas.Admin.Features.UserAccessList.AdminUserAccessListIndexViewModel
+@{
+    ViewBag.PageTitle = "لیست دسترسی های کاربران";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    <div class="well well-shadow well-white">
+        <div class="page-header margin-bottom-20">
+            <h4 class="margin-0">جستجو</h4>
+        </div>
+        @using (Html.BeginForm("Index","UserAccessList", new {area="Admin"}, FormMethod.Get))
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.Label("کنترل پنل", htmlAttributes: new { @class = "control-label" })
+                    <select class="form-control" name="@nameof(Model.AreaName)" id="@nameof(Model.AreaName)" data-val="true" data-val-required="انتخاب یک گزینه الزامی است">
+                        <option value="">انتخاب کنید</option>
+                        @foreach (var area in Model.AllAreaWithController)
+                        {
+                            <option @(Model.AreaName == area.Name ? "selected" : "") value="@area.Name">@area.Title</option>
+                        }
+                    </select>
+                    @Html.ValidationMessage(nameof(Model.AreaName), "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-4">
+                    @Html.Label("بخش ها", htmlAttributes: new { @class = "control-label" })
+                    <select class="form-control" name="@nameof(Model.ControllerName)" id="@nameof(Model.ControllerName)" data-val="true" data-val-required="انتخاب یک گزینه الزامی است">
+                        <option value="">انتخاب کنید</option>
+                        @foreach (var area in Model.AllAreaWithController)
+                        {
+                            foreach (var controller in area.Controllers)
+                            {
+                                <option class="@(Model.AreaName == area.Name ? "" : "display-none")" @(Model.AreaName == area.Name && Model.ControllerName == controller.Name ? "selected" : "") value="@controller.Name" data-area="@area.Name">@controller.Title</option>
+                            }
+                        }
+                    </select>
+                    @Html.ValidationMessage(nameof(Model.ControllerName), "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-4">
+                    @Html.Label("متد ها", htmlAttributes: new { @class = "control-label" })
+                    <select class="form-control" name="@nameof(Model.ActionName)" id="@nameof(Model.ActionName)" data-val="true" data-val-required="انتخاب یک گزینه الزامی است">
+                        <option value="">انتخاب کنید</option>
+                        @foreach (var area in Model.AllAreaWithController)
+                        {
+                            foreach (var controller in area.Controllers)
+                            {
+                                foreach (var action in controller.Actions)
+                                {
+                                    <option class="@(Model.AreaName == area.Name && Model.ControllerName == controller.Name ? "" : "display-none")" @(Model.AreaName == area.Name && Model.ControllerName == controller.Name && Model.ActionName == action.Name ? "selected" : "") value="@action.Name" data-area="@area.Name" data-controller="@controller.Name">@action.Title</option>
+                                }
+                            }
+                        }
+                    </select>
+                    @Html.ValidationMessage(nameof(Model.ActionName), "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-12 margin-top-20">
+                    <input class="btn btn-default padding-right-left-50" type="submit" value="جستجو کن!" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        @Html.Grid(Model,x=>x.Users).Options(i =>
+        {
+            i.SetPaging(false);
+            i.SetTitle("لیست کاربران");
+        }).Columns(i =>
+        {
+            i.AddColumnFor(Model.User, x => x.FirstName);
+            i.AddColumnFor(Model.User, x => x.LastName);
+            i.AddColumnFor(Model.User, x => x.Position);
+            i.AddColumnFor(Model.User, x => x.Roles).SetIsList("Name").SetCustomTemplate("<span class=\"label label-default\" style=\"margin-left:2px;\">{0}</span>");
+        }).Done()
+    </div>
+    <div class="col-md-4">
+        @Html.Grid(Model,x=>x.RoleAccesses).Options(i =>
+        {
+            i.SetPaging(false);
+            i.SetTitle("لیست نقش ها");
+        }).Columns(i =>
+        {
+            i.AddColumnFor(Model.RoleAccess, x => x.RoleName).SetLabel("نام نقش");
+            i.AddColumnFor(Model.RoleAccess, x => x.HaveAccess).SetLabel("نوع دسترسی").SetIsBoolean("دارد", "ندارد");
+        }).Done()
+    </div>
+</div>
+@if (Model.Users.Any() == false && Model.RoleAccesses.Any() == false)
+{
+    <div class="col-md-12">
+        @{ Html.RenderPartial(MVC.Admin.Features.Views.Shared.Default._NoDataForDisplaying); }
+    </div>
+}
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        $("#AreaName").change(function () {
+            $("#ControllerName option[data-area]").hide();
+            $("#ControllerName").val("");
+            $("#ActionName option[data-controller]").hide();
+            $("#ActionName").val("");
+
+            var area = $(this).val();
+
+            if (area != "") {
+                $("#ControllerName option[data-area='" + area + "']").show();
+            }
+        });
+        $("#ControllerName").change(function () {
+            $("#ActionName option[data-controller]").hide();
+            $("#ActionName").val("");
+
+            var area = $("#AreaName").val();
+            var controller = $(this).val();
+
+            if (controller != "") {
+                $("#ActionName option[data-area='" + area + "'][data-controller='" + controller + "']").show();
+            }
+        });
+    </script>
+}

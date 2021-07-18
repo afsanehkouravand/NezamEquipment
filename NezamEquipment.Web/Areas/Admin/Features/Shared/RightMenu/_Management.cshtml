@@ -1,0 +1,49 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel   
+@{
+    var indexRole = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.Role.Name, MVC.Admin.Role.ActionNames.Index);
+    var indexUser = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.User.Name, MVC.Admin.User.ActionNames.Index);
+    var indexUserAccessList = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.UserAccessList.Name, MVC.Admin.UserAccessList.ActionNames.Index);
+}
+
+@if (indexRole || indexUser || indexUserAccessList)
+{
+    var controllerGroup = new List<string>
+            {
+                MVC.Admin.Role.Name.ToLower(),
+                MVC.Admin.User.Name.ToLower(),
+                MVC.Admin.UserAccessList.Name.ToLower(),
+            };
+    <li data-controller-group="@string.Join(" ",controllerGroup)">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-list-alt"></i>
+            <span>مدیریت</span>
+            <i class="fa fa-chevron-circle-left drop-icon"></i>
+        </a>
+        <ul class="submenu">
+            @if (indexRole)
+            {
+                <li data-controller-action="@MVC.Admin.Role.Name.ToLower() @MVC.Admin.Role.ActionNames.Index.ToLower()">
+                    <a href="@Url.Action(MVC.Admin.Role.Index())">
+                        <span>نقش ها</span>
+                    </a>
+                </li>
+            }
+            @if (indexUser)
+            {
+                <li data-controller-action="@MVC.Admin.User.Name.ToLower() @MVC.Admin.User.ActionNames.Index.ToLower()">
+                    <a href="@Url.Action(MVC.Admin.User.Index())">
+                        <span>کاربران</span>
+                    </a>
+                </li>
+            }
+            @if (indexUserAccessList)
+            {
+                <li data-controller-action="@MVC.Admin.UserAccessList.Name.ToLower() @MVC.Admin.UserAccessList.ActionNames.Index.ToLower()">
+                    <a href="@Url.Action(MVC.Admin.UserAccessList.Index())">
+                        <span>لیست دسترسیهای کاربران</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </li>
+}

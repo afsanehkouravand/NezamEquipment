@@ -1,0 +1,53 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.EquipmentFaulty.AdminEquipmentFaultyDetailsViewModel
+@{
+    ViewBag.PageTitle = "اطلاعات";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+
+<div class="col-md-12">
+    @Html.Ul(Model).Items(i =>
+{
+    i.AddFor(EUlTabId.Tab1, "اطلاعات");
+
+    //i.AddFor(EUlTabId.Tab2, "لیست خدمات", MVC.Admin.EquipmentFaulty.Index(Model.EquipmentFaultyDto.Id));
+
+}).Done()
+</div>
+
+<div class="col-md-12">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            @Html.ToolBox(Model).Items(i =>
+       {
+
+           i.AddEditButton(MVC.Admin.Equipment.Edit(Model.EquipmentFaultyDto.Id));
+           i.AddDeleteButton(Model.EquipmentFaultyDto.Id, MVC.Admin.Equipment.Delete()).SetGoToPage(Url.Action(MVC.Admin.Equipment.Index()));
+
+          
+
+       }).Done()
+            <div class="margin-bottom-20">
+                @Html.Info(Model).Options(i =>
+                {
+                    i.SetTitle("اطلاعات");
+                }).Items(i =>
+                {
+                    //i.AddFor(Model.NezamEquipment, x => x.Brand);
+                    i.AddFor(Model.EquipmentFaultyDto, x => x.RepairDate);
+
+                    i.AddFor(Model.EquipmentFaultyDto, x => x.MoneyRepair);
+                    i.AddFor(Model.EquipmentFaultyDto, x => x.Description);
+
+
+                }).Done()
+            </div>
+        </div>
+        @*@Html.UlEmptyTab(EUlTabId.Tab2)*@
+    </div>
+
+</div>
+
+

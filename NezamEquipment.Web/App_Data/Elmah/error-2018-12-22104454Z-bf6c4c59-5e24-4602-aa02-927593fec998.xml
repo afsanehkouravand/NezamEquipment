@@ -1,0 +1,215 @@
+﻿<error errorId="bf6c4c59-5e24-4602-aa02-927593fec998" application="/LM/W3SVC/2/ROOT" host="KOURAVAND-PC" type="System.Exception" message="c:\Users\kouravand\AppData\Local\Temp\od3meq1h.0.cs(94,58) : error CS0103: The name 'DataSource2' does not exist in the current context" source="Stimulsoft.Report" detail="System.Exception: c:\Users\kouravand\AppData\Local\Temp\od3meq1h.0.cs(94,58) : error CS0103: The name 'DataSource2' does not exist in the current context&#xD;&#xA;   at Stimulsoft.Report.StiReport.Compile(String path, Stream stream, StiOutputType outputType, Boolean autoCreate, Object standaloneReportType)&#xD;&#xA;   at Stimulsoft.Report.StiReport.Compile()&#xD;&#xA;   at Stimulsoft.Report.Engine.StiReportV2Builder.RenderSingleReport(StiReport masterReport, StiRenderState renderState)&#xD;&#xA;   at Stimulsoft.Report.StiReport.RenderReport(StiRenderState renderState)&#xD;&#xA;   at Stimulsoft.Report.StiReport.Render(StiRenderState renderState, StiGuiMode guiMode)&#xD;&#xA;   at Stimulsoft.Report.StiReport.Render(Boolean showProgress)&#xD;&#xA;   at Stimulsoft.Report.Mvc.StiMvcViewer.SaveReportObject(HttpContextBase httpContext, StiReport report)&#xD;&#xA;   at Stimulsoft.Report.Mvc.StiMvcViewer.GetReportSnapshotResult(HttpContextBase httpContext, StiReport report)&#xD;&#xA;   at NezamEquipment.Web.Areas.Report.Features.TransfrPermitReport.TransfrPermitReportController.&lt;Report&gt;d__5.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Report\Features\TransfrPermitReport\TransfrPermitReportController.cs:line 86&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__11_0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_1.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_1.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__5(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="sa" time="2018-12-22T10:44:54.2935322Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:379&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=xcuJrP5BaKGB8If_VZ67KfelD79sojY0NFxzHgSKcpz-WDdkFtSqf-Mjn92eZ3qo3o7E-62Pd_G3sw46p2FvLpbn3qk1; NezamEquipmentIdentityCookie=kH6LfSzi2u--TxxmsmxZuh1mOe5DOzUGxjNiXMgDPEYaT83Cye9gKsYkg5raCiE8TRebQsHeE90hD49286_9gvmv4baOl_60ky88kXJDVHC3ZyqnkKeKdiBAZb1VyF25rSgWfpyyZ8qJIbJA0AjmjU5icrCmHiZl21qk_DzWjACXZ0q_InvYQf3eN8jat-egQENPVehARNqXKMPTjgq6W8nt4JEcjsFkj4hKvb55T17QlyzWrxg4yVg7VaCoDriLB3D2rJOvjllnTPTNk0QRfbMcWqYgvQYY52BGSHMw9mikjKmiMdiSTlb44k_0bcRUEuaYyqu3bWj9loaKXb9W4VFdJjcOFgglx-t0gMZbkea3OMoiiB2LCoT3mgnZ-clcbJoV61M1f3SQr-hgm1N66s1E_ApNG8eZYZPjCAAaZ25WDS5ETpfGb86rPSGH_RCIB3eDmcuuFtPW7-IRxQapEKEDOJ-405QjDbDMoPoiXVWEpZgANH7adi_Mfqb9UtFAKB9sAw&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/Report/TransfrPermitReport/TransfrPermit/58d52696-d605-e911-b474-58b03572367b&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:1324&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 379&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=xcuJrP5BaKGB8If_VZ67KfelD79sojY0NFxzHgSKcpz-WDdkFtSqf-Mjn92eZ3qo3o7E-62Pd_G3sw46p2FvLpbn3qk1; NezamEquipmentIdentityCookie=kH6LfSzi2u--TxxmsmxZuh1mOe5DOzUGxjNiXMgDPEYaT83Cye9gKsYkg5raCiE8TRebQsHeE90hD49286_9gvmv4baOl_60ky88kXJDVHC3ZyqnkKeKdiBAZb1VyF25rSgWfpyyZ8qJIbJA0AjmjU5icrCmHiZl21qk_DzWjACXZ0q_InvYQf3eN8jat-egQENPVehARNqXKMPTjgq6W8nt4JEcjsFkj4hKvb55T17QlyzWrxg4yVg7VaCoDriLB3D2rJOvjllnTPTNk0QRfbMcWqYgvQYY52BGSHMw9mikjKmiMdiSTlb44k_0bcRUEuaYyqu3bWj9loaKXb9W4VFdJjcOFgglx-t0gMZbkea3OMoiiB2LCoT3mgnZ-clcbJoV61M1f3SQr-hgm1N66s1E_ApNG8eZYZPjCAAaZ25WDS5ETpfGb86rPSGH_RCIB3eDmcuuFtPW7-IRxQapEKEDOJ-405QjDbDMoPoiXVWEpZgANH7adi_Mfqb9UtFAKB9sAw&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/Report/TransfrPermitReport/TransfrPermit/58d52696-d605-e911-b474-58b03572367b&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36&#xD;&#xA;Origin: http://localhost:1324&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="sa" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="379" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Report/TransfrPermitReport/Report/58d52696-d605-e911-b474-58b03572367b" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Report\TransfrPermitReport\Report\58d52696-d605-e911-b474-58b03572367b" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50393" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Report/TransfrPermitReport/Report/58d52696-d605-e911-b474-58b03572367b" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Report/TransfrPermitReport/Report/58d52696-d605-e911-b474-58b03572367b" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="379" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=xcuJrP5BaKGB8If_VZ67KfelD79sojY0NFxzHgSKcpz-WDdkFtSqf-Mjn92eZ3qo3o7E-62Pd_G3sw46p2FvLpbn3qk1; NezamEquipmentIdentityCookie=kH6LfSzi2u--TxxmsmxZuh1mOe5DOzUGxjNiXMgDPEYaT83Cye9gKsYkg5raCiE8TRebQsHeE90hD49286_9gvmv4baOl_60ky88kXJDVHC3ZyqnkKeKdiBAZb1VyF25rSgWfpyyZ8qJIbJA0AjmjU5icrCmHiZl21qk_DzWjACXZ0q_InvYQf3eN8jat-egQENPVehARNqXKMPTjgq6W8nt4JEcjsFkj4hKvb55T17QlyzWrxg4yVg7VaCoDriLB3D2rJOvjllnTPTNk0QRfbMcWqYgvQYY52BGSHMw9mikjKmiMdiSTlb44k_0bcRUEuaYyqu3bWj9loaKXb9W4VFdJjcOFgglx-t0gMZbkea3OMoiiB2LCoT3mgnZ-clcbJoV61M1f3SQr-hgm1N66s1E_ApNG8eZYZPjCAAaZ25WDS5ETpfGb86rPSGH_RCIB3eDmcuuFtPW7-IRxQapEKEDOJ-405QjDbDMoPoiXVWEpZgANH7adi_Mfqb9UtFAKB9sAw" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/Report/TransfrPermitReport/TransfrPermit/58d52696-d605-e911-b474-58b03572367b" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1324" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="mvcviewerid">
+      <value string="MyViewr" />
+    </item>
+    <item name="routes">
+      <value string="{&quot;action&quot;:&quot;TransfrPermit&quot;,&quot;controller&quot;:&quot;TransfrPermitReport&quot;,&quot;id&quot;:&quot;58d52696-d605-e911-b474-58b03572367b&quot;}" />
+    </item>
+    <item name="formValues">
+      <value string="{}" />
+    </item>
+    <item name="reportguid">
+      <value string="null" />
+    </item>
+    <item name="paramsguid">
+      <value string="null" />
+    </item>
+    <item name="servercachemode">
+      <value string="Page" />
+    </item>
+    <item name="servertimeout">
+      <value string="00:10:00" />
+    </item>
+    <item name="servercacheitempriority">
+      <value string="Default" />
+    </item>
+    <item name="pagenumber">
+      <value string="0" />
+    </item>
+    <item name="zoom">
+      <value string="100" />
+    </item>
+    <item name="viewmode">
+      <value string="OnePage" />
+    </item>
+    <item name="bookmarksvisible">
+      <value string="true" />
+    </item>
+    <item name="openlinkstarget">
+      <value string="_self" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="xcuJrP5BaKGB8If_VZ67KfelD79sojY0NFxzHgSKcpz-WDdkFtSqf-Mjn92eZ3qo3o7E-62Pd_G3sw46p2FvLpbn3qk1" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="kH6LfSzi2u--TxxmsmxZuh1mOe5DOzUGxjNiXMgDPEYaT83Cye9gKsYkg5raCiE8TRebQsHeE90hD49286_9gvmv4baOl_60ky88kXJDVHC3ZyqnkKeKdiBAZb1VyF25rSgWfpyyZ8qJIbJA0AjmjU5icrCmHiZl21qk_DzWjACXZ0q_InvYQf3eN8jat-egQENPVehARNqXKMPTjgq6W8nt4JEcjsFkj4hKvb55T17QlyzWrxg4yVg7VaCoDriLB3D2rJOvjllnTPTNk0QRfbMcWqYgvQYY52BGSHMw9mikjKmiMdiSTlb44k_0bcRUEuaYyqu3bWj9loaKXb9W4VFdJjcOFgglx-t0gMZbkea3OMoiiB2LCoT3mgnZ-clcbJoV61M1f3SQr-hgm1N66s1E_ApNG8eZYZPjCAAaZ25WDS5ETpfGb86rPSGH_RCIB3eDmcuuFtPW7-IRxQapEKEDOJ-405QjDbDMoPoiXVWEpZgANH7adi_Mfqb9UtFAKB9sAw" />
+    </item>
+  </cookies>
+</error>

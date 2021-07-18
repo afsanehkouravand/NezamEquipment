@@ -1,0 +1,124 @@
+﻿@using NezamEquipment.Common.Extension
+@model NezamEquipment.Web.Areas.Admin.Features.Equipment.AdminNezamEquipmentIndexViewModel
+@{
+    ViewBag.PageTitle = " لیست تجهیزات کامپیوتری واحد " + Model.unitType.GetDisplayName();
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+
+@if (Model.NezamEquipments.Count() != 0)
+{
+    <div class="col-md-12">
+        @Html.ToolBox(Model).Items(i =>
+   {
+       i.AddButton(MVC.Admin.Home.GetExcelFile(unitType: Model.unitType)).SetText("دریافت این لیست به صورت Excel").SetClass("btn btn-info");
+   }).Done()
+
+    </div>
+
+    <div class="col-md-12 well well-shadow">
+        @if (Model.CaseTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد کیس
+                @Model.CaseTotal
+            </div>
+        }
+        @if (Model.MonitorTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد مانیتور
+                @Model.MonitorTotal
+            </div>
+        }
+        @if (Model.PrinterTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد پرینتر
+                @Model.PrinterTotal
+            </div>
+        }
+        @if (Model.ScanerTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد مانیتور
+                @Model.ScanerTotal
+            </div>
+        }
+        @if (Model.LaptopTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد لب تاب
+                @Model.LaptopTotal
+            </div>
+        }
+        @if (Model.TabletTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد تب لت
+                @Model.TabletTotal
+            </div>
+        }
+        @if (Model.FaxTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد  فکس
+                @Model.FaxTotal
+            </div>
+        }
+        @if (Model.mouseTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد  موس بیسیم
+                @Model.mouseTotal
+            </div>
+        }
+        @if (Model.KeyTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد  کیبورد بیسیم
+                @Model.KeyTotal
+            </div>
+        }
+        @if (Model.HardTotal != 0)
+        {
+            <div class="btn btn-success">
+                تعداد هارد اکسترنال
+                @Model.HardTotal
+            </div>
+        }
+    </div>
+    <div class="col-md-12">
+        @Html.Grid(Model, x => x.NezamEquipments).Options(i =>
+   {
+       //i.AddDetailsButton();
+
+   }).Columns(i =>
+   {
+       i.AddColumnCounter();
+       //  i.AddColumnForButton();
+       i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentTypes);
+       i.AddColumnFor(Model.NezamEquipment, x => x.Brand);
+       i.AddColumnFor(Model.NezamEquipment, x => x.Model);
+       i.AddColumnFor(Model.NezamEquipment, x => x.unitType);
+       i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentStatus);
+       i.AddColumnFor(Model.NezamEquipment, x => x.EmployeFullName);
+
+
+   }).Done()
+    </div>
+}
+else
+{
+    <div class=" col-md-12 alert alert-warning">
+        <span>اطلاعاتی وجود ندارد</span>
+    </div>
+}
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Equipment.Index())";
+    </script>
+}

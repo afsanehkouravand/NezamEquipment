@@ -1,0 +1,21 @@
+﻿@model IList<string>
+@{
+    ViewBag.PageTitle = "خطا";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+<div class="container tahoma">
+    <div class="hidden-sm hidden-xs" style="height: 80px;"></div>
+    <div class="hidden-lg hidden-md" style="height: 30px;"></div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-danger">
+            <p><strong>خطاهای زیر هنگام پردازش درخواست رخ داد:</strong></p>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

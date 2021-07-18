@@ -1,0 +1,56 @@
+﻿@using NezamEquipment.ServiceLayer.Entity.Setting.Setting.Xml
+@model NezamEquipment.Web.Areas.Admin.Features.Setting.AdminSettingSmsViewModel
+@{
+    ViewBag.PageTitle = "تنظیمات پیامک ها";
+    var m = typeof(SettingSmsXml);
+}
+
+<div class="col-md-12">
+    <div class="page-header title">
+        <h3>@ViewBag.PageTitle</h3>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="well well-white well-shadow">
+        @using (Ajax.BeginForm("Sms", AjaxOptionsExtension.Get(Url.Action(MVC.Admin.Setting.Sms()))))
+        {
+            @Html.AntiForgeryToken()
+
+            <fieldset class="form-horizontal fieldset">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @{
+                    foreach (var item in m.GetProperties())
+                    {
+                        <div class="form-group">
+                            @Html.Label($"{m.Name}.{item.Name}", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-7">
+                                @{
+                                    if (ModelMetadata.FromStringExpression($"{m.Name}.{item.Name}", ViewData).AdditionalValues.ContainsKey("Help"))
+                                    {
+                                        <span class="help-block">@ModelMetadata.FromStringExpression($"{m.Name}.{item.Name}", ViewData).AdditionalValues["Help"]</span>
+                                    }
+                                }
+                                @Html.Editor($"{m.Name}.{item.Name}", new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessage($"{m.Name}.{item.Name}", "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    }
+                }
+
+                <div class="form-group form-button">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="ارسال" class="btn btn-success" />
+                        @Html.ButtonLoading()
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div></div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Setting.Sms())";
+    </script>
+}

@@ -1,0 +1,48 @@
+﻿
+@model NezamEquipment.Web.Areas.Admin.Features.Segment.AdminSegmentIndexViewModel
+
+
+@{
+    ViewBag.PageTitle = "اطلاعات قطعه";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.Form(Model).Options(i =>
+    {
+    i.IsSearchForm(MVC.Admin.Segment.Index(), Model.PageTotal);
+
+    i.SetHiddenInput(nameof(Model.DoSearch), true.ToString());
+    }).Items(i =>
+    {
+     i.TextBox(Model.S, x => x.Type, 4);
+    }).Done()
+</div>
+
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+    i.AddButton(MVC.Admin.Segment.Add()).SetText("افزودن").SetClass("btn btn-success");
+    }).Done()
+</div>
+<div class="col-md-12">
+
+    @Html.Grid(Model, x => x.Segments).Options(i =>
+    {
+        i.AddEditButton();
+        i.AddDeleteButton();
+
+    }).Columns(i =>
+        {
+        i.AddColumnCounter();
+        i.AddColumnForButton();
+        i.AddColumnFor(Model.Segment, x => x.CreatedOnStr);
+      
+        i.AddColumnFor(Model.Segment, x => x.Type);
+      
+
+        }).Done()
+</div>
+

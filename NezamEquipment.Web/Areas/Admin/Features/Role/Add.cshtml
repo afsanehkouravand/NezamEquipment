@@ -1,0 +1,47 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Role.AdminRoleAddViewModel
+@{
+    ViewBag.PageTitle = "افزودن نقش جدید";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    <div class="well well-white well-shadow">
+        @using (Ajax.BeginForm("Add", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.Role.Add()))))
+        {
+            Html.RenderPartial("_Form", Model.PartialForm);
+        }
+    </div>
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Role.Index())";
+
+        $("a[data-controller]").click(function() {
+            var name = $(this).data("controller");
+            $("tr[data-controller='" + name + "']").toggle("");
+        });
+        $(".btnUpCircle").click(function () {
+            $(".tab-content div.active tr[data-controller]").hide();
+        });
+        $(".btnDownCircle").click(function () {
+            $(".tab-content div.active tr[data-controller]").show();
+        });
+
+        $("input.HaveAccess").on('click', function() {
+            var $box = $(this);
+            if ($box.is(":checked")) {
+                $(this).parents("tr").children("td.col-sm-1")
+                    .children(".HaveAccess:checkbox[name='" + $box.attr("name") + "']").prop("checked", false);
+                $box.prop("checked", true);
+                $(this).parents("tr").children("td.col-sm-7").children(".HaveAccessValue").val($box.attr("value"));
+            } else {
+                $box.prop("checked", false);
+                $(this).parents("tr").children("td.col-sm-7").children(".HaveAccessValue").val("");
+            }
+        });
+    </script>
+}

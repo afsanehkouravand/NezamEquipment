@@ -1,0 +1,76 @@
+﻿@using NezamEquipment.Common.Extension
+@model NezamEquipment.Web.Areas.Admin.Features.Equipment.AdminNezamEquipmentIndexViewModel
+@{
+    ViewBag.PageTitle = "لیست تجهیزات کامپیوتری ";
+    string i1 = "";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.Form(Model).Options(i =>
+    {
+        i.IsSearchForm(MVC.Admin.Equipment.Index(), Model.PageTotal);
+    }).Items(i =>
+    {
+
+        i.TextBox(Model.S, x => x.Code, 3);
+        i.EnumDropDown(Model.S, x => x.EquipmentType, 3);
+        i.EnumDropDown(Model.S, x => x.EquipmentStatus, 3);
+        i.EnumDropDown(Model.S, x => x.UnitType, 3);
+        //i.TextBox(Model.S, x => x.FromCreatedOn, 4).IsDateFormat().Value(Model.S.FromCreatedOn != null ? Model.S.FromCreatedOn.Value.ToShortShamsi(false) : "");
+        //i.TextBox(Model.S, x => x.ToCreatedOn, 4).IsDateFormat().Value(Model.S.ToCreatedOn != null ? Model.S.ToCreatedOn.Value.ToShortShamsi(false) : "");
+
+
+
+    }).Done()
+</div>
+@i1 =@Model.S.EquipmentType.ToString()
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+{
+    i.AddButton(MVC.Admin.Equipment.Add()).SetText("افزودن آیتم جدید").SetClass("btn btn-success ").SetStyle("margin-left: 50px;");
+    if (Model.NezamEquipments != null)
+    i.AddButton(MVC.Admin.Equipment.GetExcelFile())
+        .SetText("دریافت این لیست به صورت Excel").SetClass("btn btn-info").SetQueryString("equipmentType", nameof(@i1.ToString));
+}).Done()
+
+</div>
+<div class="col-md-12">
+    @Html.Grid(Model, x => x.NezamEquipments).Options(i =>
+{
+    i.AddDetailsButton();
+    i.AddEditButton();
+    i.AddButton(MVC.Admin.EquipmentFaulty.Add()).SetClass("label label-warning").SetText("تعمیرات").SetQueryString("id", nameof(Model.NezamEquipment.Id));
+
+    //i.AddButton(MVC.Admin.Equipment.PasswordCahnge()).SetClass("label label-info").SetText("تغییر پسورد").SetQueryString("id", nameof(Model.NezamEquipment.Id));
+
+    i.AddDeleteButton();
+    //i.SetRowColorRoles(nameof(Model.NezamEquipment.unitType), new Dictionary<string, EGridColorType>()
+    //    {
+    //        {UnitType.Disactive.ToString(), EGridColorType.Danger},
+    //    });
+}).Columns(i =>
+{
+    i.AddColumnCounter();
+    i.AddColumnForButton();
+    i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentTypes);
+    //i.AddColumnFor(Model.NezamEquipment, x => x.Brand);
+    i.AddColumnFor(Model.NezamEquipment, x => x.Model);
+    i.AddColumnFor(Model.NezamEquipment, x => x.Code);
+    i.AddColumnFor(Model.NezamEquipment, x => x.unitType);
+    i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentStatus);
+    i.AddColumnFor(Model.NezamEquipment, x => x.EmployeFullName);
+
+
+
+}).Done()
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Equipment.Index())";
+    </script>
+}

@@ -1,0 +1,117 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Role.AdminRolePartialFormViewModel
+@{
+    var firstTab = true;
+    var firstDiv = true;
+    var n = 0;
+}
+
+<fieldset class="form-horizontal fieldset">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Role.Id)
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Role.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-7">
+            <span class="help-block">لطفا یک عنوان برای نقش مورد نظر وارد کنید.</span>
+            @Html.EditorFor(model => model.Role.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Role.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Role.AreaType, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-7">
+            <span class="help-block">لطفا بخش مورد نظر را انتخاب کنید.</span>
+            @Html.EnumDropDownListFor(model => model.Role.AreaType, "انتخاب کنید", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Role.AreaType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 text-left">
+            <label class="control-label">لیست متدها</label>
+            <div class="">
+                <a class="btn btn-default btn-sm btnUpCircle"><i class="fa fa-caret-up"></i></a>
+                <a class="btn btn-default btn-sm btnDownCircle"><i class="fa fa-caret-down"></i></a>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <span class="help-block">لطفا دسترسی ها مورد نظر را انتخاب کنید.</span>
+            <ul class="nav nav-tabs margin-bottom-20" role="tablist">
+                @foreach (var areaAuth in Model.AllAreaWithController)
+                {
+                    <li role="presentation" class="@(firstTab ? "active" : "")">
+                        <a href="#@areaAuth.Name" aria-controls="@areaAuth.Name" role="tab" data-toggle="tab">@areaAuth.Title</a>
+                    </li>
+                    firstTab = false;
+                }
+            </ul>
+            <div class="tab-content">
+                @foreach (var area in Model.AllAreaWithController)
+                {
+                    <div role="tabpanel" class="tab-pane @(firstDiv ? "active" : "")" id="@area.Name">
+                        <table class="table table-striped table-bordered well well-shadow">
+                            <tbody>
+                                @foreach (var controller in area.Controllers.Where(x => x.Actions.Any()).ToList())
+                                {
+                                    <tr class="info">
+                                        <td class="col-sm-7">
+                                            <a class="cursor-pointer" data-controller="@controller.Name">
+                                                <i class="fa fa-circle"></i>
+                                                <b>@controller.Title</b>
+                                            </a>
+                                        </td>
+                                        <td class="col-sm-1 text-center">
+                                            <small>دارد</small>
+                                        </td>
+                                        <td class="col-sm-1 text-center">
+                                            <small>ندارد</small>
+                                        </td>
+                                    </tr>
+                                    if (controller.Actions.Any())
+                                    {
+                                        foreach (var action in controller.Actions.Where(x=>x.Title != "").ToList())
+                                        {
+                                            ++n;
+                                            <tr data-controller="@controller.Name">
+                                                <td class="col-sm-7">
+                                                    <span>@action.Title</span>
+                                                    <input type="hidden" name="@($"{nameof(Model.RoleAccess)}.Index")" value="@n" />
+                                                    @{
+                                                        bool? haveAccess = null;
+                                                        var item = Model.ListOfAccesses.FirstOrDefault(x => x.Area == area.Name && x.Controller == controller.Name && x.Action == action.Name);
+                                                        if (item != null)
+                                                        {
+                                                            haveAccess = item.HaveAccess != null && item.HaveAccess.Value;
+                                                        }
+                                                    }
+                                                    <input class="HaveAccessValue" type="hidden" name="@($"{nameof(Model.RoleAccess)}[{n}].{nameof(Model.RoleAccess.HaveAccess)}")" value="@(haveAccess?.ToString() ?? "")" />
+                                                    <input type="hidden" name="@($"{nameof(Model.RoleAccess)}[{n}].{nameof(Model.RoleAccess.Area)}")" value="@area.Name" />
+                                                    <input type="hidden" name="@($"{nameof(Model.RoleAccess)}[{n}].{nameof(Model.RoleAccess.Controller)}")" value="@controller.Name" />
+                                                    <input type="hidden" name="@($"{nameof(Model.RoleAccess)}[{n}].{nameof(Model.RoleAccess.Action)}")" value="@action.Name" />
+                                                </td>
+                                                <td class="col-sm-1 text-center">
+                                                    <input type="checkbox" class="HaveAccess" name="HaveAccess" value="true" @(Model.ListOfAccesses.Any(x => x.Area == area.Name && x.Controller == controller.Name && x.Action == action.Name && x.HaveAccess != null && x.HaveAccess.Value) ? "checked" : "")/>
+                                                </td>
+                                                <td class="col-sm-1 text-center">
+                                                    <input type="checkbox" class="HaveAccess" name="HaveAccess" value="false" @(Model.ListOfAccesses.Any(x => x.Area == area.Name && x.Controller == controller.Name && x.Action == action.Name && x.HaveAccess != null && !x.HaveAccess.Value) ? "checked" : "")/>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    firstDiv = false;
+                }
+            </div>
+        </div>
+    </div>
+    <div class="form-group form-button">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="ارسال" class="btn btn-success" />
+            @Html.ButtonLoading()
+        </div>
+    </div>
+</fieldset>

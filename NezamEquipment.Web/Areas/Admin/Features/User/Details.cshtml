@@ -1,0 +1,43 @@
+﻿@using NezamEquipment.ServiceLayer._Identity.Role.Dto
+@using MyCommon.Helpers.ToolBox
+@model NezamEquipment.Web.Areas.Admin.Features.User.AdminUserDetailsViewModel
+@{
+    ViewBag.PageTitle = "اطلاعات کاربر";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+        i.AddEditButton(MVC.Admin.User.Edit(Model.User.Id));
+        i.AddDeleteButton(Model.User.Id, MVC.Admin.User.Delete());
+    }).Done()
+</div>
+<div id="FormPopUpModalRequest">
+    @using (Ajax.BeginForm(AjaxOptionsExtension.Get(Url.Action(),updateTargetId: "PopUpModalBody", onSuccess: "OnSuccessPopUpModal")))
+    {
+        @Html.AntiForgeryToken()
+    }
+</div>
+<div class="col-md-12">
+    @Html.DefaultInfoFor(title: "اطلاعات").Items(i =>
+    {
+        i.AddFor(Model.User, x => x.UserName);
+        i.AddFor(Model.User, x => $"{x.FirstName} {x.LastName}");
+        i.AddFor(Model.User, x => x.Email);
+        i.AddFor(Model.User, x => x.Position);
+        i.AddFor(Model.User, x => x.LastLogin);
+        i.AddFor(Model, x => x.Roles, listPropertyName: nameof(RoleDto.Name), customTemplate: "<span class=\"label label-default\">{0}</span>");
+    }).Done()
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.User.Index())";
+    </script>
+}
+
+

@@ -1,0 +1,42 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Employees.AdminNezamEmployePartialFormViewModel
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.EmployeesDto.Id)
+
+<div class="well well-white well-shadow">
+    <fieldset class="form-horizontal fieldset">
+     
+       
+        <div class="row margin-bottom-10" id="showPass">
+            @if (Model.EmployeesDto != null && Model.EmployeesDto.Id != Guid.Empty)
+            {
+               @*<div class="col-sm-4">
+                    @Html.LabelFor(x => x.NezamEmploye.ApplicantStatus)
+                    @Html.EnumDropDownListFor(x => x.NezamEmploye.ApplicantStatus, "انتخاب کنید", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.NezamEmploye.ApplicantStatus, "", new { @class = "text-danger" })
+                </div>*@
+                <div class="col-sm-6">
+                    @Html.LabelFor(x => x.PasswordChange)
+                    @Html.PasswordFor(x => x.PasswordChange, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.PasswordChange, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-6">
+                    @Html.LabelFor(x => x.ConfirmPassword)
+                    @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+            }
+            else
+            {
+               
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 margin-top-20">
+                <button type="submit" class="btn btn-success">ارسال</button>
+                @Html.ButtonLoading()
+            </div>
+        </div>
+    </fieldset>
+</div>

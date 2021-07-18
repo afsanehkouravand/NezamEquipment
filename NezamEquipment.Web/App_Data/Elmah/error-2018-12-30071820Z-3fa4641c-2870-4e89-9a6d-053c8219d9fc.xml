@@ -1,0 +1,165 @@
+﻿<error errorId="3fa4641c-2870-4e89-9a6d-053c8219d9fc" application="/LM/W3SVC/2/ROOT" host="KOURAVAND-PC" type="System.Web.HttpException" message="Path '/Areas/Report/Features/TransfrPermitReport/TransfrPermit.cshtml' was not found." source="System.Web" detail="System.Web.HttpException (0x80004005): Path '/Areas/Report/Features/TransfrPermitReport/TransfrPermit.cshtml' was not found.&#xD;&#xA;   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" time="2018-12-30T07:18:20.9757120Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=0t0pu2hyWxValJfxbc0S0SVbk9oYUSiTN0uUQNiFN7Rx5CSMe56aXzhNQgqIWl99lpmFmW4_DJtv2B10ymq2kCMmQco1; .ASPXAUTH=BDC78EEC47BA6C8D8C15633D3A34C5EB74E32B83FFF961993A5F048797FACA8C3259FB7D6418F29B9BBFBAF94DE6ED0D54E86605EF1C7BBD04F82665FDB7AC5335432121D7836D02D443ECD0AC5809BCA57DB05309AF656A7E9776E646DE1C9FBDD3EC304980F050473A01A9D7D84738E39107038B47920CEBB3CD71ED3ADC5430CEE3162383ADBE6DBC4A8F903E49F9A8D08EAB2B81F3E82DE9C5B57665C299A5FD6430FA3E69F641605F3CFB20AE71B4D3BF3B0A40DF754DBFDC0B090A316473B5385EA0F41D90618BB8A1532FD2474D720B57&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=0t0pu2hyWxValJfxbc0S0SVbk9oYUSiTN0uUQNiFN7Rx5CSMe56aXzhNQgqIWl99lpmFmW4_DJtv2B10ymq2kCMmQco1; .ASPXAUTH=BDC78EEC47BA6C8D8C15633D3A34C5EB74E32B83FFF961993A5F048797FACA8C3259FB7D6418F29B9BBFBAF94DE6ED0D54E86605EF1C7BBD04F82665FDB7AC5335432121D7836D02D443ECD0AC5809BCA57DB05309AF656A7E9776E646DE1C9FBDD3EC304980F050473A01A9D7D84738E39107038B47920CEBB3CD71ED3ADC5430CEE3162383ADBE6DBC4A8F903E49F9A8D08EAB2B81F3E82DE9C5B57665C299A5FD6430FA3E69F641605F3CFB20AE71B4D3BF3B0A40DF754DBFDC0B090A316473B5385EA0F41D90618BB8A1532FD2474D720B57&#xD;&#xA;Host: localhost:1324&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Areas/Report/Features/TransfrPermitReport/TransfrPermit.cshtml" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Report\Features\TransfrPermitReport\TransfrPermit.cshtml" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50343" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Areas/Report/Features/TransfrPermitReport/TransfrPermit.cshtml" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Areas/Report/Features/TransfrPermitReport/TransfrPermit.cshtml" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=0t0pu2hyWxValJfxbc0S0SVbk9oYUSiTN0uUQNiFN7Rx5CSMe56aXzhNQgqIWl99lpmFmW4_DJtv2B10ymq2kCMmQco1; .ASPXAUTH=BDC78EEC47BA6C8D8C15633D3A34C5EB74E32B83FFF961993A5F048797FACA8C3259FB7D6418F29B9BBFBAF94DE6ED0D54E86605EF1C7BBD04F82665FDB7AC5335432121D7836D02D443ECD0AC5809BCA57DB05309AF656A7E9776E646DE1C9FBDD3EC304980F050473A01A9D7D84738E39107038B47920CEBB3CD71ED3ADC5430CEE3162383ADBE6DBC4A8F903E49F9A8D08EAB2B81F3E82DE9C5B57665C299A5FD6430FA3E69F641605F3CFB20AE71B4D3BF3B0A40DF754DBFDC0B090A316473B5385EA0F41D90618BB8A1532FD2474D720B57" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="0t0pu2hyWxValJfxbc0S0SVbk9oYUSiTN0uUQNiFN7Rx5CSMe56aXzhNQgqIWl99lpmFmW4_DJtv2B10ymq2kCMmQco1" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="BDC78EEC47BA6C8D8C15633D3A34C5EB74E32B83FFF961993A5F048797FACA8C3259FB7D6418F29B9BBFBAF94DE6ED0D54E86605EF1C7BBD04F82665FDB7AC5335432121D7836D02D443ECD0AC5809BCA57DB05309AF656A7E9776E646DE1C9FBDD3EC304980F050473A01A9D7D84738E39107038B47920CEBB3CD71ED3ADC5430CEE3162383ADBE6DBC4A8F903E49F9A8D08EAB2B81F3E82DE9C5B57665C299A5FD6430FA3E69F641605F3CFB20AE71B4D3BF3B0A40DF754DBFDC0B090A316473B5385EA0F41D90618BB8A1532FD2474D720B57" />
+    </item>
+  </cookies>
+</error>

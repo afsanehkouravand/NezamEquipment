@@ -1,0 +1,95 @@
+﻿@using System.Drawing
+@using BotDetect
+@using BotDetect.Web.Mvc
+@model NezamEquipment.Web.Areas.Admin.Features.Account.LoginViewModel
+@{
+    ViewBag.PageTitle = "ورود";
+    Layout = "~/Areas/Admin/Features/Shared/_LayoutEmpty.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div style="height: 20px;"></div>
+        <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xm-12" style="margin-top: 50px;margin-bottom: 50px;">
+            <section class="well account" id="form-login">
+                @using (Html.BeginForm(MVC.Admin.Account.Login(), FormMethod.Post, new { @class = "form-horizontal", role = "login" }))
+                 {
+                    @Html.AntiForgeryToken()
+                    <h3 class="font-BYekan" style="margin: 5px 0 0 0;">ورود به سیستم</h3>
+                    <hr/>
+                    @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                    <div class="input-group-margin">
+                        @Html.LabelFor(m => m.UserName, new {@class = "control-label font-BYekan"})
+                        @Html.TextBoxFor(m => m.UserName, new {@class = "form-control", placeholder = "نام کاربری"})
+                        @Html.ValidationMessageFor(m => m.UserName, "", new {@class = "text-danger"})
+                    </div>
+                    <div class="input-group-margin">
+                        @Html.LabelFor(m => m.Password, new {@class = "control-label font-BYekan"})
+                        @Html.PasswordFor(m => m.Password, new {@class = "form-control", placeholder = "رمز عبور"})
+                        @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
+                    </div>
+                    <div class="input-group-margin" style="margin-top: 20px;">
+                        @{ MvcCaptcha exampleCaptcha = new MvcCaptcha("ExampleCaptcha") {SoundEnabled = false, CodeStyle = CodeStyle.Numeric, UserInputID = "CaptchaCode", ReloadEnabled = false, AutoClearInput = true, ImageSize = new Size(250, 50)}; }
+                        @Html.Captcha(exampleCaptcha)
+                        @Html.TextBox("CaptchaCode", null, new {@class = "form-control", data_val = "true", data_val_required = "وارد کردن تصویر امنیتی الزامی هست."})
+                        @Html.ValidationMessage("CaptchaCode", "", new {@class = "text-danger"})
+                    </div>
+                    <div class="form-group" style="margin-top: 30px;">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-success btn-block font-BYekan">ورود</button>
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</div>
+
+@section InBodyTag {
+    @*Scripts.Render("~/bundles/jsDefault")
+    Scripts.Render("~/bundles/jsAdmin")*@
+    <script src="~/Scripts/Other/sha256.min.js"></script>
+    <script type="text/javascript">
+
+       
+        $("#form-login button[type='button']").click(function () {
+
+            if ($("#form-login #UserName").val() == "") {
+                showNotyDanger("لطفا کلمه عبور را وارد کنید.");
+                return;
+                //$("#form-login form").submit();
+              
+            }
+
+            if ($("#form-login #Password").val() == "") {
+                showNotyDanger("لطفا رمز عبور را وارد کنید.");
+                return;
+                //$("#form-login form").submit();
+              
+            }
+            if ($("#form-login #Password").val() != "") {
+                $("#form-login form").submit();
+                return;
+                
+
+            }
+            if ($("#CaptchaCode").val() != "") {
+                if (checkPassword($("#form-login #Password").val()) && $("#CaptchaCode").val() != "") {
+                    $("#form-login #Password").val(sha256($("#form-login #Password").val()));
+                    $("#form-login form").submit();
+                } else {
+                    showNotyDanger("رمز عبور با استاندارد سیستم مطابقت ندارد.");
+                }
+            } else {
+                showNotyDanger("تصویر امنیتی را وارد کنید.");
+            }
+           
+
+           
+        });
+
+        $(".BDC_CaptchaImageDiv a").attr("href", "#");
+
+    </script>
+}

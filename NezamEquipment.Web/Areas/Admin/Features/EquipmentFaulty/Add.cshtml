@@ -1,0 +1,27 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.EquipmentFaulty.AdminEquipmentFaultyAddViewModel
+@{
+    ViewBag.PageTitle = "افزودن";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    @using (Ajax.BeginForm("Add", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.EquipmentFaulty.Add()))))
+    {
+        Html.RenderPartial("_Form", Model.PartialForm);
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        // دکمه انتخاب فایل
+        $("input[type=file]").change(function () {
+            var name = $(this).attr("id");
+            readImageWithOutPutObject(this, $("#" + name + "_Base64"), "value");
+            setPath(this, name + "_Name");
+        });
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.Equipment.Index())';
+    </script>
+}

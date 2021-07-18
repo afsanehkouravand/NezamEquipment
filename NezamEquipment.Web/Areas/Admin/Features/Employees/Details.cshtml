@@ -1,0 +1,51 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Employees.AdminNezamEmployeDetailsViewModel
+@{
+    ViewBag.PageTitle = "اطلاعات کارمندان";
+}
+
+<div class="col-md-12">
+    @Html.Ul(Model).Items(i =>
+{
+    i.AddFor(EUlTabId.Tab1, "اطلاعات");
+   i.AddFor(EUlTabId.Tab2, "لیست تجهیزات", MVC.Admin.EmployEquipment.Index(Model.NezamEmploye.Id));
+
+}).Done()
+</div>
+<div class="col-md-12">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            @Html.ToolBox(Model).Items(i =>
+            {
+
+                i.AddEditButton(MVC.Admin.Employees.Edit(Model.NezamEmploye.Id));
+                i.AddDeleteButton(Model.NezamEmploye.Id, MVC.Admin.Employees.Delete()).SetGoToPage(Url.Action(MVC.Admin.Employees.Index()));
+            }).Done()
+            <div class="margin-bottom-20">
+                @Html.Info(Model).Options(i =>
+           {
+               i.SetTitle("اطلاعات");
+           }).Items(i =>
+           {
+               i.AddFor(Model.NezamEmploye, x => x.Fullname);
+               i.AddFor(Model.NezamEmploye, x => x.NationalCode);
+               i.AddFor(Model.NezamEmploye, x => x.GenderType);
+
+               i.AddFor(Model.NezamEmploye, x => x.CodePersonal);
+
+               i.AddFor(Model.NezamEmploye, x => x.unitType);
+               i.AddFor(Model.NezamEmploye, x => x.CertificateCode);
+          
+               i.AddFor(Model.NezamEmploye, x => x.MobileNumber);
+               i.AddFor(Model.NezamEmploye, x => x.IP);
+               i.AddFor(Model.NezamEmploye, x => x.LoginStatus);
+               i.AddFor(Model.NezamEmploye, x => x.NetworkType);
+               i.AddFor(Model.NezamEmploye, x => x.UserLogin);
+
+               i.AddFor(Model.NezamEmploye, x => x.Description);
+           }).Done()
+            </div>
+        </div>
+        @Html.UlEmptyTab(EUlTabId.Tab2)
+    </div>
+
+</div>

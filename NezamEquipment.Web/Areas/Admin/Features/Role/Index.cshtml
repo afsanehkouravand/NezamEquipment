@@ -1,0 +1,42 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Role.AdminRoleIndexViewModel
+@{
+    ViewBag.PageTitle = "لیست نقش ها";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+        i.AddButton(MVC.Admin.Role.Add()).SetText("افزودن نقش جدید").SetClass("btn btn-success");
+    }).Done()
+</div>
+<div class="col-md-12">
+    @Html.Grid(Model, x=>x.Roles).Options(i =>
+    {
+        i.AddDeleteButton();
+        i.AddEditButton();
+        i.SetPaging(false);
+        i.SetHaveAccessTo(Model.HaveAccessTo);
+    }).Columns(i =>
+    {
+        i.AddColumnCounter();
+        i.AddColumnForButton();
+        i.AddColumnFor(Model.Role, x => x.Name);
+        i.AddColumnFor(Model.Role, x => x.AreaType);
+        i.AddColumnFor(Model.Role, x => x.IsDefaultRole)
+            .SetIsBoolean(onTrueTemplate: "<span class=\"label label-warning\">نقش پیش فرض</span>", onFalseTemplate:"-");
+    }).Done()
+
+</div>
+
+@section InBodyTag
+{
+    @if (Model.HaveAccessTo.Check(MVC.Admin.Role.ActionNames.Delete))
+    {
+        <script type="text/javascript">
+            GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.Role.Index())";
+        </script>
+    }
+}

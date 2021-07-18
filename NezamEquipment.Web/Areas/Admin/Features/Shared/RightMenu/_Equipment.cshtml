@@ -1,0 +1,35 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel
+@{
+   
+    var indexNezamEquipment = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.Equipment.Name, MVC.Admin.Equipment.ActionNames.Index);
+    var count = 0;
+}
+
+@if ( indexNezamEquipment)
+{
+    var controllerGroup = new List<string>
+            {
+               
+                MVC.Admin.Equipment.Name.ToLower(),
+            };
+    <li data-controller-group="@string.Join(" ",controllerGroup)">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-suitcase"></i>
+            <span>تجهیزات کامپیوتری </span>
+            @if (count != 0)
+            {
+                <span class="label label-number-circle" style="color: white !important; margin: 0; font-size: 14px;">@count</span>
+            }
+            <i class="fa fa-chevron-circle-left drop-icon"></i>
+        </a>
+        <ul class="submenu">
+
+            <li data-controller-action="@MVC.Admin.Equipment.Name.ToLower() @MVC.Admin.Equipment.ActionNames.Index.ToLower()">
+                <a href="@Url.Action(MVC.Admin.Equipment.Index())">
+                    <span>لیست تجهیزات کامپیوتری </span>
+                </a>
+            </li>
+
+        </ul>
+    </li>
+}

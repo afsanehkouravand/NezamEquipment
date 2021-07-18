@@ -1,0 +1,50 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel
+@{
+    var indexReportPayment = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.ReportPayment.Name, MVC.Admin.ReportPayment.ActionNames.Index);
+    var indexReportPermit = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.ReportPermitList .Name, MVC.Admin.ReportPermitList.ActionNames.Index);
+  
+ var count = 0;
+}
+
+
+@if (indexReportPayment || indexReportPermit)
+{
+    var controllerGroup = new List<string>
+    {
+               
+        MVC.Admin.ReportPayment.Name.ToLower(),
+        MVC.Admin.ReportPermitList.Name.ToLower(),
+    };
+    <li data-controller-group="@string.Join(" ",controllerGroup)">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-bar-chart "></i>
+            <span>گزارشات</span>
+            @if (count != 0)
+            {
+                <span class="label label-number-circle" style="color: white !important; margin: 0; font-size: 14px;">@count</span>
+            }
+            <i class="fa fa-chevron-circle-left drop-icon"></i>
+        </a>
+        <ul class="submenu">
+        @if (indexReportPayment)
+        {
+            <li data-controller-action="@MVC.Admin.ReportPayment.Name.ToLower() @MVC.Admin.ReportPayment.ActionNames.Index.ToLower()">
+                <a href="@Url.Action(MVC.Admin.ReportPayment.Index())">
+                    <span>گزارش پرداخت های عوارض نقل و انتقال</span>
+                </a>
+            </li>
+        }
+           
+            @if (indexReportPermit)
+            {
+                <li data-controller-action="@MVC.Admin.ReportPermitList.Name.ToLower() @MVC.Admin.ReportPermitList.ActionNames.Index.ToLower()">
+                    <a href="@Url.Action(MVC.Admin.ReportPermitList.Index())">
+                        <span>چاپ گروهی مجوز ها</span>
+                    </a>
+                </li>
+            }
+           
+        </ul>
+    </li>
+}
+

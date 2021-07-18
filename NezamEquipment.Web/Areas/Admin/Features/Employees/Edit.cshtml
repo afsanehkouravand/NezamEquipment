@@ -1,0 +1,21 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Employees.AdminNezamEmployeEditViewModel
+@{
+    ViewBag.PageTitle = "ویرایش اطلاعات کارمندان";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    @using (Ajax.BeginForm("Edit", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.Employees.Edit()))))
+    {
+        Html.RenderPartial("_Form", Model.PartialForm);
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.Employees.Details(Model.PartialForm.EmployeesDto.Id))';
+    </script>
+}

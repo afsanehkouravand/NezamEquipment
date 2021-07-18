@@ -1,0 +1,34 @@
+﻿@using System.Drawing
+@using System.Web.UI.WebControls
+@using Stimulsoft.Report.Mvc
+@model NezamEquipment.Web.Areas.Report.Features.TransfrPermitReport.TransfrPermitViewModel
+@{
+    ViewBag.Title = "اطلاعات صدور مجوز";
+   
+    var option = new StiMvcViewerOptions()
+    {
+        ToolbarFontFamily = "IranNastaliq",
+        ActionGetReportSnapshot = "Report",
+        ActionViewerEvent = "ViewerEvent",
+        Width = Unit.Percentage(100),
+        Theme = StiTheme.Office2013,
+        ShowButtonPrint = true,
+        ShowButtonSave = true,
+        ToolbarBackgroundColor = System.Drawing.Color.Silver,
+        ActionPrintReport = "PrintReport",
+        ActionExportReport = "ExportReport",
+        MenuPrintDestination = StiPrintDestination.Direct,
+
+    };
+}
+
+<div class="col-md-12" style="direction: ltr; font-family:IranNastaliq !important">
+    @Html.Stimulsoft().RenderMvcViewerScripts()
+    @Html.Stimulsoft().RenderMvcDesignerScripts()
+    @Html.Stimulsoft().StiMvcViewer("MyViewr",option)
+</div>
+@section InBodyTag
+{
+    <link href="~/Content/_Home/4-IranNastaliq.css" rel="stylesheet" />
+   
+}

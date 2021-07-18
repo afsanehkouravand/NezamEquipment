@@ -1,0 +1,188 @@
+﻿<error errorId="997818ea-cbd6-4aeb-92a8-197f5ab2cb7c" application="/LM/W3SVC/2/ROOT" host="DESKTOP-G9DJ020" type="System.NullReferenceException" message="Object reference not set to an instance of an object." source="NezamEquipment.Web" detail="System.AggregateException: One or more errors occurred. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at NezamEquipment.Web.Areas.Admin.Features.TransferAllManagmentTow.TransferAllManagmentTowController.&lt;DetailsNew&gt;d__10.MoveNext() in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\TransferAllManagmentTow\TransferAllManagmentTowController.cs:line 265&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)&#xD;&#xA;   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)&#xD;&#xA;   at System.Threading.Tasks.Task`1.get_Result()&#xD;&#xA;   at MyCommon.Helpers.Extension.GetUrlInfoExtension.UrlInfo(Task`1 data, RequestContext requestContext)&#xD;&#xA;   at MyCommon.Helpers.Ul.UlDataItem.AddFor(EUlTabId id, String title, Task`1 t4MvcActionUrl, Nullable`1 isActive)&#xD;&#xA;   at ASP._Page_Areas_Admin_Features_Transfer_Index_cshtml.&lt;Execute&gt;b__3_2(UlDataItem i) in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\Transfer\Index.cshtml:line 182&#xD;&#xA;   at MyCommon.Helpers.Ul.UlExtension.Items(Action`1 build)&#xD;&#xA;   at ASP._Page_Areas_Admin_Features_Transfer_Index_cshtml.Execute() in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\Transfer\Index.cshtml:line 175&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)&#xD;&#xA;---&gt; (Inner Exception #0) System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at NezamEquipment.Web.Areas.Admin.Features.TransferAllManagmentTow.TransferAllManagmentTowController.&lt;DetailsNew&gt;d__10.MoveNext() in D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\Admin\Features\TransferAllManagmentTow\TransferAllManagmentTowController.cs:line 265&lt;---&#xD;&#xA;" user="sa" time="2020-09-14T09:39:01.3294066Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=gynV0neAHjPNg1CdVl8DchvD3mBx6ruhEepFDBvRu3WLM0CLQqGpB7sYwZTCH3RGBlCDRKbfgeCm5JC9cJGBWNaA5941; ASP.NET_SessionId=alygsb3bzfzfbllrlitaoxnc; NezamEquipmentIdentityCookie=FtPEpL7_y9KfQwoZHfmvJlqB_JTxAj8MK1K5xovcghtlBVH_RxrsdFTCq2uAXfd0xADVH64ifU575OyKL-zCvEpmjYFFvO2mYDFl9FNR9BL5LdX4CKzkpHkLzXEhoMdC23KMaixe2ax8dt-Ia-m7V5e6XmrFLivMjvSAGfjQT95eHaNFIaur_5xWewMCW7SqkKEjCh7elpxiqjg-sHadSrgnW6Sga7Djp7IMPYaZc-saSF4ImwND63ntiPP-uyhGBop-zQkNpCCVi8KD5T_vzOC4qc0mM2ju8cfh93FXeIdfN1PiDBhPGjmk9NuGQqh0fGQITYv-1NuHJTOAoKk6kt2FOSzQ2yzt6kjs1QXLIH328V6Eqx0Xinf4phvm3JcJMPVEUAMO80jmlDqOQZwxCmJnIZiCrZcNbizKCeRipBGtRKYzsZlgq85OZJfZzCdRNM0IrO6_h61xSOpwNfqO1n_7zfuy78PVSbx_j8A56gdBvrWrW_ChAeeoofbz6TkSX7QX3OZzbunESwdvsHpFldGIB74&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/Admin/TransferAll?S.ContractNumber=&amp;S.CreatedOn=&amp;S.FromCreatedOn=%DB%B1%DB%B3%DB%B9%DB%B9%2F%DB%B0%DB%B6%2F%DB%B1%DB%B5&amp;S.ToCreatedOn=&amp;DoSearch=True&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:cross-site&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=gynV0neAHjPNg1CdVl8DchvD3mBx6ruhEepFDBvRu3WLM0CLQqGpB7sYwZTCH3RGBlCDRKbfgeCm5JC9cJGBWNaA5941; ASP.NET_SessionId=alygsb3bzfzfbllrlitaoxnc; NezamEquipmentIdentityCookie=FtPEpL7_y9KfQwoZHfmvJlqB_JTxAj8MK1K5xovcghtlBVH_RxrsdFTCq2uAXfd0xADVH64ifU575OyKL-zCvEpmjYFFvO2mYDFl9FNR9BL5LdX4CKzkpHkLzXEhoMdC23KMaixe2ax8dt-Ia-m7V5e6XmrFLivMjvSAGfjQT95eHaNFIaur_5xWewMCW7SqkKEjCh7elpxiqjg-sHadSrgnW6Sga7Djp7IMPYaZc-saSF4ImwND63ntiPP-uyhGBop-zQkNpCCVi8KD5T_vzOC4qc0mM2ju8cfh93FXeIdfN1PiDBhPGjmk9NuGQqh0fGQITYv-1NuHJTOAoKk6kt2FOSzQ2yzt6kjs1QXLIH328V6Eqx0Xinf4phvm3JcJMPVEUAMO80jmlDqOQZwxCmJnIZiCrZcNbizKCeRipBGtRKYzsZlgq85OZJfZzCdRNM0IrO6_h61xSOpwNfqO1n_7zfuy78PVSbx_j8A56gdBvrWrW_ChAeeoofbz6TkSX7QX3OZzbunESwdvsHpFldGIB74&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/Admin/TransferAll?S.ContractNumber=&amp;S.CreatedOn=&amp;S.FromCreatedOn=%DB%B1%DB%B3%DB%B9%DB%B9%2F%DB%B0%DB%B6%2F%DB%B1%DB%B5&amp;S.ToCreatedOn=&amp;DoSearch=True&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: cross-site&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="sa" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Admin/Transfer" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Admin\Transfer" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="ContractNumber=996008" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53846" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Admin/Transfer" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Admin/Transfer" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=gynV0neAHjPNg1CdVl8DchvD3mBx6ruhEepFDBvRu3WLM0CLQqGpB7sYwZTCH3RGBlCDRKbfgeCm5JC9cJGBWNaA5941; ASP.NET_SessionId=alygsb3bzfzfbllrlitaoxnc; NezamEquipmentIdentityCookie=FtPEpL7_y9KfQwoZHfmvJlqB_JTxAj8MK1K5xovcghtlBVH_RxrsdFTCq2uAXfd0xADVH64ifU575OyKL-zCvEpmjYFFvO2mYDFl9FNR9BL5LdX4CKzkpHkLzXEhoMdC23KMaixe2ax8dt-Ia-m7V5e6XmrFLivMjvSAGfjQT95eHaNFIaur_5xWewMCW7SqkKEjCh7elpxiqjg-sHadSrgnW6Sga7Djp7IMPYaZc-saSF4ImwND63ntiPP-uyhGBop-zQkNpCCVi8KD5T_vzOC4qc0mM2ju8cfh93FXeIdfN1PiDBhPGjmk9NuGQqh0fGQITYv-1NuHJTOAoKk6kt2FOSzQ2yzt6kjs1QXLIH328V6Eqx0Xinf4phvm3JcJMPVEUAMO80jmlDqOQZwxCmJnIZiCrZcNbizKCeRipBGtRKYzsZlgq85OZJfZzCdRNM0IrO6_h61xSOpwNfqO1n_7zfuy78PVSbx_j8A56gdBvrWrW_ChAeeoofbz6TkSX7QX3OZzbunESwdvsHpFldGIB74" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/Admin/TransferAll?S.ContractNumber=&amp;S.CreatedOn=&amp;S.FromCreatedOn=%DB%B1%DB%B3%DB%B9%DB%B9%2F%DB%B0%DB%B6%2F%DB%B1%DB%B5&amp;S.ToCreatedOn=&amp;DoSearch=True" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="cross-site" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="ContractNumber">
+      <value string="996008" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="gynV0neAHjPNg1CdVl8DchvD3mBx6ruhEepFDBvRu3WLM0CLQqGpB7sYwZTCH3RGBlCDRKbfgeCm5JC9cJGBWNaA5941" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="alygsb3bzfzfbllrlitaoxnc" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="FtPEpL7_y9KfQwoZHfmvJlqB_JTxAj8MK1K5xovcghtlBVH_RxrsdFTCq2uAXfd0xADVH64ifU575OyKL-zCvEpmjYFFvO2mYDFl9FNR9BL5LdX4CKzkpHkLzXEhoMdC23KMaixe2ax8dt-Ia-m7V5e6XmrFLivMjvSAGfjQT95eHaNFIaur_5xWewMCW7SqkKEjCh7elpxiqjg-sHadSrgnW6Sga7Djp7IMPYaZc-saSF4ImwND63ntiPP-uyhGBop-zQkNpCCVi8KD5T_vzOC4qc0mM2ju8cfh93FXeIdfN1PiDBhPGjmk9NuGQqh0fGQITYv-1NuHJTOAoKk6kt2FOSzQ2yzt6kjs1QXLIH328V6Eqx0Xinf4phvm3JcJMPVEUAMO80jmlDqOQZwxCmJnIZiCrZcNbizKCeRipBGtRKYzsZlgq85OZJfZzCdRNM0IrO6_h61xSOpwNfqO1n_7zfuy78PVSbx_j8A56gdBvrWrW_ChAeeoofbz6TkSX7QX3OZzbunESwdvsHpFldGIB74" />
+    </item>
+  </cookies>
+</error>

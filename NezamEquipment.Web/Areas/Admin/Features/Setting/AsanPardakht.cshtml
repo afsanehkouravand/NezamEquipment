@@ -1,0 +1,68 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Setting.AdminSettingAsanPardakhtViewModel
+
+@{
+    ViewBag.PageTitle = "تنظیمات درگاه آسان پرداخت";
+    var ajaxOption = new AjaxOptions()
+    {
+        Url = Url.Action("AsanPardakht", "Setting", new { area = "Admin" }),
+        HttpMethod = "post",
+        OnBegin = "OnBegin",
+        OnComplete = "OnComplete",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        LoadingElementId = "loading"
+    };
+}
+
+<div>
+    <div class="col-md-12">
+        <div class="page-header title">
+            <h3>@ViewBag.PageTitle</h3>
+        </div>
+    </div>
+    @{Html.RenderPartial(MVC.Admin.Features.Views.Shared._Message);}
+    <div class="col-md-12">
+        @using (Ajax.BeginForm("AsanPardakht", ajaxOption))
+        {
+            @Html.AntiForgeryToken()
+            <fieldset class="form-horizontal fieldset">
+                @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+
+                @{ Html.RenderPartial("_AsanPardakht", Model.SettingAsanPardakhtXml); }
+
+                <div class="form-group form-button">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="ثبت کن" class="btn btn-primary"/>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+
+        function OnBegin() {
+            GoToTop();
+            disableWithClass("fieldset", 'yes');
+        }
+        function OnComplete() {
+            disableWithClass("fieldset", 'no');
+        }
+        function OnFailure() {
+            showNotyFailure();
+            disableWithClass("fieldset", 'no');
+        }
+        function OnSuccess(data) {
+            if (data.IsSucceed == true) {
+                showNotySuccess();
+            } else {
+                showNotyDanger(data.Message);
+            }
+        }
+
+    </script>
+}

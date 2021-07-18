@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BB867D9-A1EE-4B60-97C1-7C9B9181C936}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCommon.Helpers</RootNamespace>
+    <AssemblyName>MyCommon.Helpers</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BotDetect, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Captcha.4.4.2\lib\net35\BotDetect.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect.Web.Mvc, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Captcha.4.4.2\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcPaging, Version=2.1.13.46, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvcPaging.2.1.13\lib\net40\MvcPaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Data.SQLite.Core.1.0.112.2\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\T4MVCExtensions.4.2.4\lib\net45\T4MVCExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extension\AnonymousEnumToDictionaryExtension.cs" />
+    <Compile Include="Extension\CustomCastExtension.cs" />
+    <Compile Include="Extension\GetIdFromNameExtension.cs" />
+    <Compile Include="Extension\GetDisplayNameExtension.cs" />
+    <Compile Include="Extension\GetDropDownExtension.cs" />
+    <Compile Include="Extension\GetPropertyNameExtension.cs" />
+    <Compile Include="Extension\IsNullableEnumExtension.cs" />
+    <Compile Include="Extension\ListCloneExtensions.cs" />
+    <Compile Include="Extension\ToShortShamsiExtension.cs" />
+    <Compile Include="Form\EFormColorType.cs" />
+    <Compile Include="Form\EFormMethodType.cs" />
+    <Compile Include="Form\FormDataItem.cs" />
+    <Compile Include="Form\FormItem.cs" />
+    <Compile Include="Form\FormDataOption.cs" />
+    <Compile Include="Form\FormExtension.cs" />
+    <Compile Include="Form\FormHelper.cs" />
+    <Compile Include="Form\FormOption.cs" />
+    <Compile Include="Form\FormItemExtension.cs" />
+    <Compile Include="Form\FormButton.cs" />
+    <Compile Include="Form\FormButtonExtension.cs" />
+    <Compile Include="Grid\EGridButtonType.cs" />
+    <Compile Include="Grid\EGridColorType.cs" />
+    <Compile Include="Extension\GetUrlInfoExtension.cs" />
+    <Compile Include="Grid\GridButtonQueryString.cs" />
+    <Compile Include="Grid\GridButton.cs" />
+    <Compile Include="Grid\GridColumn.cs" />
+    <Compile Include="Grid\GridButtonExtension.cs" />
+    <Compile Include="Grid\GridDataFooter.cs" />
+    <Compile Include="Grid\GridDataColumns.cs" />
+    <Compile Include="Grid\GridDataOptions.cs" />
+    <Compile Include="Grid\GridExtension.cs" />
+    <Compile Include="Grid\GridForm.cs" />
+    <Compile Include="Grid\GridHelper.cs" />
+    <Compile Include="Grid\GridHtml.cs" />
+    <Compile Include="Grid\GridOption.cs" />
+    <Compile Include="Grid\GridColumnExtension.cs" />
+    <Compile Include="Grid\GridFormExtension.cs" />
+    <Compile Include="Grid\GridHtmlExtension.cs" />
+    <Compile Include="Grid\IPagingData.cs" />
+    <Compile Include="Helper\ButtonLoadingHtmlHelper.cs" />
+    <Compile Include="Helper\DatePickerForHelper.cs" />
+    <Compile Include="Helper\DefaultGridForHelper.cs" />
+    <Compile Include="Helper\DefaultInfoForHelper.cs" />
+    <Compile Include="Helper\DefaultFormForHelper.cs" />
+    <Compile Include="Helper\DefaultSearchFormForHelper.cs" />
+    <Compile Include="Helper\DefaultToolButtonsForHelper.cs" />
+    <Compile Include="Helper\DefaultUlEmptyTabHelper.cs" />
+    <Compile Include="Helper\DefaultUlForHelper.cs" />
+    <Compile Include="Enum\DatePickerPlacement.cs" />
+    <Compile Include="Enum\DateType.cs" />
+    <Compile Include="Helper\PageTitleHelper.cs" />
+    <Compile Include="Info\EInfoColumeType.cs" />
+    <Compile Include="Info\EInfoColorType.cs" />
+    <Compile Include="Info\InfoButton.cs" />
+    <Compile Include="Info\InfoDataFooter.cs" />
+    <Compile Include="Info\InfoDataOption.cs" />
+    <Compile Include="Info\InfoItemExtension.cs" />
+    <Compile Include="Info\InfoButtonExtension.cs" />
+    <Compile Include="Info\InfoDataItem.cs" />
+    <Compile Include="Info\InfoExtension.cs" />
+    <Compile Include="Info\InfoHelper.cs" />
+    <Compile Include="Info\InfoItem.cs" />
+    <Compile Include="Info\InfoOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\HaveAccessToExtension.cs" />
+    <Compile Include="Security\RoleAccessDto.cs" />
+    <Compile Include="ToolBox\EGridColorType.cs" />
+    <Compile Include="ToolBox\ToolBoxRadioGroup.cs" />
+    <Compile Include="ToolBox\ToolBoxRadioExtension.cs" />
+    <Compile Include="ToolBox\ToolBoxRadio.cs" />
+    <Compile Include="ToolBox\ToolBoxItem.cs" />
+    <Compile Include="ToolBox\ToolBoxButtonExtension.cs" />
+    <Compile Include="ToolBox\ToolBoxButton.cs" />
+    <Compile Include="ToolBox\ToolBoxDataItems.cs" />
+    <Compile Include="ToolBox\ToolBoxDataOption.cs" />
+    <Compile Include="ToolBox\ToolBoxExtension.cs" />
+    <Compile Include="ToolBox\ToolBoxHelper.cs" />
+    <Compile Include="ToolBox\ToolBoxOption.cs" />
+    <Compile Include="Ul\UlEmptyTabHelper.cs" />
+    <Compile Include="Ul\UlDataOption.cs" />
+    <Compile Include="Ul\UlItem.cs" />
+    <Compile Include="Ul\UlDataItem.cs" />
+    <Compile Include="Ul\UlExtension.cs" />
+    <Compile Include="Ul\UlHelper.cs" />
+    <Compile Include="Ul\UlOption.cs" />
+    <Compile Include="Ul\EUlTabId.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestNuget.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MyCommon.Helpers.dll" />
+    <Content Include="bin\Debug\MyCommon.Helpers.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

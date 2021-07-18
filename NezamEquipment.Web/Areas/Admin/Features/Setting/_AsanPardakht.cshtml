@@ -1,0 +1,18 @@
+﻿@using NezamEquipment.ServiceLayer.Entity.Setting.Setting.Xml
+@model NezamEquipment.ServiceLayer.Entity.Setting.Setting.Xml.SettingAsanPardakhtXml
+           
+@{
+    foreach (var item in typeof(SettingAsanPardakhtXml).GetProperties())
+    {
+        <div class="form-group">
+            @Html.Label(item.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-7">
+                <span class="help-block">@ModelMetadata.FromStringExpression(item.Name, ViewData).AdditionalValues["Help"]</span>
+                @Html.Editor(item.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessage(item.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+}
+
+

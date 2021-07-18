@@ -1,0 +1,1 @@
+﻿You only need to use .ToSafeHtml() on property that allows html

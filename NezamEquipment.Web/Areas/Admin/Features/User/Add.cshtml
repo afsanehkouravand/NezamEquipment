@@ -1,0 +1,21 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.User.AdminUserAddViewModel
+@{
+    ViewBag.PageTitle = "افزودن کاربر جدید";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12" id="form">
+    @using (Ajax.BeginForm("Add", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.User.Add()))))
+    {
+        Html.RenderPartial("_Form", Model.PartialForm);
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.User.Index())';
+    </script>
+}

@@ -1,0 +1,39 @@
+﻿
+@model NezamEquipment.Web.Areas.Admin.Features.EmployEquipment.AdminEmployEquipmentIndexViewModel
+
+
+<div class="tab-content">
+
+
+    <div role="tabpanel" id="tab2">
+
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="panel panel-default" style="padding-bottom: 3px;">
+                @*<div class="panel-heading">تجهیزات</div>*@
+
+                <div class="panel-body">
+                   
+                    <div class="col-md-12" style="padding: 0;">
+                        @Html.Grid(Model, x => x.NezamEquipments).Options(i =>
+                   {
+                       i.SetTitle("تجهیزات کاربر");
+                       //i.AddEditButton();
+                   }).Columns(i => { i.AddColumnCounter(); /*i.AddColumnForButton();*/
+                       i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentTypes);                      
+                       i.AddColumnFor(Model.NezamEquipment, x => x.Model);
+                       i.AddColumnFor(Model.NezamEquipment, x => x.unitType);
+                       i.AddColumnFor(Model.NezamEquipment, x => x.EquipmentStatus);
+                       i.AddColumnFor(Model.NezamEquipment, x => x.Code);
+                     
+                   }).Footer(i => { }).Done()
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>

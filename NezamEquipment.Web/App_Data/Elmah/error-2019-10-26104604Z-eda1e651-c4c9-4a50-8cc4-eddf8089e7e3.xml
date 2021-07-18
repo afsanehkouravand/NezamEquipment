@@ -1,0 +1,230 @@
+﻿<error errorId="eda1e651-c4c9-4a50-8cc4-eddf8089e7e3" application="/LM/W3SVC/2/ROOT" host="OFFICEPC" type="System.NullReferenceException" message="Object reference not set to an instance of an object." source="NezamEquipment.Web" detail="System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at NezamEquipment.Web.Areas.Admin.Features.TransferLevy.TransferLevyController.&lt;ArenaAndLandEarth&gt;d__4.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__11_0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_1.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_1.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__5(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="sa" time="2019-10-26T10:46:04.4412468Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:466&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=00xe5p4qipiiv2un2i5t22o0; __RequestVerificationToken=O3jTHSxtvOx2KzulRm1CDMb9bGlNN_ga5jE-WZovXUVa7UGZhvVg5Nlsk9NNPGBLh9bie1G47T7khA7bB6-kSYuEunQ1; LoginStamp=871039e2-08cc-4b44-8c3d-d19c76d94150; arvandContractMattersIdentityCookie=lvkA3fGtb6oT_TEjcjwy74t4xId8UiAp_KJ-5agtE1-8zJIAVpb1Qiw1_TJWGL096RAjhvTuMNkVTDhECLnavGthx41kKjOETHtGNqpqwW6rb7ELcesmSPmceBCvIkDY_3SW8p9lJ9Za0sg97v-k9XVt1w8IJrZelJa0IwM4bXdSZaO7uyuV_c4DeSOzuwYTGCKfH0ehX-vXBRCZDPMhv61sNkbdVmr2naAAYSIMmsPzUbU81yS90iKYsxGqfyA02gE4w9uoIJVOiYBh6LxbMXeU_ggodyFkqOTt5f_RsXaz-0bulklvrpMeBLWnKSqLW7DmuAzQcgAQWZw-iVCvnvNfO66APhJfAqpG-b3ny1ONgD6T7gRIX9B1b9hq29XUJf4ECDZrVzS6IUsmLkyBBqqFXCeEmEXw9RKJCNfbCLvQM0CgH_Jl0cfwSRYQkYETseyiFemRl9Z3sQfs4d1E78x09usbrSLW8CO2UR4BPuixb24Og_pgGTTYqPZMsUVJhgYMTQ; .ASPXAUTH=1C0C057DE0F530A7CD2BFEC99556A5FF256F83BBF1453512A4230F3BB4E96750F278AA4EE64A9EB590A1BB825449BA07E6F39C9620022274761480531E5B55CE32129266804331018390B748BCE7E41C8DB7BFD90892A20AF58BC1B8D53B31D866AADA187FD9079BA159859025AF77B4C6D3E4DCF362509D36814955157C6E3208CB755B30ED6B80075EDD3D0A42451EC61CDAB5135D69EA1C42E2484AE9636E2DDB737F8A457A49EE8D028C7E4CCD1C2249F24A96E2E3158FDC72B3FEB654F2A5513191E9ADCC89DB21994E52966F60830A690B; NezamEquipmentIdentityCookie=R9TufLkXEYeO-tYBGEWcmyOlEOf0Z2L8Gq4X5hnZAJVRyrH5A_UchFf1KzOMhANnI_d-ze0dOkr4-vbanEwiO0EcO9wgYwqzfU3NRKXGYrq_3H5SEKwuLZ6O5veN3Io62rjjDo0hOsQqgA5F5DTfk_YKURsUDmFdCLlpKo3a3FAFQmJOBxUtV326v-OR0DJ6Cgdi_JOyvH-bMKbAEOaXtFWG9BffCHFfV7kTuweEzVa1NSKQIcTcma0ercKGZkAxI0PDPoZM7fpN5Dc3QTuW9i8a7wOhx5wWFs9sQxX_jrKvafmRcBfxmKEX8l8KYV06-vaLhXAwCSygk9fkV_BYibfPM0V-OH4uhjxH4-VBhziEYURPW9i9d7P2DeNPoKNsku0oRe_gjcOBqczJZ0iNyb4iX1y2XHJoXIrJEUDrhbKV4lyZ0fXZv6-K_1uI96to10T-SKOeno_vFIH9LGk2wTB9GaFoe6XWsHUZvQIO3xa7DS1sGUspKQSU42mDir591BwAaw&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/Admin/Transfer?ContractNumber=988001&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:1324&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;HTTP_SEC_FETCH_MODE:cors&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 466&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: ASP.NET_SessionId=00xe5p4qipiiv2un2i5t22o0; __RequestVerificationToken=O3jTHSxtvOx2KzulRm1CDMb9bGlNN_ga5jE-WZovXUVa7UGZhvVg5Nlsk9NNPGBLh9bie1G47T7khA7bB6-kSYuEunQ1; LoginStamp=871039e2-08cc-4b44-8c3d-d19c76d94150; arvandContractMattersIdentityCookie=lvkA3fGtb6oT_TEjcjwy74t4xId8UiAp_KJ-5agtE1-8zJIAVpb1Qiw1_TJWGL096RAjhvTuMNkVTDhECLnavGthx41kKjOETHtGNqpqwW6rb7ELcesmSPmceBCvIkDY_3SW8p9lJ9Za0sg97v-k9XVt1w8IJrZelJa0IwM4bXdSZaO7uyuV_c4DeSOzuwYTGCKfH0ehX-vXBRCZDPMhv61sNkbdVmr2naAAYSIMmsPzUbU81yS90iKYsxGqfyA02gE4w9uoIJVOiYBh6LxbMXeU_ggodyFkqOTt5f_RsXaz-0bulklvrpMeBLWnKSqLW7DmuAzQcgAQWZw-iVCvnvNfO66APhJfAqpG-b3ny1ONgD6T7gRIX9B1b9hq29XUJf4ECDZrVzS6IUsmLkyBBqqFXCeEmEXw9RKJCNfbCLvQM0CgH_Jl0cfwSRYQkYETseyiFemRl9Z3sQfs4d1E78x09usbrSLW8CO2UR4BPuixb24Og_pgGTTYqPZMsUVJhgYMTQ; .ASPXAUTH=1C0C057DE0F530A7CD2BFEC99556A5FF256F83BBF1453512A4230F3BB4E96750F278AA4EE64A9EB590A1BB825449BA07E6F39C9620022274761480531E5B55CE32129266804331018390B748BCE7E41C8DB7BFD90892A20AF58BC1B8D53B31D866AADA187FD9079BA159859025AF77B4C6D3E4DCF362509D36814955157C6E3208CB755B30ED6B80075EDD3D0A42451EC61CDAB5135D69EA1C42E2484AE9636E2DDB737F8A457A49EE8D028C7E4CCD1C2249F24A96E2E3158FDC72B3FEB654F2A5513191E9ADCC89DB21994E52966F60830A690B; NezamEquipmentIdentityCookie=R9TufLkXEYeO-tYBGEWcmyOlEOf0Z2L8Gq4X5hnZAJVRyrH5A_UchFf1KzOMhANnI_d-ze0dOkr4-vbanEwiO0EcO9wgYwqzfU3NRKXGYrq_3H5SEKwuLZ6O5veN3Io62rjjDo0hOsQqgA5F5DTfk_YKURsUDmFdCLlpKo3a3FAFQmJOBxUtV326v-OR0DJ6Cgdi_JOyvH-bMKbAEOaXtFWG9BffCHFfV7kTuweEzVa1NSKQIcTcma0ercKGZkAxI0PDPoZM7fpN5Dc3QTuW9i8a7wOhx5wWFs9sQxX_jrKvafmRcBfxmKEX8l8KYV06-vaLhXAwCSygk9fkV_BYibfPM0V-OH4uhjxH4-VBhziEYURPW9i9d7P2DeNPoKNsku0oRe_gjcOBqczJZ0iNyb4iX1y2XHJoXIrJEUDrhbKV4lyZ0fXZv6-K_1uI96to10T-SKOeno_vFIH9LGk2wTB9GaFoe6XWsHUZvQIO3xa7DS1sGUspKQSU42mDir591BwAaw&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/Admin/Transfer?ContractNumber=988001&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36&#xD;&#xA;Origin: http://localhost:1324&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;Sec-Fetch-Mode: cors&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="sa" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="466" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Admin/TransferLevy/ArenaAndLandEarth" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Admin\TransferLevy\ArenaAndLandEarth" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53750" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Admin/TransferLevy/ArenaAndLandEarth" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Admin/TransferLevy/ArenaAndLandEarth" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="466" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=00xe5p4qipiiv2un2i5t22o0; __RequestVerificationToken=O3jTHSxtvOx2KzulRm1CDMb9bGlNN_ga5jE-WZovXUVa7UGZhvVg5Nlsk9NNPGBLh9bie1G47T7khA7bB6-kSYuEunQ1; LoginStamp=871039e2-08cc-4b44-8c3d-d19c76d94150; arvandContractMattersIdentityCookie=lvkA3fGtb6oT_TEjcjwy74t4xId8UiAp_KJ-5agtE1-8zJIAVpb1Qiw1_TJWGL096RAjhvTuMNkVTDhECLnavGthx41kKjOETHtGNqpqwW6rb7ELcesmSPmceBCvIkDY_3SW8p9lJ9Za0sg97v-k9XVt1w8IJrZelJa0IwM4bXdSZaO7uyuV_c4DeSOzuwYTGCKfH0ehX-vXBRCZDPMhv61sNkbdVmr2naAAYSIMmsPzUbU81yS90iKYsxGqfyA02gE4w9uoIJVOiYBh6LxbMXeU_ggodyFkqOTt5f_RsXaz-0bulklvrpMeBLWnKSqLW7DmuAzQcgAQWZw-iVCvnvNfO66APhJfAqpG-b3ny1ONgD6T7gRIX9B1b9hq29XUJf4ECDZrVzS6IUsmLkyBBqqFXCeEmEXw9RKJCNfbCLvQM0CgH_Jl0cfwSRYQkYETseyiFemRl9Z3sQfs4d1E78x09usbrSLW8CO2UR4BPuixb24Og_pgGTTYqPZMsUVJhgYMTQ; .ASPXAUTH=1C0C057DE0F530A7CD2BFEC99556A5FF256F83BBF1453512A4230F3BB4E96750F278AA4EE64A9EB590A1BB825449BA07E6F39C9620022274761480531E5B55CE32129266804331018390B748BCE7E41C8DB7BFD90892A20AF58BC1B8D53B31D866AADA187FD9079BA159859025AF77B4C6D3E4DCF362509D36814955157C6E3208CB755B30ED6B80075EDD3D0A42451EC61CDAB5135D69EA1C42E2484AE9636E2DDB737F8A457A49EE8D028C7E4CCD1C2249F24A96E2E3158FDC72B3FEB654F2A5513191E9ADCC89DB21994E52966F60830A690B; NezamEquipmentIdentityCookie=R9TufLkXEYeO-tYBGEWcmyOlEOf0Z2L8Gq4X5hnZAJVRyrH5A_UchFf1KzOMhANnI_d-ze0dOkr4-vbanEwiO0EcO9wgYwqzfU3NRKXGYrq_3H5SEKwuLZ6O5veN3Io62rjjDo0hOsQqgA5F5DTfk_YKURsUDmFdCLlpKo3a3FAFQmJOBxUtV326v-OR0DJ6Cgdi_JOyvH-bMKbAEOaXtFWG9BffCHFfV7kTuweEzVa1NSKQIcTcma0ercKGZkAxI0PDPoZM7fpN5Dc3QTuW9i8a7wOhx5wWFs9sQxX_jrKvafmRcBfxmKEX8l8KYV06-vaLhXAwCSygk9fkV_BYibfPM0V-OH4uhjxH4-VBhziEYURPW9i9d7P2DeNPoKNsku0oRe_gjcOBqczJZ0iNyb4iX1y2XHJoXIrJEUDrhbKV4lyZ0fXZv6-K_1uI96to10T-SKOeno_vFIH9LGk2wTB9GaFoe6XWsHUZvQIO3xa7DS1sGUspKQSU42mDir591BwAaw" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/Admin/Transfer?ContractNumber=988001" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1324" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="cors" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="VQxDwuF4dLnHVF16qwyi8TccvqdoNm1_-UOrzJw9b74YqWJGdJMUnhlwEZaxNWoejqgZnI9DzBRtGKoNoyMT5zEfinEC5EyHERkCTkIM_EKu_QPo61P3epJIQkMTPBEv1Rp3wg2" />
+    </item>
+    <item name="Transfer.Id">
+      <value string="660c7cdf-dcf7-e911-b173-c4a81d8163a0" />
+    </item>
+    <item name="Transfer.ArenaEarth">
+      <value string="100000" />
+    </item>
+    <item name="Transfer.LandEarth">
+      <value string="10000" />
+    </item>
+    <item name="Transfer.LandArenaArea">
+      <value string="10000" />
+    </item>
+    <item name="Transfer.LandArea">
+      <value string="1000" />
+    </item>
+    <item name="Transfer.CommercialValue">
+      <value string="10000" />
+    </item>
+    <item name="Transfer.Ownership">
+      <value string="Special" />
+    </item>
+    <item name="Transfer.SpecialOwnership">
+      <value string="10000" />
+    </item>
+    <item name="Transfer.Description">
+      <value string="jkgujgh" />
+    </item>
+    <item name="X-Requested-With">
+      <value string="XMLHttpRequest" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="00xe5p4qipiiv2un2i5t22o0" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="O3jTHSxtvOx2KzulRm1CDMb9bGlNN_ga5jE-WZovXUVa7UGZhvVg5Nlsk9NNPGBLh9bie1G47T7khA7bB6-kSYuEunQ1" />
+    </item>
+    <item name="LoginStamp">
+      <value string="871039e2-08cc-4b44-8c3d-d19c76d94150" />
+    </item>
+    <item name="arvandContractMattersIdentityCookie">
+      <value string="lvkA3fGtb6oT_TEjcjwy74t4xId8UiAp_KJ-5agtE1-8zJIAVpb1Qiw1_TJWGL096RAjhvTuMNkVTDhECLnavGthx41kKjOETHtGNqpqwW6rb7ELcesmSPmceBCvIkDY_3SW8p9lJ9Za0sg97v-k9XVt1w8IJrZelJa0IwM4bXdSZaO7uyuV_c4DeSOzuwYTGCKfH0ehX-vXBRCZDPMhv61sNkbdVmr2naAAYSIMmsPzUbU81yS90iKYsxGqfyA02gE4w9uoIJVOiYBh6LxbMXeU_ggodyFkqOTt5f_RsXaz-0bulklvrpMeBLWnKSqLW7DmuAzQcgAQWZw-iVCvnvNfO66APhJfAqpG-b3ny1ONgD6T7gRIX9B1b9hq29XUJf4ECDZrVzS6IUsmLkyBBqqFXCeEmEXw9RKJCNfbCLvQM0CgH_Jl0cfwSRYQkYETseyiFemRl9Z3sQfs4d1E78x09usbrSLW8CO2UR4BPuixb24Og_pgGTTYqPZMsUVJhgYMTQ" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="1C0C057DE0F530A7CD2BFEC99556A5FF256F83BBF1453512A4230F3BB4E96750F278AA4EE64A9EB590A1BB825449BA07E6F39C9620022274761480531E5B55CE32129266804331018390B748BCE7E41C8DB7BFD90892A20AF58BC1B8D53B31D866AADA187FD9079BA159859025AF77B4C6D3E4DCF362509D36814955157C6E3208CB755B30ED6B80075EDD3D0A42451EC61CDAB5135D69EA1C42E2484AE9636E2DDB737F8A457A49EE8D028C7E4CCD1C2249F24A96E2E3158FDC72B3FEB654F2A5513191E9ADCC89DB21994E52966F60830A690B" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="R9TufLkXEYeO-tYBGEWcmyOlEOf0Z2L8Gq4X5hnZAJVRyrH5A_UchFf1KzOMhANnI_d-ze0dOkr4-vbanEwiO0EcO9wgYwqzfU3NRKXGYrq_3H5SEKwuLZ6O5veN3Io62rjjDo0hOsQqgA5F5DTfk_YKURsUDmFdCLlpKo3a3FAFQmJOBxUtV326v-OR0DJ6Cgdi_JOyvH-bMKbAEOaXtFWG9BffCHFfV7kTuweEzVa1NSKQIcTcma0ercKGZkAxI0PDPoZM7fpN5Dc3QTuW9i8a7wOhx5wWFs9sQxX_jrKvafmRcBfxmKEX8l8KYV06-vaLhXAwCSygk9fkV_BYibfPM0V-OH4uhjxH4-VBhziEYURPW9i9d7P2DeNPoKNsku0oRe_gjcOBqczJZ0iNyb4iX1y2XHJoXIrJEUDrhbKV4lyZ0fXZv6-K_1uI96to10T-SKOeno_vFIH9LGk2wTB9GaFoe6XWsHUZvQIO3xa7DS1sGUspKQSU42mDir591BwAaw" />
+    </item>
+  </cookies>
+</error>

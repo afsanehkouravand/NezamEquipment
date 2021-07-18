@@ -1,0 +1,58 @@
+﻿@using NezamEquipment.Common.Extension
+@model NezamEquipment.Web.Areas.Admin.Features.Segment.AdminSegmentAddViewModel
+@{
+    ViewBag.PageTitle = " ثبت اطلاعات پایه ارزش تجاری";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+
+<div class="col-md-12" id="form">
+
+
+    @using (Ajax.BeginForm("Add", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.Segment.Add()))))
+    {
+
+        <fieldset class="fieldset">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="tab-pane text-right" style="padding: 0 20px 20px;" id="tab0">
+                <h4>ثبت اطلاعات پایه ارزش تجاری</h4>
+                <hr class="margin-0" />
+                <div class="row margin-bottom-10">
+                    <div class="col-sm-4">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(x => x.Segment.Type, new { @class = "control-label" })
+                            @Html.TextBoxFor(x => x.Segment.Type, new { @class = "form-control", data_val = "true", data_val_required = "پر کردن این فیلد ضروری است" })
+                            @Html.ValidationMessageFor(x => x.Segment.Type, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                  </div>
+
+            </div>
+
+            <div class="tab-pane active text-right " style="padding: 0 20px 20px;" id="tab2">
+
+                <div class="row margin-bottom-10">
+                    <div class="col-sm-12">
+                        <button class="btn btn-success" type="submit">ثبت اطلاعات</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    }
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.Segment.Index())';
+    </script>
+}
+
+
+
+

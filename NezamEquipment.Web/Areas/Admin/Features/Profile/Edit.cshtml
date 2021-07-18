@@ -1,0 +1,57 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Profile.AdminProfileEditViewModel
+@{
+    ViewBag.PageTitle = "ویرایش اطلاعات";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-sm-12 margin-top-10">
+    <div class="well well-white well-shadow">
+        <div class="" id="form">
+            @using (Ajax.BeginForm("Edit", AjaxOptionsExtension.Get(url: Url.Action(MVC.Admin.Profile.Edit()))))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(x => x.User.Id)
+                @Html.HiddenFor(x => x.User.UserName)
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <fieldset class="form-horizontal fieldset">
+                    <div class="col-sm-4">
+                        @Html.LabelFor(model => model.User.FirstName, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.User.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.LabelFor(model => model.User.LastName, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.User.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User.LastName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.LabelFor(model => model.User.Email, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.User.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-12">
+                        @Html.LabelFor(model => model.User.Password, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.User.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="margin-top-20">
+                            <input type="submit" value="ارسال" class="btn btn-success" />
+                            @Html.ButtonLoading()
+                        </div>
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = '@Url.Action(MVC.Admin.Profile.Index())';
+    </script>
+}

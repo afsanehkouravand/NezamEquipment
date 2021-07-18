@@ -1,0 +1,58 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Equipment.AdminNezamEquipmentDetailsViewModel
+@{
+    ViewBag.PageTitle = "اطلاعات تجهیزات";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+
+<div class="col-md-12">
+    @Html.Ul(Model).Items(i =>
+    {
+        i.AddFor(EUlTabId.Tab1, "اطلاعات");
+        // i.AddFor(EUlTabId.Tab2, "لیست خدمات", MVC.Admin.EmployEquipment.Index(Model.NezamEmploye.Id));
+        i.AddFor(EUlTabId.Tab2, "لیست خدمات", MVC.Admin.EquipmentFaulty.Index(Model.NezamEquipment.Id));
+
+    }).Done()
+</div>
+
+<div class="col-md-12">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            @Html.ToolBox(Model).Items(i =>
+            {
+               
+                i.AddEditButton(MVC.Admin.Equipment.Edit(Model.NezamEquipment.Id));
+                i.AddDeleteButton(Model.NezamEquipment.Id, MVC.Admin.Equipment.Delete()).SetGoToPage(Url.Action(MVC.Admin.Equipment.Index()));
+            }).Done()
+            <div class="margin-bottom-20">
+                @Html.Info(Model).Options(i =>
+                {
+                    i.SetTitle("اطلاعات");
+                }).Items(i =>
+                {
+                    //i.AddFor(Model.NezamEquipment, x => x.Brand);
+                    i.AddFor(Model.NezamEquipment, x => x.Model);
+
+                    i.AddFor(Model.NezamEquipment, x => x.EquipmentTypes);
+                    i.AddFor(Model.NezamEquipment, x => x.EquipmentStatus);
+
+                    if(Model.NezamEquipment.EmployeFullName!=null)
+                    {
+                        i.AddFor(Model.NezamEquipment, x => x.EmployeFullName);
+                    }
+
+                    i.AddFor(Model.NezamEquipment, x => x.unitType);
+                    //i.AddFor(Model.NezamEquipment, x => x.DateBuy);
+                    i.AddFor(Model.NezamEquipment, x => x.Description);
+
+                }).Done()
+            </div>
+        </div>
+        @Html.UlEmptyTab(EUlTabId.Tab2)
+    </div>
+
+</div>
+
+

@@ -1,0 +1,206 @@
+﻿<error errorId="cfa3a832-a54f-437c-b719-8bf6bc7345a6" application="/LM/W3SVC/2/ROOT" host="OFFICEPC" type="System.Security.Cryptography.CryptographicException" message="Specified key is not a valid size for this algorithm." source="mscorlib" detail="System.Security.Cryptography.CryptographicException: Specified key is not a valid size for this algorithm.&#xD;&#xA;   at System.Security.Cryptography.SymmetricAlgorithm.set_Key(Byte[] value)&#xD;&#xA;   at NezamEquipment.ServiceLayer.AsanPardakhtBusiness.Aes2.Encrypt(String input, String&amp; encryptedString) in D:\Tpe\Project\NezamEquipment\NezamEquipment.ServiceLayer\AsanPardakhtBusiness\Aes2.cs:line 24" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" time="2020-05-03T07:34:46.9842649Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_PRAGMA:no-cache&#xD;&#xA;HTTP_CONTENT_LENGTH:204&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:LoginStamp=634a7ece-1b68-4f94-9095-797a20e757d5; __RequestVerificationToken=4AhUi47fnpPv9idpyPwTSoPPcBbvMs7k_hj8X3AMJJzDi6TYb0Cr5wJCOo7dEkkI7LL7X6aMUV5ytxSGRbZHEopARrs1; .ASPXAUTH=5482635B77E596208E748212DC234E613D2086F41E5A3D5867B3A4570EFA27772811749FE1E8AC232793BCEF2F31EA1E91D70EB211E4A4796AB5334F883B5E2EB9D7E318B18FF8D679FC1F7E8C66CEFF9D76016540A36DD9E1005138E55C05DF360B65C4831CD307285436B233A7612C2F8F2B9E35E9FBE216699DFD38FABB86B68D2ADCACB8232F56B9FA28EE73BBE323842D8DC6822B2DDA7BCCD03F6EA7A023248F2534891AB907D607A79222E811D5F5BB428F6B0ADC472C0FD8271280AEC425ABF0C17BBD7AE414C6E9D574F6643B7D780A&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/RentAndTransfert/Payment/Details/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_ORIGIN:http://localhost:1324&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Pragma: no-cache&#xD;&#xA;Content-Length: 204&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: LoginStamp=634a7ece-1b68-4f94-9095-797a20e757d5; __RequestVerificationToken=4AhUi47fnpPv9idpyPwTSoPPcBbvMs7k_hj8X3AMJJzDi6TYb0Cr5wJCOo7dEkkI7LL7X6aMUV5ytxSGRbZHEopARrs1; .ASPXAUTH=5482635B77E596208E748212DC234E613D2086F41E5A3D5867B3A4570EFA27772811749FE1E8AC232793BCEF2F31EA1E91D70EB211E4A4796AB5334F883B5E2EB9D7E318B18FF8D679FC1F7E8C66CEFF9D76016540A36DD9E1005138E55C05DF360B65C4831CD307285436B233A7612C2F8F2B9E35E9FBE216699DFD38FABB86B68D2ADCACB8232F56B9FA28EE73BBE323842D8DC6822B2DDA7BCCD03F6EA7A023248F2534891AB907D607A79222E811D5F5BB428F6B0ADC472C0FD8271280AEC425ABF0C17BBD7AE414C6E9D574F6643B7D780A&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/RentAndTransfert/Payment/Details/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Origin: http://localhost:1324&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="204" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/RentAndTransfert/Payment/Payment/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\RentAndTransfert\Payment\Payment\f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="52493" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/RentAndTransfert/Payment/Payment/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/RentAndTransfert/Payment/Payment/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_PRAGMA">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="204" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="LoginStamp=634a7ece-1b68-4f94-9095-797a20e757d5; __RequestVerificationToken=4AhUi47fnpPv9idpyPwTSoPPcBbvMs7k_hj8X3AMJJzDi6TYb0Cr5wJCOo7dEkkI7LL7X6aMUV5ytxSGRbZHEopARrs1; .ASPXAUTH=5482635B77E596208E748212DC234E613D2086F41E5A3D5867B3A4570EFA27772811749FE1E8AC232793BCEF2F31EA1E91D70EB211E4A4796AB5334F883B5E2EB9D7E318B18FF8D679FC1F7E8C66CEFF9D76016540A36DD9E1005138E55C05DF360B65C4831CD307285436B233A7612C2F8F2B9E35E9FBE216699DFD38FABB86B68D2ADCACB8232F56B9FA28EE73BBE323842D8DC6822B2DDA7BCCD03F6EA7A023248F2534891AB907D607A79222E811D5F5BB428F6B0ADC472C0FD8271280AEC425ABF0C17BBD7AE414C6E9D574F6643B7D780A" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/RentAndTransfert/Payment/Details/f54a6ee4-fb89-ea11-b1bd-c4a81d8163a0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1324" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="cZv4HxrLrj-myyNtuvCx7eWb13x7GpZYfAk_T_7IMjTF-63CXJFYjb-WtruyYMKGQWADRtq4fGrCSGhJDONzciAhR6a5ifSszYiSum4sjwqrINpduwvGMLVcZVMehWL7xY6VEHlRbG0nberem7yuh8x_CmByfYbj6yKiDHujIGE7OVme0" />
+    </item>
+  </form>
+  <cookies>
+    <item name="LoginStamp">
+      <value string="634a7ece-1b68-4f94-9095-797a20e757d5" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="4AhUi47fnpPv9idpyPwTSoPPcBbvMs7k_hj8X3AMJJzDi6TYb0Cr5wJCOo7dEkkI7LL7X6aMUV5ytxSGRbZHEopARrs1" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="5482635B77E596208E748212DC234E613D2086F41E5A3D5867B3A4570EFA27772811749FE1E8AC232793BCEF2F31EA1E91D70EB211E4A4796AB5334F883B5E2EB9D7E318B18FF8D679FC1F7E8C66CEFF9D76016540A36DD9E1005138E55C05DF360B65C4831CD307285436B233A7612C2F8F2B9E35E9FBE216699DFD38FABB86B68D2ADCACB8232F56B9FA28EE73BBE323842D8DC6822B2DDA7BCCD03F6EA7A023248F2534891AB907D607A79222E811D5F5BB428F6B0ADC472C0FD8271280AEC425ABF0C17BBD7AE414C6E9D574F6643B7D780A" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="bwt2gz2ww2humyyqlwnp2mg3" />
+    </item>
+  </cookies>
+</error>

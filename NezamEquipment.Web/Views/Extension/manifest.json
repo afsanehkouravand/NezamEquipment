@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "khzceo Template Items",
+  "short_name": "CPTemplates",
+  "version": "2.0",
+  "description": "Chrome Extension to provide khzceo template items.",
+  "icons": {
+    "48": "img/myimg.png",
+    "128": "img/myimg.png"
+  },
+  "background": {
+    "scripts": [ "js/background.js" ]
+  },
+  "page_action": {
+    "default_icon": "img/myimg.png",
+    "default_title": "khzceo: Insert Template Items"
+
+  },
+  "default_popup": "Popup.html",
+  "options_page": "Popup.html",
+  "permissions": [
+    "tabs",
+    "http://khzceo.ir/"
+  ]
+}
+

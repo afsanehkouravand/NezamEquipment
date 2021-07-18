@@ -1,0 +1,180 @@
+﻿<error errorId="f58a2663-e081-4c9d-956a-4e302f424829" application="/LM/W3SVC/2/ROOT" host="DESKTOP-G9DJ020" type="System.Web.HttpException" message="Path '/Areas/RentAndTransfer/Features/Transfer/Details.cshtml' was not found." source="System.Web" detail="System.Web.HttpException (0x80004005): Path '/Areas/RentAndTransfer/Features/Transfer/Details.cshtml' was not found.&#xD;&#xA;   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" time="2020-09-16T09:06:27.8754046Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=7eQ_proBA2W55GwnA0klndvl7z6V7eDT5SeX3VOsWvSFK4b7xS5cHcubcz6od2csgyJ4v3vOP59vrSN6osrWF8Qi8941; ASP.NET_SessionId=mjgpk1gq0wjgpngttkzoz2q5; .ASPXAUTH=DB1A4621C61C6A5DA84346A878A92062210091BC47A9F7AFA28349E539CB1B822995145DB650A8EF578604FEAFAE79D236A61686EF2655B41E21C6DD95805B57355C1414A97ED2E183924EA920FF805F481FCA27482890F94DF62EDBDDD59E849B7B7CA04113AF80D6EEA3141439BA9A147F3A6F9002F05FE105711BD3FB8EBF248A8849AA441717F2B8C8A309CFA6EABD7DD69777D43B15283154B7070D6634712B3172A9963F286A998A10D943326971B3A7B340856B61C1C0235C4BBB2D45975132154B16A8EDA8402A732A080F61FE289EFF&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:none&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=7eQ_proBA2W55GwnA0klndvl7z6V7eDT5SeX3VOsWvSFK4b7xS5cHcubcz6od2csgyJ4v3vOP59vrSN6osrWF8Qi8941; ASP.NET_SessionId=mjgpk1gq0wjgpngttkzoz2q5; .ASPXAUTH=DB1A4621C61C6A5DA84346A878A92062210091BC47A9F7AFA28349E539CB1B822995145DB650A8EF578604FEAFAE79D236A61686EF2655B41E21C6DD95805B57355C1414A97ED2E183924EA920FF805F481FCA27482890F94DF62EDBDDD59E849B7B7CA04113AF80D6EEA3141439BA9A147F3A6F9002F05FE105711BD3FB8EBF248A8849AA441717F2B8C8A309CFA6EABD7DD69777D43B15283154B7070D6634712B3172A9963F286A998A10D943326971B3A7B340856B61C1C0235C4BBB2D45975132154B16A8EDA8402A732A080F61FE289EFF&#xD;&#xA;Host: localhost:1324&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: none&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;f9646670-d2f0-ea11-90f3-005056ab6049&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Areas/RentAndTransfer/Features/Transfer/Details.cshtml" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Areas\RentAndTransfer\Features\Transfer\Details.cshtml" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="52974" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Areas/RentAndTransfer/Features/Transfer/Details.cshtml" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Areas/RentAndTransfer/Features/Transfer/Details.cshtml" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=7eQ_proBA2W55GwnA0klndvl7z6V7eDT5SeX3VOsWvSFK4b7xS5cHcubcz6od2csgyJ4v3vOP59vrSN6osrWF8Qi8941; ASP.NET_SessionId=mjgpk1gq0wjgpngttkzoz2q5; .ASPXAUTH=DB1A4621C61C6A5DA84346A878A92062210091BC47A9F7AFA28349E539CB1B822995145DB650A8EF578604FEAFAE79D236A61686EF2655B41E21C6DD95805B57355C1414A97ED2E183924EA920FF805F481FCA27482890F94DF62EDBDDD59E849B7B7CA04113AF80D6EEA3141439BA9A147F3A6F9002F05FE105711BD3FB8EBF248A8849AA441717F2B8C8A309CFA6EABD7DD69777D43B15283154B7070D6634712B3172A9963F286A998A10D943326971B3A7B340856B61C1C0235C4BBB2D45975132154B16A8EDA8402A732A080F61FE289EFF" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="none" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="7eQ_proBA2W55GwnA0klndvl7z6V7eDT5SeX3VOsWvSFK4b7xS5cHcubcz6od2csgyJ4v3vOP59vrSN6osrWF8Qi8941" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="mjgpk1gq0wjgpngttkzoz2q5" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="DB1A4621C61C6A5DA84346A878A92062210091BC47A9F7AFA28349E539CB1B822995145DB650A8EF578604FEAFAE79D236A61686EF2655B41E21C6DD95805B57355C1414A97ED2E183924EA920FF805F481FCA27482890F94DF62EDBDDD59E849B7B7CA04113AF80D6EEA3141439BA9A147F3A6F9002F05FE105711BD3FB8EBF248A8849AA441717F2B8C8A309CFA6EABD7DD69777D43B15283154B7070D6634712B3172A9963F286A998A10D943326971B3A7B340856B61C1C0235C4BBB2D45975132154B16A8EDA8402A732A080F61FE289EFF" />
+    </item>
+  </cookies>
+</error>

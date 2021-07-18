@@ -1,0 +1,224 @@
+﻿<error errorId="d3220210-6c34-4c2c-858f-357a2e91307e" application="/LM/W3SVC/2/ROOT" host="KOURAVAND-PC" type="System.Data.SqlClient.SqlException" message="The UPDATE statement conflicted with the FOREIGN KEY constraint &quot;FK_dbo.ApplicantTransfers_dbo.Transfers_TransferId&quot;. The conflict occurred in database &quot;NezamEquipment&quot;, table &quot;dbo.Transfers&quot;, column 'Id'.&#xD;&#xA;The statement has been terminated." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: The UPDATE statement conflicted with the FOREIGN KEY constraint &quot;FK_dbo.ApplicantTransfers_dbo.Transfers_TransferId&quot;. The conflict occurred in database &quot;NezamEquipment&quot;, table &quot;dbo.Transfers&quot;, column 'Id'.&#xD;&#xA;The statement has been terminated.&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__174_0(Task`1 result)&#xD;&#xA;   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__39.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__9`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__31.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.DataLayer.DbContext.NezamEquipmentDbContext.&lt;SaveAllChangesAsync&gt;d__62.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.DataLayer\DbContext\NezamEquipmentDbContext.cs:line 149&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.DataLayer.DbContext.NezamEquipmentDbContext.&lt;SaveChangesAsync&gt;d__60.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.DataLayer\DbContext\NezamEquipmentDbContext.cs:line 132&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.ServiceLayer.Base.BaseSaveDbResult.&lt;SaveDbResult&gt;d__0.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.ServiceLayer\Base\BaseSaveDbResult.cs:line 27" user="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" time="2018-11-10T09:17:56.7248481Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:770&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=wTlN5LHyynfG9cBbIyRXvlKao9PJc44VfxLWtt0U8Rr0gIOV8Ljzbjt5kiFktKSQ3gs3tS_Lm3TMR1zPG50PXOxMEHA1; .ASPXAUTH=E67C55F28F90FB0BCBA268E096391D06F22E73722D5678C92B258C83F6D3F542FF1719C6C86F662F6DC1B714FB6C7AAD26E2035B333C99D2DD01672DE6914518060CDB1B1FE51F2C5C0241493548C63C92B53EAE74311D68FB78C5609890DF9CD468AAC8514B93B75699FB64A11787F5F0C2F92EA81FE60B3BB86040FEE5FB8C33F7F3A5E38B08D1432AE0EA1C156D58B3D25C9BD2095DD7579A10D92F8C3EE4545D49AB36F1F94A247096E9032BDB15ADC77CC05F5379AFD7DD6EFBE8AA12A0A3DE856222A9B8090E190D56D9A8F5C6FD103AEF&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:1324&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 770&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: __RequestVerificationToken=wTlN5LHyynfG9cBbIyRXvlKao9PJc44VfxLWtt0U8Rr0gIOV8Ljzbjt5kiFktKSQ3gs3tS_Lm3TMR1zPG50PXOxMEHA1; .ASPXAUTH=E67C55F28F90FB0BCBA268E096391D06F22E73722D5678C92B258C83F6D3F542FF1719C6C86F662F6DC1B714FB6C7AAD26E2035B333C99D2DD01672DE6914518060CDB1B1FE51F2C5C0241493548C63C92B53EAE74311D68FB78C5609890DF9CD468AAC8514B93B75699FB64A11787F5F0C2F92EA81FE60B3BB86040FEE5FB8C33F7F3A5E38B08D1432AE0EA1C156D58B3D25C9BD2095DD7579A10D92F8C3EE4545D49AB36F1F94A247096E9032BDB15ADC77CC05F5379AFD7DD6EFBE8AA12A0A3DE856222A9B8090E190D56D9A8F5C6FD103AEF&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;Origin: http://localhost:1324&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="{&quot;Username&quot;:&quot;1841880183&quot;,&quot;Id&quot;:&quot;cffad8be-08d1-e811-b417-58b03572367b&quot;}" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="770" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\RentAndTransfert\Transfer\EditApplicant\7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="51480" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="770" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=wTlN5LHyynfG9cBbIyRXvlKao9PJc44VfxLWtt0U8Rr0gIOV8Ljzbjt5kiFktKSQ3gs3tS_Lm3TMR1zPG50PXOxMEHA1; .ASPXAUTH=E67C55F28F90FB0BCBA268E096391D06F22E73722D5678C92B258C83F6D3F542FF1719C6C86F662F6DC1B714FB6C7AAD26E2035B333C99D2DD01672DE6914518060CDB1B1FE51F2C5C0241493548C63C92B53EAE74311D68FB78C5609890DF9CD468AAC8514B93B75699FB64A11787F5F0C2F92EA81FE60B3BB86040FEE5FB8C33F7F3A5E38B08D1432AE0EA1C156D58B3D25C9BD2095DD7579A10D92F8C3EE4545D49AB36F1F94A247096E9032BDB15ADC77CC05F5379AFD7DD6EFBE8AA12A0A3DE856222A9B8090E190D56D9A8F5C6FD103AEF" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/RentAndTransfert/Transfer/EditApplicant/7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1324" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="dG37IhxiiPhZq5Wud-yMHRk1MZbkLJvcxrbsKlnfaT_1d3_piykrYijMiwrhSfGq7cOpXxDT8u7MJ1bAUN8l0tLrGvkveZX5XCtAfjithI4o6xWhG1TfRmELIQXN2V43aZ8UZAFT0oFXoDUcoMN8qgRQ-hxT8LzVipO9-b4s24I5gYBF0" />
+    </item>
+    <item name="ApplicantTransferDto.Id">
+      <value string="7fe467bb-ace1-e811-a426-58b03572367b" />
+    </item>
+    <item name="ApplicantTransferDto.ApplicantType">
+      <value string="0" />
+    </item>
+    <item name="ApplicantTransferDto.Fullname">
+      <value string="bdgd" />
+    </item>
+    <item name="ApplicantTransferDto.NationalCode">
+      <value string="0010003371" />
+    </item>
+    <item name="ApplicantTransferDto.FatherName">
+      <value string="y" />
+    </item>
+    <item name="ApplicantTransferDto.CertificateCode">
+      <value string="876" />
+    </item>
+    <item name="ApplicantTransferDto.BirthDate">
+      <value string="1397/7/24" />
+    </item>
+    <item name="ApplicantTransferDto.PlaceOfBirth">
+      <value string="dgd" />
+    </item>
+    <item name="ApplicantTransferDto.GenderType">
+      <value string="0" />
+    </item>
+    <item name="ApplicantTransferDto.NationalityType">
+      <value string="0" />
+    </item>
+    <item name="ApplicantTransferDto.PhoneNumber">
+      <value string="06133323233" />
+    </item>
+    <item name="ApplicantTransferDto.MobileNumber">
+      <value string="09168024080" />
+    </item>
+    <item name="ApplicantTransferDto.Address">
+      <value string="tfhg" />
+    </item>
+    <item name="X-Requested-With">
+      <value string="XMLHttpRequest" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="wTlN5LHyynfG9cBbIyRXvlKao9PJc44VfxLWtt0U8Rr0gIOV8Ljzbjt5kiFktKSQ3gs3tS_Lm3TMR1zPG50PXOxMEHA1" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="E67C55F28F90FB0BCBA268E096391D06F22E73722D5678C92B258C83F6D3F542FF1719C6C86F662F6DC1B714FB6C7AAD26E2035B333C99D2DD01672DE6914518060CDB1B1FE51F2C5C0241493548C63C92B53EAE74311D68FB78C5609890DF9CD468AAC8514B93B75699FB64A11787F5F0C2F92EA81FE60B3BB86040FEE5FB8C33F7F3A5E38B08D1432AE0EA1C156D58B3D25C9BD2095DD7579A10D92F8C3EE4545D49AB36F1F94A247096E9032BDB15ADC77CC05F5379AFD7DD6EFBE8AA12A0A3DE856222A9B8090E190D56D9A8F5C6FD103AEF" />
+    </item>
+  </cookies>
+</error>

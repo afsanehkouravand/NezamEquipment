@@ -1,0 +1,25 @@
+﻿@using MyCommon.Helpers.ToolBox
+@model NezamEquipment.Web.Areas.Admin.Features.Profile.AdminProfileIndexViewModel
+@{
+    ViewBag.PageTitle = "پروفایل کاربری";
+}
+
+<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+    {
+        i.AddEditButton(MVC.Admin.Profile.Edit());
+    }).Done()
+</div>
+<div class="col-md-12">
+    @Html.DefaultInfoFor(title: "اطلاعات", colume: DefaultInfoForColumeType.Column4).Items(i =>
+    {
+        i.AddFor(Model.User, x => x.UserName);
+        i.AddFor(Model.User, x => $"{x.FirstName} {x.LastName}");
+        i.AddFor(Model.User, x => x.Position);
+        i.AddFor(Model.User, x => x.Email);
+        i.AddFor(Model, x => x.Roles, listPropertyName: nameof(NezamEquipment.ServiceLayer._Identity.Role.Dto.RoleDto.Name), customTemplate: "<span class=\"label label-default\">{0}</span>");
+    }).Done()
+</div>

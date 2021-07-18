@@ -1,0 +1,29 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Base.AdminBaseViewModel
+@{
+    var indexProfile = Model.HaveAccessTo.Check(MVC.Admin.Name, MVC.Admin.Profile.Name, MVC.Admin.Profile.ActionNames.Index);
+}
+
+@if (indexProfile)
+{
+    var controllerGroup = new List<string>
+            {
+                MVC.Admin.Profile.Name.ToLower(),
+            };
+    <li data-controller-group="@string.Join(" ",controllerGroup)">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-user"></i>
+            <span>پروفایل</span>
+            <i class="fa fa-chevron-circle-left drop-icon"></i>
+        </a>
+        <ul class="submenu">
+            @if (indexProfile)
+            {
+                <li data-controller-action="@MVC.Admin.Profile.Name.ToLower() @MVC.Admin.Profile.ActionNames.Index.ToLower()">
+                    <a href="@Url.Action(MVC.Admin.Profile.Index())">
+                        <span>پورفایل کاربری</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </li>
+}

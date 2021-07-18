@@ -1,0 +1,20 @@
+﻿@model NezamEquipment.Web.Models.ApplicantRegister.ApplicantRegisterSuccessViewModel
+@{
+    ViewBag.PageTitle = "ثبت متقاضی";
+    Layout = "~/Views/Shared/_LayoutSabt.cshtml";
+}
+
+<div class="col-md-12" style="margin-top:-200px;">
+    <div class="row w960 wow flipInY">
+        <div class="well well-white well-shadow margin-top-20 text-center">
+            <h2>ثبت نام با موفقیت انجام شد</h2>
+            <h4>کاربر گرامی ثبت نام شما با موفقیت انجام شد. لطفا منتظر دریافت پیامک رمز عبور ورود به سیستم باشید.</h4>
+            @if (Model.TrackingCode != null)
+            {
+                <h3>کد رهگیری شما: <span class="text-success">@Model.TrackingCode</span></h3>
+            }
+            <br/><br/>
+        </div>
+    </div>
+</div>
+

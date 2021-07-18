@@ -1,0 +1,80 @@
+﻿@using NezamEquipment.Web.Models.Home
+@model HomeIndexViewModel
+@{
+    ViewBag.PageTitle = "سازمان نظام مهندسی ساختمان خوزستان";
+}
+<div class="col-md-12" style="margin-top: 180px; margin-bottom: 100px">
+    <div class=" col-md-2">
+    </div>
+    <div class=" col-md-4 " style="margin-top: 35px">
+        <div class="col-md-8 feature wow zoomIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s" style="border: none;visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: zoomIn;">
+            <div class="octa red">
+
+            </div>
+            @*<a href="@Url.Action(MVC.NezamEmployeRegister.Index())">*@
+            <i class="fa fa-plus" style="margin-left: 8px;"></i>
+            <div class="feature-content" style="color: white">
+
+                <h3> تجهیزات رایانه ایی سخت افزاری</h3>
+                @*<p>
+                    سازمان نظام مهندسی ساختمان خوزستان
+                </p>*@
+            </div>
+            </a>
+        </div>
+            </div>
+
+    <div class="wow-pricing-table col-md-4 ">
+        <div class="wow-pricing featured ">
+            <div class="wow-pricing-header">
+                <h5>ورود به سیستم </h5>
+                @*<div class="wow-pricing-cost">
+                    تجهیزات رایانه ایی سخت افزاری
+                </div>*@
+                @*<div class="wow-pricing-per">
+                    سازمان نظام مهندسی ساختمان خوزستان
+                </div>*@
+            </div>
+            @using (Html.BeginForm(MVC.Account.Login(), FormMethod.Post, new { @class = "login-form", style = "text-align: right; overflow:hidden; margin: 0px 0 0 0;" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="wow-pricing-content">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger", style = "direction: rtl;color:red;font-size: 10px;    margin-right: 10px;" })
+                    <ul>
+                        <li>
+                            <div class="group">
+                                <label>نام کاربری</label>
+                                <div>
+                                    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", style = "text-align: right", placeholder = "نام کاربری" })
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="group">
+                                <label for="name">رمز عبور</label>
+                                <div>
+                                    @Html.PasswordFor(x => x.Password, new { @class = "form-control", style = "text-align: right", placeholder = "رمز عبور" })
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="wow-pricing-button">
+                    <button type="submit" id="login" class="btn btn-Newinfo">
+                        <i class="li_lock" style="display: inline-block;"></i>
+                        <span style="display: block; margin-top: -25px;">ورود</span>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+    <div class=" col-md-2 ">
+
+    </div>
+    <div class=" col-md-2 ">
+
+    </div>
+</div>

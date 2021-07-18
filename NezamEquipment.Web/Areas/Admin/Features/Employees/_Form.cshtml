@@ -1,0 +1,97 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Employees.AdminNezamEmployePartialFormViewModel
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.EmployeesDto.Id)
+
+<div class="well well-white well-shadow">
+    <fieldset class="form-horizontal fieldset">
+        <legend>اطلاعات کارمندان</legend>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.Fullname)
+                @Html.TextBoxFor(x => x.EmployeesDto.Fullname, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.Fullname, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.CodePersonal)
+                @Html.TextBoxFor(x => x.EmployeesDto.CodePersonal, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.CodePersonal, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.NationalCode)
+                @Html.TextBoxFor(x => x.EmployeesDto.NationalCode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.NationalCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row margin-bottom-10">
+
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.unitType)
+                @Html.EnumDropDownListFor(x => x.EmployeesDto.unitType, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.unitType, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.GenderType)
+                @Html.EnumDropDownListFor(x => x.EmployeesDto.GenderType, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.GenderType, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.CertificateCode)
+                @Html.TextBoxFor(x => x.EmployeesDto.CertificateCode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.CertificateCode, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+       
+       
+        <div class="row margin-bottom-10">
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.NetworkType)
+                @Html.EnumDropDownListFor(x => x.EmployeesDto.NetworkType, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.NetworkType, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.LoginStatus)
+                @Html.EnumDropDownListFor(x => x.EmployeesDto.LoginStatus, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.LoginStatus, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.IP)
+                @Html.TextBoxFor(x => x.EmployeesDto.IP, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.IP, "", new { @class = "text-danger" })
+            </div>
+
+
+        </div>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.MobileNumber)
+                @Html.TextBoxFor(x => x.EmployeesDto.MobileNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.MobileNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(x => x.EmployeesDto.UserLogin)
+                @Html.TextBoxFor(x => x.EmployeesDto.UserLogin, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.UserLogin, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-12">
+                @Html.LabelFor(x => x.EmployeesDto.Description)
+                @Html.TextBoxFor(x => x.EmployeesDto.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EmployeesDto.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12 margin-top-20">
+                <button type="submit" class="btn btn-success">ارسال</button>
+                @Html.ButtonLoading()
+            </div>
+        </div>
+    </fieldset>
+</div>

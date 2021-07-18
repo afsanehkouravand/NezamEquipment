@@ -1,0 +1,135 @@
+﻿@using NezamEquipment.Common.Extension
+@model NezamEquipment.Web.Areas.Admin.Features.EquipmentFaulty.AdminEquipmentFaultyIndexViewModel
+
+
+@*<div class="col-md-12">
+    @Html.PageTitle()
+</div>
+<div class="col-md-12">
+    @Html.Form(Model).Options(i =>
+{
+    i.IsSearchForm(MVC.Admin.EquipmentFaulty.Index(), Model.PageTotal);
+}).Items(i =>
+{
+
+    //i.TextBox(Model.S, x => x.Code, 3);
+    //i.EnumDropDown(Model.S, x => x.EquipmentType, 3);
+    //i.EnumDropDown(Model.S, x => x.EquipmentStatus, 3);
+    //i.EnumDropDown(Model.S, x => x.UnitType, 3);
+    //i.TextBox(Model.S, x => x.FromCreatedOn, 4).IsDateFormat().Value(Model.S.FromCreatedOn != null ? Model.S.FromCreatedOn.Value.ToShortShamsi(false) : "");
+    //i.TextBox(Model.S, x => x.ToCreatedOn, 4).IsDateFormat().Value(Model.S.ToCreatedOn != null ? Model.S.ToCreatedOn.Value.ToShortShamsi(false) : "");
+
+
+
+}).Done()
+</div>
+<div class="col-md-12">
+    @Html.ToolBox(Model).Items(i =>
+{
+//i.AddButton(MVC.Admin.EquipmentFaulty.Add()).SetText("افزودن آیتم جدید").SetClass("btn btn-success ").SetStyle("margin-left: 50px;");
+  // if(Model.EquipmentFaultyDtos !=null);
+    //i.AddButton(MVC.Admin.EquipmentFaulty.GetExcelFile())
+    //    .SetText("دریافت این لیست به صورت Excel").SetClass("btn btn-info").SetQueryString("equipmentType", nameof(Model.S.EquipmentType));
+}).Done()
+   
+</div>
+<div class="col-md-12">
+    @Html.Grid(Model, x => x.EquipmentFaultyDtos).Options(i =>
+{
+    i.AddDetailsButton();
+    i.AddEditButton();
+    //i.AddButton(MVC.Admin.Equipment.PasswordCahnge()).SetClass("label label-info").SetText("تغییر پسورد").SetQueryString("id", nameof(Model.NezamEquipment.Id));
+
+    i.AddDeleteButton();
+    //i.SetRowColorRoles(nameof(Model.NezamEquipment.unitType), new Dictionary<string, EGridColorType>()
+    //    {
+    //        {UnitType.Disactive.ToString(), EGridColorType.Danger},
+    //    });
+}).Columns(i =>
+{
+    i.AddColumnCounter();
+    i.AddColumnForButton();
+    i.AddColumnFor(Model.EquipmentFaultyDto, x => x.RepairDate);
+    //i.AddColumnFor(Model.NezamEquipment, x => x.Brand);
+    i.AddColumnFor(Model.EquipmentFaultyDto, x => x.MoneyRepair);
+   
+    //i.AddColumnFor(Model.EquipmentFaultyDto, x => x.EquipmentId);
+
+
+
+}).Done()
+</div>
+
+@section InBodyTag
+{
+    <script type="text/javascript">
+        GoToPageOnSuccessUrl = "@Url.Action(MVC.Admin.EquipmentFaulty.Index())";
+    </script>
+}*@
+
+
+<div class="tab-content">
+
+
+    <div role="tabpanel" id="tab2">
+
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="panel panel-default" style="padding-bottom: 3px;">
+                @*<div class="panel-heading">تجهیزات</div>*@
+
+                <div class="panel-body">
+                   
+                    <div class="col-md-12" style="padding: 0;">
+                        @Html.Grid(Model, x => x.EquipmentFaultyDtos).Options(i =>
+                   {
+                       i.SetTitle("لیست تعمیرات");
+                      
+                       //i.AddEditButton();
+                   }).Columns(i => { i.AddColumnCounter(); /*i.AddColumnForButton();*/
+                       i.AddColumnFor(Model.EquipmentFaultyDto, x => x.RepairDate);
+                       i.AddColumnFor(Model.EquipmentFaultyDto, x => x.MoneyRepair);
+                       i.AddColumnFor(Model.EquipmentFaultyDto, x => x.Description);
+
+
+                   }).Footer(i => { }).Done()
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane active" id="tab1">
+                <div class="panel panel-default" style="padding-bottom: 3px;">
+                    <div class="panel-heading">فایل ها</div>
+
+                    <div class="panel-body">
+                 
+                        <div class="col-md-12" style="padding: 0;">
+                            @Html.Grid(Model, x => x.EquipmentFaultyFiles).Options(i =>
+                            { 
+                                i.SetTitle("فایل های تعمیری");
+                                i.AddEditButton();
+                                i.AddButton(Url.Content(Model.ImagePath)).SetAttribute("data-toggle", "lightbox")
+                                    .SetQueryString("id", nameof(Model.EquipmentFaultyFile.FileName))
+                                    .SetClass("label label-info margin-left-10").SetText("نمایش فایل")
+                                    .SetShowIf(nameof(Model.EquipmentFaultyFile.Type), "1");
+                                i.SetRowColorRoles(nameof(Model.EquipmentFaultyFile.Status),
+                                    new Dictionary<string, EGridColorType>() { });
+                            }).Columns(i => { i.AddColumnCounter();
+                                                i.AddColumnForButton(); 
+                                                i.AddColumnFor(Model.EquipmentFaultyFile, x => x.Status); 
+                                                i.AddColumnFor(Model.EquipmentFaultyFile, x => x.FileType); 
+                                                
+                                                i.AddColumnFor(Model.EquipmentFaultyFile, x => x.Extension); 
+                                                i.AddColumnFor(Model.EquipmentFaultyFile, x => x.CreatedOn); }).Footer(i => { }).Done()
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

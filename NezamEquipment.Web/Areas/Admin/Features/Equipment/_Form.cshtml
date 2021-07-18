@@ -1,0 +1,90 @@
+﻿@model NezamEquipment.Web.Areas.Admin.Features.Equipment.AdminNezamEquipmentPartialFormViewModel
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.EquipmentDto.Id)
+
+<div class="well well-white well-shadow">
+    <fieldset class="form-horizontal fieldset">
+        <legend>اطلاعات تجهیزات</legend>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.EquipmentTypes)
+                @Html.EnumDropDownListFor(x => x.EquipmentDto.EquipmentTypes, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.EquipmentTypes, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.Model)
+                @Html.TextBoxFor(x => x.EquipmentDto.Model, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.Model, "", new { @class = "text-danger" })
+            </div>
+            @*<div class="col-sm-6">
+            @Html.LabelFor(x => x.EquipmentDto.Brand)
+            @Html.TextBoxFor(x => x.EquipmentDto.Brand, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.EquipmentDto.Brand, "", new { @class = "text-danger" })
+
+        </div>*@
+        </div>
+        <div class="row margin-bottom-10">
+
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.EquipmentStatus)
+                @Html.EnumDropDownListFor(x => x.EquipmentDto.EquipmentStatus, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.EquipmentStatus, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.Code)
+                @Html.TextBoxFor(x => x.EquipmentDto.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.Code, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row margin-bottom-10">
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.unitType)
+                @Html.EnumDropDownListFor(x => x.EquipmentDto.unitType, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.unitType, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="col-sm-6">
+                @Html.LabelFor(x => x.DropDown)
+
+                @{
+                    List<SelectListItem>
+                        lstCountry = new List<SelectListItem>
+                            ();
+
+                    foreach (var item in Model.DropDown)
+                    {
+                        lstCountry.Add(new SelectListItem { Text = item.Value, Value = item.Key.ToString() });
+                    }
+                }
+                @Html.DropDownListFor(x => x.EquipmentDto.EmployeesId, lstCountry, "انتخاب کنید", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.EmployeesId, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="row margin-bottom-10">
+            
+            @*<div class="col-sm-6">
+                @Html.LabelFor(x => x.EquipmentDto.DateBuystr)
+                @Html.DatePickerFor(x => x.EquipmentDto.DateBuystr, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.DateBuystr, "", new { @class = "text-danger" })
+            </div>*@
+
+            <div class="col-sm-12">
+                @Html.LabelFor(x => x.EquipmentDto.Description)
+                @Html.TextBoxFor(x => x.EquipmentDto.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EquipmentDto.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12 margin-top-20">
+                <button type="submit" class="btn btn-success">ارسال</button>
+                @Html.ButtonLoading()
+            </div>
+        </div>
+    </fieldset>
+</div>

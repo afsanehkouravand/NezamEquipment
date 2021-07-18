@@ -1,0 +1,200 @@
+﻿<error errorId="fe88c1d8-cc76-4d6e-8b61-f8612c9215c9" application="/LM/W3SVC/2/ROOT" host="KOURAVAND-PC" type="System.Data.SqlClient.SqlException" message="The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.&#xD;&#xA;The statement has been terminated." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.&#xD;&#xA;The statement has been terminated.&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__174_0(Task`1 result)&#xD;&#xA;   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__39.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__9`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__31.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.DataLayer.DbContext.NezamEquipmentDbContext.&lt;SaveAllChangesAsync&gt;d__74.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.DataLayer\DbContext\NezamEquipmentDbContext.cs:line 154&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.DataLayer.DbContext.NezamEquipmentDbContext.&lt;SaveChangesAsync&gt;d__72.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.DataLayer\DbContext\NezamEquipmentDbContext.cs:line 137&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at NezamEquipment.ServiceLayer.Base.BaseSaveDbResult.&lt;SaveDbResult&gt;d__0.MoveNext() in E:\Tpe\Project\NezamEquipment\NezamEquipment.ServiceLayer\Base\BaseSaveDbResult.cs:line 27" user="sa" time="2019-01-12T11:14:13.3376746Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:1235&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=1FXbceYnqrGw_J48eIy2YayVmvjZo12cDRIY8LbRGOVMsJP2JLidhZ4d-iw27B0X2IFbWVv4vXWrOlQQJBVyakRyFek1; NezamEquipmentIdentityCookie=_R4fuweLpRvNxawH4EzfZeuk2HGpRNOmJYejP1vPBnGfzmqlvXXdzWUMmVDSI0iIhotgWTtMHBsM78HwCAnglSXZFPJ5JNiJ_HovfulMKRUL7U2TPweaU1aKbmY95epKUcLOGxIOMFdXM2yhngGS8N3uVTfVcSyZWCPhwPbyQUUjCa23eral_d3b9rfSGlGlzvNx4rkYcL-4Z4ThyW3CYmTqvX11IFLCPu969nVGAhSNoV6ZYbQHCo2v8aIlEiVCyjiSCUPR4JUIk4Q5_aoU_V64XkG9ItSVpkl3N4lqeNoo2xzO_SLS54QoGaC3dgetlt9oLCxZxn2FqGnJoral-RWyQa-YIXAk9uh6gM-is2rDZnySh6DExrKkGKmE4-FZTN6eEXHbIumFIxMsZXFr5O7TqwzEZkT9qhp2J7J68u2ttw1QhhijW6C4zzc7DRPrFCDGOt3UloKuWe0W5yUCUtlDthrtazP0E2EBKCj2lLjsYyocuAailFH5FN-WN2tKeiDJww&#xD;&#xA;HTTP_HOST:localhost:1324&#xD;&#xA;HTTP_REFERER:http://localhost:1324/Admin/Transfer?ContractNumber=8787&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:1324&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 1235&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=1FXbceYnqrGw_J48eIy2YayVmvjZo12cDRIY8LbRGOVMsJP2JLidhZ4d-iw27B0X2IFbWVv4vXWrOlQQJBVyakRyFek1; NezamEquipmentIdentityCookie=_R4fuweLpRvNxawH4EzfZeuk2HGpRNOmJYejP1vPBnGfzmqlvXXdzWUMmVDSI0iIhotgWTtMHBsM78HwCAnglSXZFPJ5JNiJ_HovfulMKRUL7U2TPweaU1aKbmY95epKUcLOGxIOMFdXM2yhngGS8N3uVTfVcSyZWCPhwPbyQUUjCa23eral_d3b9rfSGlGlzvNx4rkYcL-4Z4ThyW3CYmTqvX11IFLCPu969nVGAhSNoV6ZYbQHCo2v8aIlEiVCyjiSCUPR4JUIk4Q5_aoU_V64XkG9ItSVpkl3N4lqeNoo2xzO_SLS54QoGaC3dgetlt9oLCxZxn2FqGnJoral-RWyQa-YIXAk9uh6gM-is2rDZnySh6DExrKkGKmE4-FZTN6eEXHbIumFIxMsZXFr5O7TqwzEZkT9qhp2J7J68u2ttw1QhhijW6C4zzc7DRPrFCDGOt3UloKuWe0W5yUCUtlDthrtazP0E2EBKCj2lLjsYyocuAailFH5FN-WN2tKeiDJww&#xD;&#xA;Host: localhost:1324&#xD;&#xA;Referer: http://localhost:1324/Admin/Transfer?ContractNumber=8787&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&#xD;&#xA;Origin: http://localhost:1324&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="sa" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="sa" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="sa" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="1235" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Admin/TransferIssuingPermit/IssuingPermit" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\Tpe\Project\NezamEquipment\NezamEquipment.Web\Admin\TransferIssuingPermit\IssuingPermit" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="49418" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Admin/TransferIssuingPermit/IssuingPermit" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1324" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Admin/TransferIssuingPermit/IssuingPermit" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="1235" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=1FXbceYnqrGw_J48eIy2YayVmvjZo12cDRIY8LbRGOVMsJP2JLidhZ4d-iw27B0X2IFbWVv4vXWrOlQQJBVyakRyFek1; NezamEquipmentIdentityCookie=_R4fuweLpRvNxawH4EzfZeuk2HGpRNOmJYejP1vPBnGfzmqlvXXdzWUMmVDSI0iIhotgWTtMHBsM78HwCAnglSXZFPJ5JNiJ_HovfulMKRUL7U2TPweaU1aKbmY95epKUcLOGxIOMFdXM2yhngGS8N3uVTfVcSyZWCPhwPbyQUUjCa23eral_d3b9rfSGlGlzvNx4rkYcL-4Z4ThyW3CYmTqvX11IFLCPu969nVGAhSNoV6ZYbQHCo2v8aIlEiVCyjiSCUPR4JUIk4Q5_aoU_V64XkG9ItSVpkl3N4lqeNoo2xzO_SLS54QoGaC3dgetlt9oLCxZxn2FqGnJoral-RWyQa-YIXAk9uh6gM-is2rDZnySh6DExrKkGKmE4-FZTN6eEXHbIumFIxMsZXFr5O7TqwzEZkT9qhp2J7J68u2ttw1QhhijW6C4zzc7DRPrFCDGOt3UloKuWe0W5yUCUtlDthrtazP0E2EBKCj2lLjsYyocuAailFH5FN-WN2tKeiDJww" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1324" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1324/Admin/Transfer?ContractNumber=8787" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1324" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="uZnFYEsZgaTEliqJb7LH_pZskaBAhHbjJz5TStLHRcmxK-XFyu0uLFBHeV47csRIUJEjVrlkuEC-EmOsmkF4W8U-RkNEvVuIXrI4o134ccTSEJUrRIKu6G3A_y4hlplw04P1PA2" />
+    </item>
+    <item name="TransferId">
+      <value string="64d613e1-a3e5-e811-a4c1-58b03572367b" />
+    </item>
+    <item name="IsOk">
+      <value string="1" />
+    </item>
+    <item name="TranTransferIssuingPermitsfer.LicenseNumber">
+      <value string="9710002" />
+    </item>
+    <item name="TranTransferIssuingPermitsfer.IsDueDateStr">
+      <value string="1397/10/22" />
+    </item>
+    <item name="TranTransferIssuingPermitsfer.Description">
+      <value string="این مجوز بابت نقل و انتقال 3 دانگ عرصه،اعیان و سرقفلی 1 فقره پلاک ثبتی به شماره 65656. واقع در بخش یک شهرداری جهت بهره مندی از ماده 13 قانون چگونگی اداره مناطق آزاد صادر شده است." />
+    </item>
+    <item name="X-Requested-With">
+      <value string="XMLHttpRequest" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="1FXbceYnqrGw_J48eIy2YayVmvjZo12cDRIY8LbRGOVMsJP2JLidhZ4d-iw27B0X2IFbWVv4vXWrOlQQJBVyakRyFek1" />
+    </item>
+    <item name="NezamEquipmentIdentityCookie">
+      <value string="_R4fuweLpRvNxawH4EzfZeuk2HGpRNOmJYejP1vPBnGfzmqlvXXdzWUMmVDSI0iIhotgWTtMHBsM78HwCAnglSXZFPJ5JNiJ_HovfulMKRUL7U2TPweaU1aKbmY95epKUcLOGxIOMFdXM2yhngGS8N3uVTfVcSyZWCPhwPbyQUUjCa23eral_d3b9rfSGlGlzvNx4rkYcL-4Z4ThyW3CYmTqvX11IFLCPu969nVGAhSNoV6ZYbQHCo2v8aIlEiVCyjiSCUPR4JUIk4Q5_aoU_V64XkG9ItSVpkl3N4lqeNoo2xzO_SLS54QoGaC3dgetlt9oLCxZxn2FqGnJoral-RWyQa-YIXAk9uh6gM-is2rDZnySh6DExrKkGKmE4-FZTN6eEXHbIumFIxMsZXFr5O7TqwzEZkT9qhp2J7J68u2ttw1QhhijW6C4zzc7DRPrFCDGOt3UloKuWe0W5yUCUtlDthrtazP0E2EBKCj2lLjsYyocuAailFH5FN-WN2tKeiDJww" />
+    </item>
+  </cookies>
+</error>
